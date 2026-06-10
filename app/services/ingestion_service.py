@@ -117,7 +117,10 @@ def _run_pipeline_locked(run_id: int) -> None:
         finished_at = datetime.now(timezone.utc).replace(tzinfo=None)
         run.finished_at = finished_at
         db.commit()
-        _log_run_summary(db, run, finished_at)
+        try:
+            _log_run_summary(db, run, finished_at)
+        except Exception:
+            logger.exception("run %s: failed to log run summary", run_id)
         logger.info("run %s: pipeline completed", run_id)
     except Exception as exc:
         db.rollback()

@@ -104,6 +104,33 @@ def test_run_pipeline_serializes_concurrent_runs(db_session, db_session_factory,
     assert run.status == "completed"
 
 
+def test_run_pipeline_stays_completed_when_summary_logging_fails(
+    db_session, db_session_factory, monkeypatch
+):
+    monkeypatch.setattr("app.services.ingestion_service.SessionLocal", db_session_factory)
+
+    run = IngestionRun(
+        source_file="f.jsonl",
+        file_hash="h6",
+        staged_path="/tmp/f.jsonl",
+        status="completed",
+    )
+    db_session.add(run)
+    db_session.commit()
+    db_session.refresh(run)
+
+    def broken_summary(db, run, finished_at):
+        raise RuntimeError("boom")
+
+    monkeypatch.setattr(ingestion_service, "_log_run_summary", broken_summary)
+
+    ingestion_service.run_pipeline(run.id)
+
+    db_session.refresh(run)
+    assert run.status == "completed"
+    assert run.error_message is None
+
+
 def test_drain_all_queues_processes_global_leftovers(db_session, db_session_factory, monkeypatch):
     monkeypatch.setattr("app.services.ingestion_service.SessionLocal", db_session_factory)
 
