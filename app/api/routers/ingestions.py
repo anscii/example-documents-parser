@@ -43,7 +43,7 @@ async def create_ingestion(
 def list_ingestions(
     limit: int = 20, offset: int = 0, db: Session = Depends(get_db)
 ) -> OffsetPage[IngestionRunListItem]:
-    total = db.scalar(select(func.count()).select_from(IngestionRun))
+    total = db.scalar(select(func.count()).select_from(IngestionRun)) or 0
     runs = (
         db.execute(
             select(IngestionRun).order_by(IngestionRun.id.desc()).limit(limit).offset(offset)

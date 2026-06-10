@@ -62,13 +62,16 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
 
 
 def _count_pending(db: Session) -> int:
-    return db.scalar(
-        select(func.count()).select_from(RawDocument).where(RawDocument.status == "pending")
+    return (
+        db.scalar(
+            select(func.count()).select_from(RawDocument).where(RawDocument.status == "pending")
+        )
+        or 0
     )
 
 
 def _load_id_cache(db: Session, model: type[Author] | type[Organization]) -> dict[str, int]:
-    return dict(db.execute(select(model.normalized_name, model.id)).all())
+    return dict(db.execute(select(model.normalized_name, model.id)).tuples().all())
 
 
 def _load_tag_cache(db: Session) -> dict[str, Tag]:

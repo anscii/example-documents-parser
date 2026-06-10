@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import logging
 import threading
-from collections.abc import Callable
 from datetime import datetime, timezone
 from typing import Protocol
 
@@ -41,7 +40,8 @@ _pipeline_lock = threading.Lock()
 
 class _BatchWorker(Protocol):
     __name__: str
-    process_batch: Callable[[Session, int], tuple[int, int]]
+
+    def process_batch(self, db: Session, batch_size: int) -> tuple[int, int]: ...
 
 
 class DuplicateIngestionError(Exception):
@@ -157,32 +157,44 @@ def drain_all_queues() -> None:
 
 
 def build_run_detail(db: Session, run: IngestionRun) -> IngestionRunDetail:
-    normalize_pending = db.scalar(
-        select(func.count())
-        .select_from(RawDocument)
-        .where(RawDocument.ingestion_run_id == run.id, RawDocument.status == "pending")
-    )
-
-    dedup_pending = db.scalar(
-        select(func.count())
-        .select_from(Document)
-        .join(RawDocument, Document.raw_document_id == RawDocument.id)
-        .where(
-            RawDocument.ingestion_run_id == run.id,
-            Document.duplicate_group_id.is_(None),
-            Document.is_canonical.is_(None),
+    normalize_pending = (
+        db.scalar(
+            select(func.count())
+            .select_from(RawDocument)
+            .where(RawDocument.ingestion_run_id == run.id, RawDocument.status == "pending")
         )
+        or 0
     )
 
-    scoring_pending = db.scalar(
-        select(func.count())
-        .select_from(Document)
-        .join(RawDocument, Document.raw_document_id == RawDocument.id)
-        .where(RawDocument.ingestion_run_id == run.id, Document.quality_score.is_(None))
+    dedup_pending = (
+        db.scalar(
+            select(func.count())
+            .select_from(Document)
+            .join(RawDocument, Document.raw_document_id == RawDocument.id)
+            .where(
+                RawDocument.ingestion_run_id == run.id,
+                Document.duplicate_group_id.is_(None),
+                Document.is_canonical.is_(None),
+            )
+        )
+        or 0
     )
 
-    error_count = db.scalar(
-        select(func.count()).select_from(IngestionError).where(IngestionError.run_id == run.id)
+    scoring_pending = (
+        db.scalar(
+            select(func.count())
+            .select_from(Document)
+            .join(RawDocument, Document.raw_document_id == RawDocument.id)
+            .where(RawDocument.ingestion_run_id == run.id, Document.quality_score.is_(None))
+        )
+        or 0
+    )
+
+    error_count = (
+        db.scalar(
+            select(func.count()).select_from(IngestionError).where(IngestionError.run_id == run.id)
+        )
+        or 0
     )
 
     sample_errors = (

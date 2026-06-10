@@ -4,7 +4,7 @@ PY    := .venv/bin/python
 
 # ── Dev server ────────────────────────────────────────────────────────────────
 run:
-	$(UV) run uvicorn app.main:app --port 8008 --reload \
+	$(UV) run uvicorn app.main:app --port 8000 --reload \
     --reload-dir app \
 
 
@@ -28,7 +28,7 @@ lint-fix:
 
 # ── Type check ────────────────────────────────────────────────────────────────
 types:
-	$(UV) run mypy app
+	$(UV) run mypy .
 
 # ── Run everything ────────────────────────────────────────────────────────────
 check: lint-fix lint types test

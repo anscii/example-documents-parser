@@ -21,7 +21,7 @@ UNKNOWN_REGION_LABEL = "unknown"
 
 def get_stats(db: Session) -> StatsResponse:
     return StatsResponse(
-        total_documents=db.scalar(select(func.count()).select_from(Document)),
+        total_documents=db.scalar(select(func.count()).select_from(Document)) or 0,
         by_status=_count_by(db, Document.status),
         by_document_type=_count_by(db, Document.document_type),
         by_region=_count_by_region(db),
@@ -33,38 +33,52 @@ def get_stats(db: Session) -> StatsResponse:
 
 
 def _count_by(db: Session, column) -> dict[str, int]:
-    rows = db.execute(
-        select(column, func.count()).group_by(column).order_by(func.count().desc())
-    ).all()
+    rows = (
+        db.execute(select(column, func.count()).group_by(column).order_by(func.count().desc()))
+        .tuples()
+        .all()
+    )
     return dict(rows)
 
 
 def _count_by_region(db: Session) -> dict[str, int]:
     region_label = func.coalesce(Document.region, UNKNOWN_REGION_LABEL)
-    rows = db.execute(
-        select(region_label, func.count()).group_by(region_label).order_by(func.count().desc())
-    ).all()
+    rows = (
+        db.execute(
+            select(region_label, func.count()).group_by(region_label).order_by(func.count().desc())
+        )
+        .tuples()
+        .all()
+    )
     return dict(rows)
 
 
 def _top_tags(db: Session) -> dict[str, int]:
-    rows = db.execute(
-        select(Tag.name, func.count(document_tags.c.document_id))
-        .join(document_tags, Tag.id == document_tags.c.tag_id)
-        .group_by(Tag.name)
-        .order_by(func.count(document_tags.c.document_id).desc())
-    ).all()
+    rows = (
+        db.execute(
+            select(Tag.name, func.count(document_tags.c.document_id))
+            .join(document_tags, Tag.id == document_tags.c.tag_id)
+            .group_by(Tag.name)
+            .order_by(func.count(document_tags.c.document_id).desc())
+        )
+        .tuples()
+        .all()
+    )
     return dict(rows)
 
 
 def _duplicate_stats(db: Session) -> DuplicateStats:
-    group_sizes = dict(
-        db.execute(
+    group_sizes: dict[int, int] = {
+        group_id: count
+        for group_id, count in db.execute(
             select(Document.duplicate_group_id, func.count())
             .where(Document.duplicate_group_id.is_not(None))
             .group_by(Document.duplicate_group_id)
-        ).all()
-    )
+        )
+        .tuples()
+        .all()
+        if group_id is not None
+    }
 
     total_groups = len(group_sizes)
     total_duplicates = sum(group_sizes.values())
@@ -107,15 +121,17 @@ def _duplicate_stats(db: Session) -> DuplicateStats:
 
 
 def _quality_score_distribution(db: Session) -> QualityScoreDistribution:
-    scores = list(
-        db.execute(
+    scores = [
+        score
+        for score in db.execute(
             select(Document.quality_score)
             .where(Document.quality_score.is_not(None))
             .order_by(Document.quality_score)
         )
         .scalars()
         .all()
-    )
+        if score is not None
+    ]
 
     histogram = [0] * HISTOGRAM_BUCKET_COUNT
     for score in scores:

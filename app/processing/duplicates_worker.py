@@ -79,15 +79,20 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
 
 
 def _count_pending(db: Session) -> int:
-    return db.scalar(
-        select(func.count())
-        .select_from(Document)
-        .where(Document.duplicate_group_id.is_(None), Document.is_canonical.is_(None))
+    return (
+        db.scalar(
+            select(func.count())
+            .select_from(Document)
+            .where(Document.duplicate_group_id.is_(None), Document.is_canonical.is_(None))
+        )
+        or 0
     )
 
 
 def _unknown_id(db: Session, model: type[Author] | type[Organization]) -> int:
-    return db.scalar(select(model.id).where(model.normalized_name == UNKNOWN_NORMALIZED_NAME))
+    unknown_id = db.scalar(select(model.id).where(model.normalized_name == UNKNOWN_NORMALIZED_NAME))
+    assert unknown_id is not None, f"missing Unknown sentinel row for {model.__name__}"
+    return unknown_id
 
 
 def _mark_singleton(doc: Document) -> None:

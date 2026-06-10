@@ -4,7 +4,7 @@ import bisect
 import logging
 import math
 from datetime import date
-from typing import Any
+from typing import Any, cast
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session, selectinload
@@ -62,20 +62,26 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
 
 
 def _count_pending(db: Session) -> int:
-    return db.scalar(
-        select(func.count()).select_from(Document).where(Document.quality_score.is_(None))
+    return (
+        db.scalar(
+            select(func.count()).select_from(Document).where(Document.quality_score.is_(None))
+        )
+        or 0
     )
 
 
 def _citation_count_distribution(db: Session) -> tuple[list[int], int | None]:
-    cc_sorted = list(
-        db.execute(
-            select(Document.citation_count)
-            .where(Document.citation_count.is_not(None))
-            .order_by(Document.citation_count)
-        )
-        .scalars()
-        .all()
+    cc_sorted = cast(
+        "list[int]",
+        list(
+            db.execute(
+                select(Document.citation_count)
+                .where(Document.citation_count.is_not(None))
+                .order_by(Document.citation_count)
+            )
+            .scalars()
+            .all()
+        ),
     )
     if not cc_sorted:
         return cc_sorted, None

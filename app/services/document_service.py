@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import date
+from typing import TypedDict
 
 from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session, selectinload
@@ -18,6 +19,20 @@ _SORT_COLUMNS = {
     "quality_score": Document.quality_score,
     "created_at": Document.created_at,
 }
+
+
+class _DocumentFilters(TypedDict):
+    published_after: date | None
+    published_before: date | None
+    tag: str | None
+    organization: str | None
+    status: str | None
+    document_type: str | None
+    language: str | None
+    region: str | None
+    q: str | None
+    canonical_only: bool
+    min_quality_score: float | None
 
 
 def _apply_filters(
@@ -91,19 +106,19 @@ def list_documents(
     page = max(page, 1)
     page_size = min(max(page_size, 1), MAX_PAGE_SIZE)
 
-    filter_kwargs = dict(
-        published_after=published_after,
-        published_before=published_before,
-        tag=tag,
-        organization=organization,
-        status=status,
-        document_type=document_type,
-        language=language,
-        region=region,
-        q=q,
-        canonical_only=canonical_only,
-        min_quality_score=min_quality_score,
-    )
+    filter_kwargs: _DocumentFilters = {
+        "published_after": published_after,
+        "published_before": published_before,
+        "tag": tag,
+        "organization": organization,
+        "status": status,
+        "document_type": document_type,
+        "language": language,
+        "region": region,
+        "q": q,
+        "canonical_only": canonical_only,
+        "min_quality_score": min_quality_score,
+    }
 
     count_stmt = _apply_filters(
         select(func.count(func.distinct(Document.id))).select_from(Document),
@@ -161,7 +176,7 @@ def get_document(db: Session, document_id: int) -> DocumentDetail | None:
         )
         detail.duplicate_group = DuplicateGroupInfo(
             group_id=document.duplicate_group_id,
-            group_size=group_size,
+            group_size=group_size or 0,
             is_canonical=bool(document.is_canonical),
             confidence=document.duplicate_confidence,
         )

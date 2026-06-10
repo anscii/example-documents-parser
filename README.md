@@ -21,10 +21,11 @@ the rest of this README assumes those terms.
 ## Quick start
 
 ```bash
-uv sync
-uv run alembic upgrade head
-uv run uvicorn app.main:app --reload --port 8000
+make install
+make migrate
+make run
 ```
+API Swagger docs will be avaliable at http://127.0.0.1:8000/docs
 
 Ingest a file (returns immediately with `status: "queued"`; processing happens
 in the background):
@@ -49,9 +50,9 @@ response is in [`docs/stats_examples.md`](docs/stats_examples.md).
 ### Tests and linting
 
 ```bash
-uv run pytest          # full unit + integration suite (fast, ~30s)
-uv run pytest -m slow   # also run the full ~11k-line corpus ingestion test
-uv run ruff check .
+make test          # full unit + integration suite (fast, ~30s)
+make test-all      # also run the full ~11k-line corpus ingestion test
+make format lint-fix lint types
 ```
 
 ## Architecture
@@ -261,7 +262,7 @@ Every messy-data decision below was verified against the actual
 - **Re-running stage 2/3 incrementally** when new documents join an existing
   duplicate-group title cohort currently re-touches the whole cohort every
   batch (correct, but more I/O than strictly necessary at very large scale —
-  see the batching note in `docs/execution_log_sample.md`).
+  see the batching note in [`docs/execution_log_sample.md`](docs/execution_log_sample.md).
 
 ## Project documentation
 
