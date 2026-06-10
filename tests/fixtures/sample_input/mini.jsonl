@@ -1,0 +1,5 @@
+{"external_id": "doc-001", "title": "Climate Policy in Southern Europe", "abstract": "An abstract.", "body": "Body text.", "author_name": "Jane Doe", "organization_name": "Climate Institute", "source_name": "Feed A", "language": "en", "status": "published", "document_type": "report", "region": "Southern Europe", "published_at": "2021-05-01", "updated_at": "2021-06-01", "tags": ["energy", "climate"], "url": "https://example.com/report.pdf", "doi": "10.1234/abcd", "citation_count": 12, "word_count": 1000, "page_count": 10, "relevance_score": 0.8, "version": "1.0", "open_access": true, "peer_reviewed": false}
+{}
+[]
+{"broken": true}
+{"title": "Broken JSON"

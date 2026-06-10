@@ -1,0 +1,2 @@
+UNKNOWN_NORMALIZED_NAME = "__unknown__"
+UNKNOWN_DISPLAY_NAME = "Unknown"

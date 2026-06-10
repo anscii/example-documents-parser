@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# App data / logs
+data/*.db
+data/uploads/*
+!data/uploads/.gitkeep
+logs/*.log
+
+# macOS junk in the provided input data
+input_docs/__MACOSX/
