@@ -31,7 +31,11 @@ if TYPE_CHECKING:
 class Document(Base):
     __tablename__ = "documents"
     __table_args__ = (
-        Index("ix_documents_normalized_title_duplicate_group_id", "normalized_title", "duplicate_group_id"),
+        Index(
+            "ix_documents_normalized_title_duplicate_group_id",
+            "normalized_title",
+            "duplicate_group_id",
+        ),
         Index("ix_documents_status_document_type", "status", "document_type"),
     )
 

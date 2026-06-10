@@ -1,6 +1,10 @@
 import pytest
 
-from app.ingestion.normalizers.numbers import coerce_float, coerce_int, normalize_version
+from app.ingestion.normalizers.numbers import (
+    coerce_float,
+    coerce_int,
+    normalize_version,
+)
 
 
 @pytest.mark.parametrize(

@@ -11,7 +11,12 @@ _line_numbers = itertools.count(1)
 
 
 def _make_run(db_session) -> IngestionRun:
-    run = IngestionRun(source_file="f.jsonl", file_hash="h", staged_path="/tmp/f.jsonl", status="processing")
+    run = IngestionRun(
+        source_file="f.jsonl",
+        file_hash="h",
+        staged_path="/tmp/f.jsonl",
+        status="processing",
+    )
     db_session.add(run)
     db_session.commit()
     db_session.refresh(run)
@@ -19,11 +24,15 @@ def _make_run(db_session) -> IngestionRun:
 
 
 def _unknown_author_id(db_session) -> int:
-    return db_session.scalar(select(Author.id).where(Author.normalized_name == UNKNOWN_NORMALIZED_NAME))
+    return db_session.scalar(
+        select(Author.id).where(Author.normalized_name == UNKNOWN_NORMALIZED_NAME)
+    )
 
 
 def _unknown_org_id(db_session) -> int:
-    return db_session.scalar(select(Organization.id).where(Organization.normalized_name == UNKNOWN_NORMALIZED_NAME))
+    return db_session.scalar(
+        select(Organization.id).where(Organization.normalized_name == UNKNOWN_NORMALIZED_NAME)
+    )
 
 
 def _make_document(db_session, run, **overrides) -> Document:
@@ -93,10 +102,18 @@ def test_author_only_edge_groups_documents(db_session):
     db_session.flush()
 
     doc_a = _make_document(
-        db_session, run, normalized_title="shared title", author_id=author.id, source_name="Feed A"
+        db_session,
+        run,
+        normalized_title="shared title",
+        author_id=author.id,
+        source_name="Feed A",
     )
     doc_b = _make_document(
-        db_session, run, normalized_title="shared title", author_id=author.id, source_name="Feed B"
+        db_session,
+        run,
+        normalized_title="shared title",
+        author_id=author.id,
+        source_name="Feed B",
     )
 
     duplicates_worker.process_batch(db_session, batch_size=10)
@@ -119,10 +136,18 @@ def test_source_only_edge_groups_documents(db_session):
     db_session.flush()
 
     doc_a = _make_document(
-        db_session, run, normalized_title="shared title 2", author_id=author_a.id, source_name="Feed A"
+        db_session,
+        run,
+        normalized_title="shared title 2",
+        author_id=author_a.id,
+        source_name="Feed A",
     )
     doc_b = _make_document(
-        db_session, run, normalized_title="shared title 2", author_id=author_b.id, source_name="Feed A"
+        db_session,
+        run,
+        normalized_title="shared title 2",
+        author_id=author_b.id,
+        source_name="Feed A",
     )
 
     duplicates_worker.process_batch(db_session, batch_size=10)
@@ -144,10 +169,18 @@ def test_neither_author_nor_source_match_yields_singletons(db_session):
     db_session.flush()
 
     doc_a = _make_document(
-        db_session, run, normalized_title="shared title 3", author_id=author_c.id, source_name="Feed A"
+        db_session,
+        run,
+        normalized_title="shared title 3",
+        author_id=author_c.id,
+        source_name="Feed A",
     )
     doc_b = _make_document(
-        db_session, run, normalized_title="shared title 3", author_id=author_d.id, source_name="Feed B"
+        db_session,
+        run,
+        normalized_title="shared title 3",
+        author_id=author_d.id,
+        source_name="Feed B",
     )
 
     duplicates_worker.process_batch(db_session, batch_size=10)
@@ -168,10 +201,18 @@ def test_unknown_author_and_null_source_never_create_edge(db_session):
     unknown_author_id = _unknown_author_id(db_session)
 
     doc_a = _make_document(
-        db_session, run, normalized_title="shared title 4", author_id=unknown_author_id, source_name=None
+        db_session,
+        run,
+        normalized_title="shared title 4",
+        author_id=unknown_author_id,
+        source_name=None,
     )
     doc_b = _make_document(
-        db_session, run, normalized_title="shared title 4", author_id=unknown_author_id, source_name=None
+        db_session,
+        run,
+        normalized_title="shared title 4",
+        author_id=unknown_author_id,
+        source_name=None,
     )
 
     duplicates_worker.process_batch(db_session, batch_size=10)
@@ -221,13 +262,25 @@ def test_canonical_pick_prefers_earliest_published_at(db_session):
     db_session.flush()
 
     doc_late = _make_document(
-        db_session, run, normalized_title="shared title 6", author_id=author.id, published_at=date(2022, 1, 1)
+        db_session,
+        run,
+        normalized_title="shared title 6",
+        author_id=author.id,
+        published_at=date(2022, 1, 1),
     )
     doc_early = _make_document(
-        db_session, run, normalized_title="shared title 6", author_id=author.id, published_at=date(2020, 1, 1)
+        db_session,
+        run,
+        normalized_title="shared title 6",
+        author_id=author.id,
+        published_at=date(2020, 1, 1),
     )
     doc_no_date = _make_document(
-        db_session, run, normalized_title="shared title 6", author_id=author.id, published_at=None
+        db_session,
+        run,
+        normalized_title="shared title 6",
+        author_id=author.id,
+        published_at=None,
     )
 
     duplicates_worker.process_batch(db_session, batch_size=10)
@@ -239,7 +292,11 @@ def test_canonical_pick_prefers_earliest_published_at(db_session):
     assert doc_early.is_canonical is True
     assert doc_late.is_canonical is False
     assert doc_no_date.is_canonical is False
-    assert doc_early.duplicate_group_id == doc_late.duplicate_group_id == doc_no_date.duplicate_group_id
+    assert (
+        doc_early.duplicate_group_id
+        == doc_late.duplicate_group_id
+        == doc_no_date.duplicate_group_id
+    )
 
 
 def test_canonical_pick_tiebreaks_by_completeness_then_id(db_session):
@@ -251,7 +308,11 @@ def test_canonical_pick_tiebreaks_by_completeness_then_id(db_session):
 
     same_date = date(2021, 1, 1)
     doc_sparse = _make_document(
-        db_session, run, normalized_title="shared title 7", author_id=author.id, published_at=same_date
+        db_session,
+        run,
+        normalized_title="shared title 7",
+        author_id=author.id,
+        published_at=same_date,
     )
     doc_rich = _make_document(
         db_session,
@@ -287,10 +348,18 @@ def test_component_merges_when_bridging_document_arrives(db_session):
     db_session.flush()
 
     doc_a = _make_document(
-        db_session, run, normalized_title="shared title 8", author_id=author_h.id, source_name="Feed A"
+        db_session,
+        run,
+        normalized_title="shared title 8",
+        author_id=author_h.id,
+        source_name="Feed A",
     )
     doc_b = _make_document(
-        db_session, run, normalized_title="shared title 8", author_id=author_i.id, source_name="Feed A"
+        db_session,
+        run,
+        normalized_title="shared title 8",
+        author_id=author_i.id,
+        source_name="Feed A",
     )
 
     processed, remaining = duplicates_worker.process_batch(db_session, batch_size=10)
@@ -304,7 +373,11 @@ def test_component_merges_when_bridging_document_arrives(db_session):
     # doc_c shares an author with doc_b (but not doc_a) and a different source
     # than either - it should bridge doc_a and doc_b into one component.
     doc_c = _make_document(
-        db_session, run, normalized_title="shared title 8", author_id=author_i.id, source_name="Feed C"
+        db_session,
+        run,
+        normalized_title="shared title 8",
+        author_id=author_i.id,
+        source_name="Feed C",
     )
 
     processed, remaining = duplicates_worker.process_batch(db_session, batch_size=10)
@@ -315,4 +388,6 @@ def test_component_merges_when_bridging_document_arrives(db_session):
     db_session.refresh(doc_b)
     db_session.refresh(doc_c)
 
-    assert doc_a.duplicate_group_id == doc_b.duplicate_group_id == doc_c.duplicate_group_id == doc_a.id
+    assert (
+        doc_a.duplicate_group_id == doc_b.duplicate_group_id == doc_c.duplicate_group_id == doc_a.id
+    )

@@ -12,7 +12,7 @@ class ValidRecord:
 
 @dataclass
 class InvalidRecord:
-    category: Literal["invalid_json", "not_object", "broken_stub"]
+    category: Literal["invalid_json", "not_object", "empty", "broken_stub"]
     detail: str
 
 
@@ -29,6 +29,11 @@ def classify(line: str) -> ClassifiedLine:
         return InvalidRecord(
             category="not_object",
             detail=f"expected a JSON object, got {type(parsed).__name__}",
+        )
+    if not parsed:
+        return InvalidRecord(
+            category="empty",
+            detail="expected a non-empty JSON object",
         )
 
     if parsed == {"broken": True}:

@@ -25,11 +25,11 @@ def test_full_corpus_ingestion_matches_data_profile(client, db_session):
     runs = db_session.query(IngestionRun).all()
     assert len(runs) == len(INPUT_FILES)
     assert sum(r.total_lines for r in runs) == 11000
-    assert sum(r.raw_loaded_count for r in runs) == 10555
-    assert sum(r.skipped_count for r in runs) == 445
+    assert sum(r.raw_loaded_count for r in runs) == 10333
+    assert sum(r.skipped_count for r in runs) == 667
 
     documents = db_session.query(Document).all()
-    assert len(documents) == 10555
+    assert len(documents) == 10333
     for document in documents:
         assert document.is_canonical is not None
         assert document.quality_score is not None
@@ -37,11 +37,13 @@ def test_full_corpus_ingestion_matches_data_profile(client, db_session):
     distinct_titles = {d.normalized_title for d in documents if d.normalized_title}
     assert len(distinct_titles) == 41
 
-    duplicate_group_ids = {d.duplicate_group_id for d in documents if d.duplicate_group_id is not None}
+    duplicate_group_ids = {
+        d.duplicate_group_id for d in documents if d.duplicate_group_id is not None
+    }
     assert len(duplicate_group_ids) == 48
 
     total_duplicates = sum(1 for d in documents if d.duplicate_group_id is not None)
     assert total_duplicates == 8066
 
     stats = client.get("/stats").json()
-    assert stats["total_documents"] == 10555
+    assert stats["total_documents"] == 10333

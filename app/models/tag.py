@@ -24,4 +24,6 @@ class Tag(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(100), unique=True, index=True)
 
-    documents: Mapped[list["Document"]] = relationship(secondary=document_tags, back_populates="tags")
+    documents: Mapped[list["Document"]] = relationship(
+        secondary=document_tags, back_populates="tags"
+    )

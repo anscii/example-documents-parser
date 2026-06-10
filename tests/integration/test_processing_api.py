@@ -1,7 +1,9 @@
 import pytest
 
 
-@pytest.mark.parametrize("path", ["/processing/normalize", "/processing/duplicates", "/processing/scoring"])
+@pytest.mark.parametrize(
+    "path", ["/processing/normalize", "/processing/duplicates", "/processing/scoring"]
+)
 def test_processing_endpoints_return_zero_when_queues_empty(client, path):
     response = client.post(path)
 

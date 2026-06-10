@@ -7,7 +7,11 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.models import IngestionRun
 from app.schemas.common import OffsetPage
-from app.schemas.ingestion import IngestionRunDetail, IngestionRunListItem, IngestionRunSummary
+from app.schemas.ingestion import (
+    IngestionRunDetail,
+    IngestionRunListItem,
+    IngestionRunSummary,
+)
 from app.services import ingestion_service
 
 router = APIRouter(prefix="/ingestions", tags=["ingestions"])
@@ -41,7 +45,9 @@ def list_ingestions(
 ) -> OffsetPage[IngestionRunListItem]:
     total = db.scalar(select(func.count()).select_from(IngestionRun))
     runs = (
-        db.execute(select(IngestionRun).order_by(IngestionRun.id.desc()).limit(limit).offset(offset))
+        db.execute(
+            select(IngestionRun).order_by(IngestionRun.id.desc()).limit(limit).offset(offset)
+        )
         .scalars()
         .all()
     )

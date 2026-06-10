@@ -25,8 +25,8 @@ def test_process_run_classifies_lines(db_session):
     raw_load_worker.process_run(db_session, run)
 
     assert run.total_lines == 5
-    assert run.raw_loaded_count == 2
-    assert run.skipped_count == 3
+    assert run.raw_loaded_count == 1
+    assert run.skipped_count == 4
     assert run.status == "processing"
 
     raw_docs = (
@@ -35,10 +35,9 @@ def test_process_run_classifies_lines(db_session):
         .order_by(RawDocument.line_number)
         .all()
     )
-    assert [rd.line_number for rd in raw_docs] == [1, 2]
+    assert [rd.line_number for rd in raw_docs] == [1]
     assert all(rd.status == "pending" for rd in raw_docs)
     assert raw_docs[0].raw_data["external_id"] == "doc-001"
-    assert raw_docs[1].raw_data == {}
 
     errors = (
         db_session.query(IngestionError)
@@ -46,5 +45,10 @@ def test_process_run_classifies_lines(db_session):
         .order_by(IngestionError.line_number)
         .all()
     )
-    assert [e.line_number for e in errors] == [3, 4, 5]
-    assert [e.error_category for e in errors] == ["not_object", "broken_stub", "invalid_json"]
+    assert [e.line_number for e in errors] == [2, 3, 4, 5]
+    assert [e.error_category for e in errors] == [
+        "empty",
+        "not_object",
+        "broken_stub",
+        "invalid_json",
+    ]

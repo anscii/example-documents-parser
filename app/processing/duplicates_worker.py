@@ -14,7 +14,16 @@ logger = logging.getLogger(__name__)
 
 # Fields whose presence (non-null/non-default) counts toward a document's
 # "completeness" when picking the canonical member of a duplicate group.
-_COMPLETENESS_FIELDS = ("abstract", "body", "doi", "url", "region", "citation_count", "word_count", "page_count")
+_COMPLETENESS_FIELDS = (
+    "abstract",
+    "body",
+    "doi",
+    "url",
+    "region",
+    "citation_count",
+    "word_count",
+    "page_count",
+)
 
 
 class _UnionFind:
@@ -87,8 +96,14 @@ def _mark_singleton(doc: Document) -> None:
     doc.duplicate_confidence = None
 
 
-def _process_title_cohort(db: Session, normalized_title: str, unknown_author_id: int, unknown_org_id: int) -> None:
-    cohort = db.execute(select(Document).where(Document.normalized_title == normalized_title)).scalars().all()
+def _process_title_cohort(
+    db: Session, normalized_title: str, unknown_author_id: int, unknown_org_id: int
+) -> None:
+    cohort = (
+        db.execute(select(Document).where(Document.normalized_title == normalized_title))
+        .scalars()
+        .all()
+    )
 
     if len(cohort) == 1:
         _mark_singleton(cohort[0])
@@ -146,15 +161,23 @@ def _completeness(doc: Document, unknown_author_id: int, unknown_org_id: int) ->
     return score
 
 
-def _pick_canonical(members: list[Document], unknown_author_id: int, unknown_org_id: int) -> Document:
+def _pick_canonical(
+    members: list[Document], unknown_author_id: int, unknown_org_id: int
+) -> Document:
     def sort_key(doc: Document) -> tuple[date, int, int]:
         published = doc.published_at or date.max
-        return (published, -_completeness(doc, unknown_author_id, unknown_org_id), doc.id)
+        return (
+            published,
+            -_completeness(doc, unknown_author_id, unknown_org_id),
+            doc.id,
+        )
 
     return min(members, key=sort_key)
 
 
-def _confidence(doc: Document, members: list[Document], unknown_author_id: int, unknown_org_id: int) -> float:
+def _confidence(
+    doc: Document, members: list[Document], unknown_author_id: int, unknown_org_id: int
+) -> float:
     others = [m for m in members if m.id != doc.id]
 
     score = 0.5

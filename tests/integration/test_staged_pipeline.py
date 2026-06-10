@@ -6,7 +6,9 @@ from sqlalchemy import select
 from app.models import Author, Document, IngestionError, IngestionRun, Organization
 from app.models.sentinels import UNKNOWN_NORMALIZED_NAME
 
-FIXTURE_PATH = Path(__file__).resolve().parents[1] / "fixtures" / "sample_input" / "staged_pipeline.jsonl"
+FIXTURE_PATH = (
+    Path(__file__).resolve().parents[1] / "fixtures" / "sample_input" / "staged_pipeline.jsonl"
+)
 
 
 def _post_fixture(client):
@@ -18,12 +20,9 @@ def _post_fixture(client):
 
 
 def _documents_by_normalized_title(db_session, normalized_title):
-    return (
-        db_session.scalars(
-            select(Document).where(Document.normalized_title == normalized_title).order_by(Document.id)
-        )
-        .all()
-    )
+    return db_session.scalars(
+        select(Document).where(Document.normalized_title == normalized_title).order_by(Document.id)
+    ).all()
 
 
 def test_staged_pipeline_runs_to_completion(client, db_session):
@@ -34,18 +33,24 @@ def test_staged_pipeline_runs_to_completion(client, db_session):
     run = db_session.get(IngestionRun, run_id)
     assert run.status == "completed"
     assert run.total_lines == 12
-    assert run.raw_loaded_count == 9
-    assert run.skipped_count == 3
+    assert run.raw_loaded_count == 8
+    assert run.skipped_count == 4
 
-    errors = db_session.query(IngestionError).filter_by(run_id=run_id).order_by(IngestionError.line_number).all()
+    errors = (
+        db_session.query(IngestionError)
+        .filter_by(run_id=run_id)
+        .order_by(IngestionError.line_number)
+        .all()
+    )
     assert [(e.line_number, e.error_category) for e in errors] == [
         (2, "not_object"),
         (3, "broken_stub"),
         (4, "invalid_json"),
+        (5, "empty"),
     ]
 
     documents = db_session.query(Document).all()
-    assert len(documents) == 9
+    assert len(documents) == 8
     for document in documents:
         assert document.is_canonical is not None
         assert document.quality_score is not None
@@ -54,7 +59,9 @@ def test_staged_pipeline_runs_to_completion(client, db_session):
 def test_staged_pipeline_normalizes_messy_record(client, db_session):
     _post_fixture(client)
 
-    document = db_session.scalar(select(Document).where(Document.normalized_title == "untitled field notes"))
+    document = db_session.scalar(
+        select(Document).where(Document.normalized_title == "untitled field notes")
+    )
     assert document is not None
     assert document.raw_external_id is None
     assert document.source_name is None
@@ -100,7 +107,9 @@ def test_staged_pipeline_groups_duplicates_by_shared_source(client, db_session):
     assert duplicate.duplicate_confidence == 0.75
 
 
-def test_staged_pipeline_same_title_different_author_and_source_are_not_duplicates(client, db_session):
+def test_staged_pipeline_same_title_different_author_and_source_are_not_duplicates(
+    client, db_session
+):
     _post_fixture(client)
 
     docs = _documents_by_normalized_title(db_session, "annual sustainability review")
@@ -132,6 +141,10 @@ def test_staged_pipeline_document_detail_shows_duplicate_group(client, db_sessio
 def test_staged_pipeline_processing_endpoints_report_drained(client):
     _post_fixture(client)
 
-    for path in ("/processing/normalize", "/processing/duplicates", "/processing/scoring"):
+    for path in (
+        "/processing/normalize",
+        "/processing/duplicates",
+        "/processing/scoring",
+    ):
         response = client.post(path)
         assert response.json() == {"processed": 0, "remaining": 0}

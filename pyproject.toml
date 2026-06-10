@@ -21,6 +21,7 @@ dev = [
     "pytest>=9.0.3",
     "pytest-cov>=7.1.0",
     "ruff>=0.15.16",
+    "mypy>=2.1.0",
 ]
 
 [tool.pytest.ini_options]
@@ -28,3 +29,16 @@ markers = [
     "slow: full ~11k-line corpus ingestion against input_docs/ (deselected by default; run with `-m slow`)",
 ]
 addopts = "-m \"not slow\""
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+exclude = ["tests/"]

@@ -25,7 +25,9 @@ def db_engine(tmp_path):
 
     seed_session = sessionmaker(bind=engine, autoflush=False, autocommit=False)()
     seed_session.add(Author(name=UNKNOWN_DISPLAY_NAME, normalized_name=UNKNOWN_NORMALIZED_NAME))
-    seed_session.add(Organization(name=UNKNOWN_DISPLAY_NAME, normalized_name=UNKNOWN_NORMALIZED_NAME))
+    seed_session.add(
+        Organization(name=UNKNOWN_DISPLAY_NAME, normalized_name=UNKNOWN_NORMALIZED_NAME)
+    )
     seed_session.commit()
     seed_session.close()
 

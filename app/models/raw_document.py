@@ -17,7 +17,9 @@ class RawDocument(Base):
     __tablename__ = "raw_documents"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    ingestion_run_id: Mapped[int] = mapped_column(ForeignKey("ingestion_runs.id", ondelete="CASCADE"), index=True)
+    ingestion_run_id: Mapped[int] = mapped_column(
+        ForeignKey("ingestion_runs.id", ondelete="CASCADE"), index=True
+    )
     line_number: Mapped[int] = mapped_column(Integer)
     raw_data: Mapped[dict[str, Any]] = mapped_column(JSON)
     status: Mapped[str] = mapped_column(String(20), index=True, default="pending")

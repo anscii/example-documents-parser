@@ -29,4 +29,8 @@ def coerce_nullable_bool(value: object) -> tuple[bool | None, str | None, str | 
         if text in _FALSE_STRINGS:
             return False, raw, None
         return None, raw, f"unrecognized boolean value: {value!r}"
-    return None, raw, f"unexpected type for boolean field: {type(value).__name__}: {value!r}"
+    return (
+        None,
+        raw,
+        f"unexpected type for boolean field: {type(value).__name__}: {value!r}",
+    )

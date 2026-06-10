@@ -8,7 +8,12 @@ from app.ingestion.normalizers.links import normalize_doi, normalize_url
     [
         (None, None, None, False),
         ("", None, None, False),
-        ("https://example.com/report.pdf", "https://example.com/report.pdf", True, False),
+        (
+            "https://example.com/report.pdf",
+            "https://example.com/report.pdf",
+            True,
+            False,
+        ),
         ("not-a-url", "not-a-url", False, False),
         ("http://", "http://", False, False),
         (123, None, None, True),

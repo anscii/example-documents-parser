@@ -134,7 +134,11 @@ def test_get_stats_aggregates_documents(client, db_session):
     body = response.json()
     assert body["total_documents"] == 6
     assert body["by_status"] == {"published": 4, "draft": 1, "archived": 1}
-    assert body["by_document_type"] == {"report": 4, "working_paper": 1, "policy_brief": 1}
+    assert body["by_document_type"] == {
+        "report": 4,
+        "working_paper": 1,
+        "policy_brief": 1,
+    }
     assert body["by_region"] == {"Europe": 3, "unknown": 2, "Asia": 1}
     assert body["by_language"] == {"en": 4, "fr": 1, "de": 1}
     assert body["top_tags"] == {"alpha": 2, "beta": 2, "gamma": 1}
@@ -189,9 +193,26 @@ def test_get_stats_quality_score_distribution_single_score(client, db_session):
 
 def test_get_stats_quality_score_histogram_clamps_top_bucket(client, db_session):
     run = make_run(db_session)
-    make_document(db_session, run, title="Perfect", normalized_title="perfect", quality_score=100.0)
+    make_document(
+        db_session,
+        run,
+        title="Perfect",
+        normalized_title="perfect",
+        quality_score=100.0,
+    )
 
     response = client.get("/stats")
 
     body = response.json()
-    assert body["quality_score_distribution"]["histogram"] == [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+    assert body["quality_score_distribution"]["histogram"] == [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+    ]

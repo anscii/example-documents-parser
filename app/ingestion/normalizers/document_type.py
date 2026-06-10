@@ -18,7 +18,11 @@ def normalize_document_type(value: object) -> tuple[str, str | None, str | None]
     if value is None:
         return "unknown", None, None
     if not isinstance(value, str):
-        return "unknown", str(value), f"unexpected type for document_type: {type(value).__name__}: {value!r}"
+        return (
+            "unknown",
+            str(value),
+            f"unexpected type for document_type: {type(value).__name__}: {value!r}",
+        )
 
     raw = value
     text = value.strip().lower()

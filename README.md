@@ -204,9 +204,6 @@ Every messy-data decision below was verified against the actual
 `input_docs/*.jsonl` (11,000 lines, profile documented in
 [`docs/architecture_plan.md`](docs/architecture_plan.md)):
 
-- **`{}`** (empty object) is a *valid* record → an all-null `documents` row, not
-  an `ingestion_errors` row. Only `[]` (`not_object`), `{"broken": true}`
-  (`broken_stub`), and unparseable JSON (`invalid_json`) are hard-skipped.
 - **`external_id`**: `"duplicate-id"` / `""` / `null` all mean "no external id"
   → `raw_external_id = NULL` (it is **not** unique and not used as an identity
   key — provenance is via `raw_document_id`).

@@ -57,7 +57,10 @@ MESSY_RECORD = {
 
 def _make_run(db_session) -> IngestionRun:
     run = IngestionRun(
-        source_file="mini.jsonl", file_hash="hash", staged_path="/tmp/mini.jsonl", status="processing"
+        source_file="mini.jsonl",
+        file_hash="hash",
+        staged_path="/tmp/mini.jsonl",
+        status="processing",
     )
     db_session.add(run)
     db_session.commit()
@@ -66,7 +69,12 @@ def _make_run(db_session) -> IngestionRun:
 
 
 def _add_raw_doc(db_session, run, raw_data, line_number):
-    raw_doc = RawDocument(ingestion_run_id=run.id, line_number=line_number, raw_data=raw_data, status="pending")
+    raw_doc = RawDocument(
+        ingestion_run_id=run.id,
+        line_number=line_number,
+        raw_data=raw_data,
+        status="pending",
+    )
     db_session.add(raw_doc)
     db_session.commit()
     db_session.refresh(raw_doc)

@@ -6,7 +6,16 @@ from datetime import datetime, timezone
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.ingestion.normalizers import booleans, dates, identity, language, links, numbers, tags, text
+from app.ingestion.normalizers import (
+    booleans,
+    dates,
+    identity,
+    language,
+    links,
+    numbers,
+    tags,
+    text,
+)
 from app.ingestion.normalizers import document_type as document_type_normalizer
 from app.ingestion.normalizers import status as status_normalizer
 from app.models import Author, Document, Organization, RawDocument, Tag
@@ -36,7 +45,9 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
     tag_cache = _load_tag_cache(db)
 
     for raw_doc in raw_docs:
-        document, warnings = _build_document(db, raw_doc, author_cache, organization_cache, tag_cache)
+        document, warnings = _build_document(
+            db, raw_doc, author_cache, organization_cache, tag_cache
+        )
         db.add(document)
         raw_doc.status = "normalized"
         raw_doc.normalized_at = datetime.now(timezone.utc).replace(tzinfo=None)
@@ -51,7 +62,9 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
 
 
 def _count_pending(db: Session) -> int:
-    return db.scalar(select(func.count()).select_from(RawDocument).where(RawDocument.status == "pending"))
+    return db.scalar(
+        select(func.count()).select_from(RawDocument).where(RawDocument.status == "pending")
+    )
 
 
 def _load_id_cache(db: Session, model: type[Author] | type[Organization]) -> dict[str, int]:
@@ -132,7 +145,9 @@ def _build_document(
     source_name, warning = identity.normalize_source_name(raw_data.get("source_name"))
     track("source_name", warning)
 
-    author_id, warning = _upsert_person_or_org(db, Author, author_cache, raw_data.get("author_name"))
+    author_id, warning = _upsert_person_or_org(
+        db, Author, author_cache, raw_data.get("author_name")
+    )
     track("author_name", warning)
 
     organization_id, warning = _upsert_person_or_org(
@@ -175,10 +190,14 @@ def _build_document(
     version, warning = numbers.normalize_version(raw_data.get("version"))
     track("version", warning)
 
-    open_access, open_access_raw, warning = booleans.coerce_nullable_bool(raw_data.get("open_access"))
+    open_access, open_access_raw, warning = booleans.coerce_nullable_bool(
+        raw_data.get("open_access")
+    )
     track("open_access", warning)
 
-    peer_reviewed, peer_reviewed_raw, warning = booleans.coerce_nullable_bool(raw_data.get("peer_reviewed"))
+    peer_reviewed, peer_reviewed_raw, warning = booleans.coerce_nullable_bool(
+        raw_data.get("peer_reviewed")
+    )
     track("peer_reviewed", warning)
 
     tag_names, warning = tags.normalize_tags(raw_data.get("tags"))

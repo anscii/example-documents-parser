@@ -23,4 +23,8 @@ def normalize_status(value: object) -> tuple[str, str, str | None]:
         if text in CANONICAL_STATUSES:
             return text, raw, None
         return "unknown", raw, f"unrecognized status: {value!r}"
-    return "unknown", raw, f"unexpected type for status: {type(value).__name__}: {value!r}"
+    return (
+        "unknown",
+        raw,
+        f"unexpected type for status: {type(value).__name__}: {value!r}",
+    )

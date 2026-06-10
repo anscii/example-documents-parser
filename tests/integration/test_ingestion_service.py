@@ -7,12 +7,22 @@ from app.services import ingestion_service
 def test_resume_pending_runs_drains_processing_run(db_session, db_session_factory, monkeypatch):
     monkeypatch.setattr("app.services.ingestion_service.SessionLocal", db_session_factory)
 
-    run = IngestionRun(source_file="f.jsonl", file_hash="h1", staged_path="/tmp/f.jsonl", status="processing")
+    run = IngestionRun(
+        source_file="f.jsonl",
+        file_hash="h1",
+        staged_path="/tmp/f.jsonl",
+        status="processing",
+    )
     db_session.add(run)
     db_session.commit()
     db_session.refresh(run)
 
-    raw_doc = RawDocument(ingestion_run_id=run.id, line_number=1, raw_data={"title": "Resumed Doc"}, status="pending")
+    raw_doc = RawDocument(
+        ingestion_run_id=run.id,
+        line_number=1,
+        raw_data={"title": "Resumed Doc"},
+        status="pending",
+    )
     db_session.add(raw_doc)
     db_session.commit()
 
@@ -33,8 +43,18 @@ def test_resume_pending_runs_drains_processing_run(db_session, db_session_factor
 def test_resume_pending_runs_ignores_terminal_runs(db_session, db_session_factory, monkeypatch):
     monkeypatch.setattr("app.services.ingestion_service.SessionLocal", db_session_factory)
 
-    completed = IngestionRun(source_file="a.jsonl", file_hash="h2", staged_path="/tmp/a.jsonl", status="completed")
-    failed = IngestionRun(source_file="b.jsonl", file_hash="h3", staged_path="/tmp/b.jsonl", status="failed")
+    completed = IngestionRun(
+        source_file="a.jsonl",
+        file_hash="h2",
+        staged_path="/tmp/a.jsonl",
+        status="completed",
+    )
+    failed = IngestionRun(
+        source_file="b.jsonl",
+        file_hash="h3",
+        staged_path="/tmp/b.jsonl",
+        status="failed",
+    )
     db_session.add_all([completed, failed])
     db_session.commit()
 
@@ -49,7 +69,12 @@ def test_resume_pending_runs_ignores_terminal_runs(db_session, db_session_factor
 def test_run_pipeline_serializes_concurrent_runs(db_session, db_session_factory, monkeypatch):
     monkeypatch.setattr("app.services.ingestion_service.SessionLocal", db_session_factory)
 
-    run = IngestionRun(source_file="f.jsonl", file_hash="h5", staged_path="/tmp/f.jsonl", status="completed")
+    run = IngestionRun(
+        source_file="f.jsonl",
+        file_hash="h5",
+        staged_path="/tmp/f.jsonl",
+        status="completed",
+    )
     db_session.add(run)
     db_session.commit()
     db_session.refresh(run)
@@ -82,12 +107,22 @@ def test_run_pipeline_serializes_concurrent_runs(db_session, db_session_factory,
 def test_drain_all_queues_processes_global_leftovers(db_session, db_session_factory, monkeypatch):
     monkeypatch.setattr("app.services.ingestion_service.SessionLocal", db_session_factory)
 
-    run = IngestionRun(source_file="f.jsonl", file_hash="h4", staged_path="/tmp/f.jsonl", status="completed")
+    run = IngestionRun(
+        source_file="f.jsonl",
+        file_hash="h4",
+        staged_path="/tmp/f.jsonl",
+        status="completed",
+    )
     db_session.add(run)
     db_session.commit()
     db_session.refresh(run)
 
-    raw_doc = RawDocument(ingestion_run_id=run.id, line_number=1, raw_data={"title": "Leftover Doc"}, status="pending")
+    raw_doc = RawDocument(
+        ingestion_run_id=run.id,
+        line_number=1,
+        raw_data={"title": "Leftover Doc"},
+        status="pending",
+    )
     db_session.add(raw_doc)
     db_session.commit()
 

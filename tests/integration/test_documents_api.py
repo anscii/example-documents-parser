@@ -136,7 +136,10 @@ def test_list_documents_filter_by_published_before(client, seeded):
     response = client.get("/documents", params={"published_before": "2020-12-31"})
 
     body = response.json()
-    assert [item["id"] for item in body["items"]] == [seeded["dup_a"].id, seeded["dup_b"].id]
+    assert [item["id"] for item in body["items"]] == [
+        seeded["dup_a"].id,
+        seeded["dup_b"].id,
+    ]
 
 
 def test_list_documents_filter_by_tag_case_insensitive(client, seeded):
@@ -180,7 +183,10 @@ def test_list_documents_filter_by_min_quality_score(client, seeded):
     response = client.get("/documents", params={"min_quality_score": 50})
 
     body = response.json()
-    assert {item["id"] for item in body["items"]} == {seeded["climate"].id, seeded["dup_a"].id}
+    assert {item["id"] for item in body["items"]} == {
+        seeded["climate"].id,
+        seeded["dup_a"].id,
+    }
 
 
 def test_list_documents_sort_by_quality_score_desc(client, seeded):

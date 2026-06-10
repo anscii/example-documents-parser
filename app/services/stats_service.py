@@ -6,7 +6,12 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.models import Document, Tag, document_tags
-from app.schemas.stats import DuplicateGroupSummary, DuplicateStats, QualityScoreDistribution, StatsResponse
+from app.schemas.stats import (
+    DuplicateGroupSummary,
+    DuplicateStats,
+    QualityScoreDistribution,
+    StatsResponse,
+)
 
 HISTOGRAM_BUCKET_WIDTH = 10
 HISTOGRAM_BUCKET_COUNT = 10
@@ -28,7 +33,9 @@ def get_stats(db: Session) -> StatsResponse:
 
 
 def _count_by(db: Session, column) -> dict[str, int]:
-    rows = db.execute(select(column, func.count()).group_by(column).order_by(func.count().desc())).all()
+    rows = db.execute(
+        select(column, func.count()).group_by(column).order_by(func.count().desc())
+    ).all()
     return dict(rows)
 
 
@@ -63,14 +70,17 @@ def _duplicate_stats(db: Session) -> DuplicateStats:
     total_duplicates = sum(group_sizes.values())
     avg_group_size = round(total_duplicates / total_groups, 2) if total_groups else 0.0
 
-    top_group_ids = sorted(group_sizes, key=lambda group_id: group_sizes[group_id], reverse=True)[:TOP_GROUPS_LIMIT]
+    top_group_ids = sorted(group_sizes, key=lambda group_id: group_sizes[group_id], reverse=True)[
+        :TOP_GROUPS_LIMIT
+    ]
 
     top_groups: list[DuplicateGroupSummary] = []
     if top_group_ids:
         canonical_docs = (
             db.execute(
                 select(Document).where(
-                    Document.duplicate_group_id.in_(top_group_ids), Document.is_canonical.is_(True)
+                    Document.duplicate_group_id.in_(top_group_ids),
+                    Document.is_canonical.is_(True),
                 )
             )
             .scalars()
@@ -99,7 +109,9 @@ def _duplicate_stats(db: Session) -> DuplicateStats:
 def _quality_score_distribution(db: Session) -> QualityScoreDistribution:
     scores = list(
         db.execute(
-            select(Document.quality_score).where(Document.quality_score.is_not(None)).order_by(Document.quality_score)
+            select(Document.quality_score)
+            .where(Document.quality_score.is_not(None))
+            .order_by(Document.quality_score)
         )
         .scalars()
         .all()
@@ -111,11 +123,27 @@ def _quality_score_distribution(db: Session) -> QualityScoreDistribution:
         histogram[bucket] += 1
 
     if not scores:
-        return QualityScoreDistribution(min=None, max=None, mean=None, median=None, p25=None, p75=None, histogram=histogram)
+        return QualityScoreDistribution(
+            min=None,
+            max=None,
+            mean=None,
+            median=None,
+            p25=None,
+            p75=None,
+            histogram=histogram,
+        )
 
     if len(scores) == 1:
         value = scores[0]
-        return QualityScoreDistribution(min=value, max=value, mean=value, median=value, p25=value, p75=value, histogram=histogram)
+        return QualityScoreDistribution(
+            min=value,
+            max=value,
+            mean=value,
+            median=value,
+            p25=value,
+            p75=value,
+            histogram=histogram,
+        )
 
     p25, median, p75 = statistics.quantiles(scores, n=4, method="inclusive")
     return QualityScoreDistribution(

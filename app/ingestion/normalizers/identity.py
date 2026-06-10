@@ -56,7 +56,10 @@ def normalize_source_name(value: object) -> tuple[str | None, str | None]:
     if isinstance(value, int):
         return str(value), None
     if not isinstance(value, str):
-        return None, f"unexpected type for source_name: {type(value).__name__}: {value!r}"
+        return (
+            None,
+            f"unexpected type for source_name: {type(value).__name__}: {value!r}",
+        )
 
     text = value.strip()
     if not text or text.lower() == "unknown":

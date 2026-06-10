@@ -10,7 +10,12 @@ _counter = itertools.count(1)
 
 def make_run(db_session) -> IngestionRun:
     n = next(_counter)
-    run = IngestionRun(source_file=f"f{n}.jsonl", file_hash=f"hash{n}", staged_path=f"/tmp/f{n}.jsonl", status="completed")
+    run = IngestionRun(
+        source_file=f"f{n}.jsonl",
+        file_hash=f"hash{n}",
+        staged_path=f"/tmp/f{n}.jsonl",
+        status="completed",
+    )
     db_session.add(run)
     db_session.commit()
     db_session.refresh(run)
@@ -18,11 +23,15 @@ def make_run(db_session) -> IngestionRun:
 
 
 def unknown_author_id(db_session) -> int:
-    return db_session.scalar(select(Author.id).where(Author.normalized_name == UNKNOWN_NORMALIZED_NAME))
+    return db_session.scalar(
+        select(Author.id).where(Author.normalized_name == UNKNOWN_NORMALIZED_NAME)
+    )
 
 
 def unknown_org_id(db_session) -> int:
-    return db_session.scalar(select(Organization.id).where(Organization.normalized_name == UNKNOWN_NORMALIZED_NAME))
+    return db_session.scalar(
+        select(Organization.id).where(Organization.normalized_name == UNKNOWN_NORMALIZED_NAME)
+    )
 
 
 def _upsert_tags(db_session, names: list[str]) -> list[Tag]:

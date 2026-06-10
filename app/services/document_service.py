@@ -42,7 +42,9 @@ def _apply_filters(
     if tag is not None:
         stmt = stmt.join(Document.tags).where(func.lower(Tag.name) == tag.lower())
     if organization is not None:
-        stmt = stmt.join(Document.organization).where(func.lower(Organization.name) == organization.lower())
+        stmt = stmt.join(Document.organization).where(
+            func.lower(Organization.name) == organization.lower()
+        )
     if status is not None:
         stmt = stmt.where(Document.status == status)
     if document_type is not None:
@@ -53,7 +55,13 @@ def _apply_filters(
         stmt = stmt.where(Document.region == region)
     if q is not None:
         like = f"%{q}%"
-        stmt = stmt.where(or_(Document.title.ilike(like), Document.abstract.ilike(like), Document.body.ilike(like)))
+        stmt = stmt.where(
+            or_(
+                Document.title.ilike(like),
+                Document.abstract.ilike(like),
+                Document.body.ilike(like),
+            )
+        )
     if canonical_only:
         stmt = stmt.where(Document.is_canonical.isnot(False))
     if min_quality_score is not None:
@@ -97,12 +105,17 @@ def list_documents(
         min_quality_score=min_quality_score,
     )
 
-    count_stmt = _apply_filters(select(func.count(func.distinct(Document.id))).select_from(Document), **filter_kwargs)
+    count_stmt = _apply_filters(
+        select(func.count(func.distinct(Document.id))).select_from(Document),
+        **filter_kwargs,
+    )
     total = db.scalar(count_stmt)
 
     stmt = _apply_filters(select(Document), **filter_kwargs)
     stmt = stmt.options(
-        selectinload(Document.author), selectinload(Document.organization), selectinload(Document.tags)
+        selectinload(Document.author),
+        selectinload(Document.organization),
+        selectinload(Document.tags),
     )
 
     sort_column = _SORT_COLUMNS[sort_by]
@@ -128,7 +141,9 @@ def get_document(db: Session, document_id: int) -> DocumentDetail | None:
     document = db.execute(
         select(Document)
         .options(
-            selectinload(Document.author), selectinload(Document.organization), selectinload(Document.tags)
+            selectinload(Document.author),
+            selectinload(Document.organization),
+            selectinload(Document.tags),
         )
         .where(Document.id == document_id)
     ).scalar_one_or_none()

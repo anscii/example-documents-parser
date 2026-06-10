@@ -11,7 +11,12 @@ _line_numbers = itertools.count(1)
 
 
 def _make_run(db_session) -> IngestionRun:
-    run = IngestionRun(source_file="f.jsonl", file_hash="h", staged_path="/tmp/f.jsonl", status="processing")
+    run = IngestionRun(
+        source_file="f.jsonl",
+        file_hash="h",
+        staged_path="/tmp/f.jsonl",
+        status="processing",
+    )
     db_session.add(run)
     db_session.commit()
     db_session.refresh(run)
@@ -19,11 +24,15 @@ def _make_run(db_session) -> IngestionRun:
 
 
 def _unknown_author_id(db_session) -> int:
-    return db_session.scalar(select(Author.id).where(Author.normalized_name == UNKNOWN_NORMALIZED_NAME))
+    return db_session.scalar(
+        select(Author.id).where(Author.normalized_name == UNKNOWN_NORMALIZED_NAME)
+    )
 
 
 def _unknown_org_id(db_session) -> int:
-    return db_session.scalar(select(Organization.id).where(Organization.normalized_name == UNKNOWN_NORMALIZED_NAME))
+    return db_session.scalar(
+        select(Organization.id).where(Organization.normalized_name == UNKNOWN_NORMALIZED_NAME)
+    )
 
 
 def _make_document(db_session, run, raw_data=None, **overrides) -> Document:
@@ -84,7 +93,9 @@ def test_many_citation_sentinel_uses_p90(db_session):
     _make_document(db_session, run, citation_count=10)
     _make_document(db_session, run, citation_count=20)
     _make_document(db_session, run, citation_count=30)
-    doc_many = _make_document(db_session, run, citation_count=None, raw_data={"citation_count": "many"})
+    doc_many = _make_document(
+        db_session, run, citation_count=None, raw_data={"citation_count": "many"}
+    )
 
     scoring_worker.process_batch(db_session, batch_size=10)
 
@@ -95,7 +106,9 @@ def test_many_citation_sentinel_uses_p90(db_session):
 def test_high_relevance_sentinel(db_session):
     run = _make_run(db_session)
 
-    doc = _make_document(db_session, run, relevance_score=None, raw_data={"relevance_score": "high"})
+    doc = _make_document(
+        db_session, run, relevance_score=None, raw_data={"relevance_score": "high"}
+    )
 
     scoring_worker.process_batch(db_session, batch_size=10)
 

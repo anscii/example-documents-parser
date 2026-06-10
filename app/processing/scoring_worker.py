@@ -50,7 +50,9 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
 
     today = date.today()
     for document in pending:
-        document.quality_score = _quality_score(document, document.raw_document.raw_data, cc_sorted, p90_value, today)
+        document.quality_score = _quality_score(
+            document, document.raw_document.raw_data, cc_sorted, p90_value, today
+        )
 
     db.commit()
 
@@ -60,7 +62,9 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
 
 
 def _count_pending(db: Session) -> int:
-    return db.scalar(select(func.count()).select_from(Document).where(Document.quality_score.is_(None)))
+    return db.scalar(
+        select(func.count()).select_from(Document).where(Document.quality_score.is_(None))
+    )
 
 
 def _citation_count_distribution(db: Session) -> tuple[list[int], int | None]:
@@ -94,13 +98,19 @@ def _quality_score(
     citation_value = document.citation_count
     if citation_value is None and p90_value is not None:
         raw_citation = raw_data.get("citation_count")
-        if isinstance(raw_citation, str) and raw_citation.strip().lower() == _MANY_CITATION_SENTINEL:
+        if (
+            isinstance(raw_citation, str)
+            and raw_citation.strip().lower() == _MANY_CITATION_SENTINEL
+        ):
             citation_value = p90_value
 
     relevance_value = document.relevance_score
     if relevance_value is None:
         raw_relevance = raw_data.get("relevance_score")
-        if isinstance(raw_relevance, str) and raw_relevance.strip().lower() == _HIGH_RELEVANCE_SENTINEL:
+        if (
+            isinstance(raw_relevance, str)
+            and raw_relevance.strip().lower() == _HIGH_RELEVANCE_SENTINEL
+        ):
             relevance_value = _HIGH_RELEVANCE_VALUE
         else:
             relevance_value = 0.0

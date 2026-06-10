@@ -15,8 +15,17 @@ from app.db.session import SessionLocal
 from app.ingestion.file_io import compute_file_hash, save_staged_file
 from app.logging_config import run_log_handler
 from app.models import Document, IngestionError, IngestionRun, RawDocument
-from app.processing import duplicates_worker, normalize_worker, raw_load_worker, scoring_worker
-from app.schemas.ingestion import IngestionErrorSummary, IngestionRunDetail, IngestionRunListItem
+from app.processing import (
+    duplicates_worker,
+    normalize_worker,
+    raw_load_worker,
+    scoring_worker,
+)
+from app.schemas.ingestion import (
+    IngestionErrorSummary,
+    IngestionRunDetail,
+    IngestionRunListItem,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -125,7 +134,9 @@ def resume_pending_runs() -> None:
     """Startup hook: re-launch any run that didn't reach a terminal state."""
     db = SessionLocal()
     try:
-        run_ids = db.scalars(select(IngestionRun.id).where(IngestionRun.status.notin_(_TERMINAL_STATUSES))).all()
+        run_ids = db.scalars(
+            select(IngestionRun.id).where(IngestionRun.status.notin_(_TERMINAL_STATUSES))
+        ).all()
     finally:
         db.close()
 
@@ -170,7 +181,9 @@ def build_run_detail(db: Session, run: IngestionRun) -> IngestionRunDetail:
         .where(RawDocument.ingestion_run_id == run.id, Document.quality_score.is_(None))
     )
 
-    error_count = db.scalar(select(func.count()).select_from(IngestionError).where(IngestionError.run_id == run.id))
+    error_count = db.scalar(
+        select(func.count()).select_from(IngestionError).where(IngestionError.run_id == run.id)
+    )
 
     sample_errors = (
         db.execute(
