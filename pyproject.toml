@@ -1,5 +1,5 @@
 [project]
-name = "nitka-documents-parser"
+name = "example-documents-parser"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"

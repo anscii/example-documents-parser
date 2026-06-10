@@ -2,7 +2,7 @@
 
 ## Context
 
-Greenfield take-home project (`nitka_documents_parser`, not yet a git repo). Contains the task spec (`Nitka Task_ Document Intake and Review Service.md`) and 5 JSONL files (~11,000 records total) under `input_docs/` with deliberately noisy "climate policy document" metadata, plus `input_docs/__MACOSX/` (macOS junk, irrelevant once ingestion is upload-based).
+Greenfield take-home project (`example_documents_parser`, not yet a git repo). Contains the task spec (`Task_ Document Intake and Review Service.md`) and 5 JSONL files (~11,000 records total) under `input_docs/` with deliberately noisy "climate policy document" metadata, plus `input_docs/__MACOSX/` (macOS junk, irrelevant once ingestion is upload-based).
 
 Build a backend that ingests JSONL document data into a relational DB with a normalized schema (documents, authors, organizations, tags, ingestion runs/errors), exposes a REST API (`POST /ingestions`, `GET /documents`, `GET /documents/{id}`, `GET /stats`), and implements 3 extra processing steps (duplicate detection, scoring/ranking, document classification). Deliverables: README (run instructions, architecture, assumptions, future improvements), DB schema/migrations, sample execution log, curl examples, stats examples.
 
@@ -85,7 +85,7 @@ To be written to the project repo once this plan is approved (in addition to the
 ## 1. Project Structure
 
 ```
-nitka_documents_parser/
+example_documents_parser/
 ├── pyproject.toml
 ├── .gitignore              # data/, .venv/, __pycache__, *.db, logs/
 ├── README.md
