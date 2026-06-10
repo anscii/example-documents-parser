@@ -32,13 +32,13 @@ A shared placeholder row in `authors` or `organizations` (`normalized_name="__un
 A non-fatal note attached to a Document when one of its raw field values could not be cleanly interpreted (e.g. `citation_count: "many"`).
 
 **Ingestion Error**:
-A raw line from an Ingestion Run's source file that could not be processed at all (invalid JSON, not a JSON object, or the `{"broken": true}` stub). Never becomes a Raw Record.
+A raw line from an Ingestion Run's source file that could not be processed at all (invalid JSON, not a JSON object, an empty JSON object `{}`, or the `{"broken": true}` stub). Never becomes a Raw Record.
 
 ## Example dialogue
 
-> **Dev**: The dashboard shows 10,555 Documents but the source files only have ~10,333 "real-looking" records — what gives?
+> **Dev**: The dashboard shows 10,333 Documents out of 11,000 source lines — where did the other 667 go?
 >
-> **Domain expert**: Right — 222 of the source lines were empty objects (`{}`). Those are still valid Raw Records, so each becomes a Document with every field null. They're not Ingestion Errors; those are reserved for lines that couldn't even be parsed as a JSON object — `[]`, `{"broken": true}`, or invalid JSON.
+> **Domain expert**: Those are all Ingestion Errors — lines that never became a Raw Record. Most are `[]` (`error_category="not_object"`) or `{"broken": true}` stubs (`"broken_stub"`), but 222 of them are empty JSON objects `{}` (`"empty"`) — structurally valid JSON, but with no usable fields, so they're rejected before reaching `raw_documents` rather than becoming all-null Documents.
 >
 > **Dev**: Why does `/documents/42` show a `duplicate_group` but `is_canonical: false`?
 >

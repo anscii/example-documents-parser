@@ -4,7 +4,7 @@ All examples assume the server is running at `http://localhost:8000`
 (`uv run uvicorn app.main:app --reload --port 8000`).
 
 The `GET` examples below were captured against a database that already contains
-the full ingested corpus (10,555 documents from all five
+the full ingested corpus (10,333 documents from all five
 `input_docs/documents_*.jsonl` files — see
 [`execution_log_sample.md`](./execution_log_sample.md) and
 [`stats_examples.md`](./stats_examples.md)). The `POST /ingestions` examples
@@ -88,11 +88,11 @@ $ curl -s "http://localhost:8000/ingestions?limit=2&offset=0" | python3 -m json.
             "source_file": "documents_5.jsonl",
             "file_hash": "037256d03cff29e532b1b3c90e81671e0a79a58b7d21b9f59d1f35ff4deb208a",
             "status": "completed",
-            "started_at": "2026-06-10T15:48:57",
-            "finished_at": "2026-06-10T15:48:59.463822",
+            "started_at": "2026-06-10T21:21:08",
+            "finished_at": "2026-06-10T21:21:10.026820",
             "total_lines": 500,
-            "raw_loaded_count": 474,
-            "skipped_count": 26,
+            "raw_loaded_count": 462,
+            "skipped_count": 38,
             "error_message": null
         },
         {
@@ -100,11 +100,11 @@ $ curl -s "http://localhost:8000/ingestions?limit=2&offset=0" | python3 -m json.
             "source_file": "documents_4.jsonl",
             "file_hash": "dbcfeb071ad0b72ad0e1cd2dcbe983541a0bf8caeba1fb0fd8786ec473d22f29",
             "status": "completed",
-            "started_at": "2026-06-10T15:48:55",
-            "finished_at": "2026-06-10T15:48:57.693003",
+            "started_at": "2026-06-10T21:21:06",
+            "finished_at": "2026-06-10T21:21:08.175872",
             "total_lines": 1500,
-            "raw_loaded_count": 1436,
-            "skipped_count": 64,
+            "raw_loaded_count": 1396,
+            "skipped_count": 104,
             "error_message": null
         }
     ],
@@ -133,23 +133,23 @@ $ curl -s "http://localhost:8000/ingestions/1" | python3 -m json.tool
     "source_file": "documents_1.jsonl",
     "file_hash": "ed6d18c4737c711f89db71f26fd3a1a34c44db8c619283b6d78accfd743cd8ab",
     "status": "completed",
-    "started_at": "2026-06-10T15:48:49",
-    "finished_at": "2026-06-10T15:48:51.227808",
+    "started_at": "2026-06-10T21:20:59",
+    "finished_at": "2026-06-10T21:21:01.739217",
     "total_lines": 4000,
-    "raw_loaded_count": 3844,
-    "skipped_count": 156,
+    "raw_loaded_count": 3766,
+    "skipped_count": 234,
     "error_message": null,
     "normalize_pending": 0,
     "dedup_pending": 0,
     "scoring_pending": 0,
-    "error_count": 156,
+    "error_count": 234,
     "sample_errors": [
+        {"line_number": 7, "error_category": "empty", "error_detail": "expected a non-empty JSON object"},
+        {"line_number": 68, "error_category": "empty", "error_detail": "expected a non-empty JSON object"},
         {"line_number": 87, "error_category": "not_object", "error_detail": "expected a JSON object, got list"},
         {"line_number": 88, "error_category": "broken_stub", "error_detail": "broken stub record"},
-        {"line_number": 132, "error_category": "broken_stub", "error_detail": "broken stub record"},
-        {"line_number": 177, "error_category": "broken_stub", "error_detail": "broken stub record"},
-        {"line_number": 189, "error_category": "broken_stub", "error_detail": "broken stub record"}
-        // ... 15 more (sample_errors is capped at 20; error_count=156 is the true total)
+        {"line_number": 92, "error_category": "empty", "error_detail": "expected a non-empty JSON object"}
+        // ... 15 more (sample_errors is capped at 20; error_count=234 is the true total)
     ]
 }
 ```
@@ -257,7 +257,7 @@ $ curl -s "http://localhost:8000/documents?page_size=1" | python3 -m json.tool
             "duplicate_group_id": 1
         }
     ],
-    "total": 10555,
+    "total": 10333,
     "page": 1,
     "page_size": 1
 }
@@ -285,7 +285,7 @@ $ curl -s -G "http://localhost:8000/documents" \
 
 ```
 total: 404
-[(9, 'published', 'report'), (28, 'published', 'report')]
+[(8, 'published', 'report'), (27, 'published', 'report')]
 ```
 
 ### `published_after` / `published_before`
@@ -298,7 +298,7 @@ $ curl -s -G "http://localhost:8000/documents" \
 
 ```
 total: 1239
-[(4, '2023-12-13'), (16, '2023-06-21')]
+[(4, '2023-12-13'), (15, '2023-06-21')]
 ```
 
 ### `q` (substring search over title/abstract/body)
@@ -325,7 +325,7 @@ $ curl -s -G "http://localhost:8000/documents" --data-urlencode "canonical_only=
 ```
 
 ```
-total: 2537
+total: 2315
 [(5, True, None), (6, True, None)]
 ```
 
@@ -340,7 +340,7 @@ $ curl -s -G "http://localhost:8000/documents" \
 
 ```
 total: 456
-[(3, 100.0), (43, 100.0), (117, 100.0)]
+[(3, 100.0), (42, 100.0), (114, 100.0)]
 ```
 
 ### `organization`
@@ -366,7 +366,7 @@ $ curl -s -G "http://localhost:8000/documents" \
 
 ```
 total: 98
-[(6, 'en', 'Europe'), (33, 'en', 'Europe')]
+[(6, 'en', 'Europe'), (32, 'en', 'Europe')]
 ```
 
 ---
@@ -422,7 +422,7 @@ $ curl -s "http://localhost:8000/documents/5" | python3 -m json.tool
     "open_access": true,
     "peer_reviewed": true,
     "normalization_warnings": null,
-    "created_at": "2026-06-10T15:48:49",
+    "created_at": "2026-06-10T21:21:00",
     "duplicate_group": null
 }
 ```
@@ -433,24 +433,24 @@ Note `status_raw: "False"` (the source had `"status": false`, normalized to
 
 ### A 2-member duplicate group (canonical + duplicate)
 
-`/documents/774` (canonical) and `/documents/10411` (duplicate) share
+`/documents/759` (canonical) and `/documents/10194` (duplicate) share
 `normalized_title="transport decarbonisation pathways"` and the same
 `author_id`, giving `duplicate_confidence=0.75` (`0.5` title match + `0.25`
 shared author):
 
 ```bash
-$ curl -s "http://localhost:8000/documents/774" | python3 -c "import sys,json;d=json.load(sys.stdin);print(json.dumps({k:d[k] for k in ('id','title','author','is_canonical','duplicate_group_id','duplicate_group')}, indent=2))"
+$ curl -s "http://localhost:8000/documents/759" | python3 -c "import sys,json;d=json.load(sys.stdin);print(json.dumps({k:d[k] for k in ('id','title','author','is_canonical','duplicate_group_id','duplicate_group')}, indent=2))"
 ```
 
 ```json
 {
-    "id": 774,
+    "id": 759,
     "title": "Transport Decarbonisation Pathways",
     "author": {"id": 25, "name": "Kenji Yamamoto"},
     "is_canonical": true,
-    "duplicate_group_id": 774,
+    "duplicate_group_id": 759,
     "duplicate_group": {
-        "group_id": 774,
+        "group_id": 759,
         "group_size": 2,
         "is_canonical": true,
         "confidence": 0.75
@@ -459,18 +459,18 @@ $ curl -s "http://localhost:8000/documents/774" | python3 -c "import sys,json;d=
 ```
 
 ```bash
-$ curl -s "http://localhost:8000/documents/10411" | python3 -c "import sys,json;d=json.load(sys.stdin);print(json.dumps({k:d[k] for k in ('id','title','author','is_canonical','duplicate_group_id','duplicate_group')}, indent=2))"
+$ curl -s "http://localhost:8000/documents/10194" | python3 -c "import sys,json;d=json.load(sys.stdin);print(json.dumps({k:d[k] for k in ('id','title','author','is_canonical','duplicate_group_id','duplicate_group')}, indent=2))"
 ```
 
 ```json
 {
-    "id": 10411,
+    "id": 10194,
     "title": "Transport Decarbonisation Pathways",
     "author": {"id": 25, "name": "Kenji Yamamoto"},
     "is_canonical": false,
-    "duplicate_group_id": 774,
+    "duplicate_group_id": 759,
     "duplicate_group": {
-        "group_id": 774,
+        "group_id": 759,
         "group_size": 2,
         "is_canonical": false,
         "confidence": 0.75
@@ -480,20 +480,20 @@ $ curl -s "http://localhost:8000/documents/10411" | python3 -c "import sys,json;
 
 ### A large duplicate group (confidence capped at 1.0)
 
-`/documents/12` belongs to a 169-member group where it agrees with at least
+`/documents/11` belongs to a 169-member group where it agrees with at least
 one other member on author/source plus organization/language/region, hitting
 the `1.0` cap:
 
 ```bash
-$ curl -s "http://localhost:8000/documents/12" | python3 -c "import sys,json;d=json.load(sys.stdin);print(json.dumps({k:d[k] for k in ('id','title','duplicate_group','normalization_warnings')}, indent=2))"
+$ curl -s "http://localhost:8000/documents/11" | python3 -c "import sys,json;d=json.load(sys.stdin);print(json.dumps({k:d[k] for k in ('id','title','duplicate_group','normalization_warnings')}, indent=2))"
 ```
 
 ```json
 {
-    "id": 12,
+    "id": 11,
     "title": "Green Hydrogen: Cost Trajectories",
     "duplicate_group": {
-        "group_id": 12,
+        "group_id": 11,
         "group_size": 169,
         "is_canonical": false,
         "confidence": 1.0
@@ -523,7 +523,7 @@ Corpus-wide aggregate statistics (`total_documents`, `by_status`,
 $ curl -s http://localhost:8000/stats | python3 -m json.tool
 ```
 
-A full real response (10,555 documents) is in
+A full real response (10,333 documents) is in
 [`stats_examples.md`](./stats_examples.md), including notes on bucket
 semantics (`unknown` buckets for `region`/`language`/`document_type`,
 histogram bucketing, etc.).

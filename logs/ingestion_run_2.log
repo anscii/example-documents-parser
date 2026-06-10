@@ -1,0 +1,1137 @@
+2026-06-10 23:21:02,019 INFO app.services.ingestion_service: run 2: pipeline started (source_file=documents_2.jsonl, status=queued)
+2026-06-10 23:21:02,020 ERROR app.processing.raw_load_worker: run 2: line 20 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,020 ERROR app.processing.raw_load_worker: run 2: line 27 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,020 ERROR app.processing.raw_load_worker: run 2: line 45 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,021 ERROR app.processing.raw_load_worker: run 2: line 62 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,021 ERROR app.processing.raw_load_worker: run 2: line 69 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,022 ERROR app.processing.raw_load_worker: run 2: line 96 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,022 ERROR app.processing.raw_load_worker: run 2: line 97 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,023 ERROR app.processing.raw_load_worker: run 2: line 114 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,023 ERROR app.processing.raw_load_worker: run 2: line 119 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,024 ERROR app.processing.raw_load_worker: run 2: line 162 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,024 ERROR app.processing.raw_load_worker: run 2: line 176 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,024 ERROR app.processing.raw_load_worker: run 2: line 179 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,024 ERROR app.processing.raw_load_worker: run 2: line 185 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,024 ERROR app.processing.raw_load_worker: run 2: line 207 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,025 ERROR app.processing.raw_load_worker: run 2: line 273 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,025 ERROR app.processing.raw_load_worker: run 2: line 275 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,026 ERROR app.processing.raw_load_worker: run 2: line 287 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,026 ERROR app.processing.raw_load_worker: run 2: line 312 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,026 ERROR app.processing.raw_load_worker: run 2: line 318 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,026 ERROR app.processing.raw_load_worker: run 2: line 326 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,026 ERROR app.processing.raw_load_worker: run 2: line 331 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,027 ERROR app.processing.raw_load_worker: run 2: line 364 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,027 ERROR app.processing.raw_load_worker: run 2: line 380 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,027 ERROR app.processing.raw_load_worker: run 2: line 390 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,028 ERROR app.processing.raw_load_worker: run 2: line 447 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,029 ERROR app.processing.raw_load_worker: run 2: line 529 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,029 ERROR app.processing.raw_load_worker: run 2: line 536 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,030 ERROR app.processing.raw_load_worker: run 2: line 537 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,030 ERROR app.processing.raw_load_worker: run 2: line 584 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,030 ERROR app.processing.raw_load_worker: run 2: line 604 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,031 ERROR app.processing.raw_load_worker: run 2: line 611 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,031 ERROR app.processing.raw_load_worker: run 2: line 643 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,031 ERROR app.processing.raw_load_worker: run 2: line 645 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,032 ERROR app.processing.raw_load_worker: run 2: line 705 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,032 ERROR app.processing.raw_load_worker: run 2: line 732 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,033 ERROR app.processing.raw_load_worker: run 2: line 745 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,033 ERROR app.processing.raw_load_worker: run 2: line 763 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,035 ERROR app.processing.raw_load_worker: run 2: line 810 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,035 ERROR app.processing.raw_load_worker: run 2: line 812 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,035 ERROR app.processing.raw_load_worker: run 2: line 818 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,036 ERROR app.processing.raw_load_worker: run 2: line 857 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,036 ERROR app.processing.raw_load_worker: run 2: line 870 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,036 ERROR app.processing.raw_load_worker: run 2: line 893 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,036 ERROR app.processing.raw_load_worker: run 2: line 904 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,037 ERROR app.processing.raw_load_worker: run 2: line 921 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,037 ERROR app.processing.raw_load_worker: run 2: line 939 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,037 ERROR app.processing.raw_load_worker: run 2: line 947 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,038 ERROR app.processing.raw_load_worker: run 2: line 1015 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,038 ERROR app.processing.raw_load_worker: run 2: line 1016 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,038 ERROR app.processing.raw_load_worker: run 2: line 1017 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,038 ERROR app.processing.raw_load_worker: run 2: line 1023 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,038 ERROR app.processing.raw_load_worker: run 2: line 1040 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,039 ERROR app.processing.raw_load_worker: run 2: line 1049 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,039 ERROR app.processing.raw_load_worker: run 2: line 1105 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,040 ERROR app.processing.raw_load_worker: run 2: line 1149 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,041 ERROR app.processing.raw_load_worker: run 2: line 1161 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,041 ERROR app.processing.raw_load_worker: run 2: line 1166 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,041 ERROR app.processing.raw_load_worker: run 2: line 1174 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,041 ERROR app.processing.raw_load_worker: run 2: line 1187 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,042 ERROR app.processing.raw_load_worker: run 2: line 1193 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,042 ERROR app.processing.raw_load_worker: run 2: line 1202 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,042 ERROR app.processing.raw_load_worker: run 2: line 1209 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,043 ERROR app.processing.raw_load_worker: run 2: line 1258 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,043 ERROR app.processing.raw_load_worker: run 2: line 1280 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,043 ERROR app.processing.raw_load_worker: run 2: line 1283 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,044 ERROR app.processing.raw_load_worker: run 2: line 1288 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,044 ERROR app.processing.raw_load_worker: run 2: line 1314 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,045 ERROR app.processing.raw_load_worker: run 2: line 1350 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,047 ERROR app.processing.raw_load_worker: run 2: line 1423 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,047 ERROR app.processing.raw_load_worker: run 2: line 1429 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,049 ERROR app.processing.raw_load_worker: run 2: line 1451 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,049 ERROR app.processing.raw_load_worker: run 2: line 1466 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,051 ERROR app.processing.raw_load_worker: run 2: line 1503 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,052 ERROR app.processing.raw_load_worker: run 2: line 1537 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,052 ERROR app.processing.raw_load_worker: run 2: line 1546 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,052 ERROR app.processing.raw_load_worker: run 2: line 1550 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,053 ERROR app.processing.raw_load_worker: run 2: line 1573 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,053 ERROR app.processing.raw_load_worker: run 2: line 1584 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,053 ERROR app.processing.raw_load_worker: run 2: line 1588 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,056 ERROR app.processing.raw_load_worker: run 2: line 1646 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,056 ERROR app.processing.raw_load_worker: run 2: line 1667 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,056 ERROR app.processing.raw_load_worker: run 2: line 1677 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,057 ERROR app.processing.raw_load_worker: run 2: line 1710 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,057 ERROR app.processing.raw_load_worker: run 2: line 1771 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,058 ERROR app.processing.raw_load_worker: run 2: line 1775 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,058 ERROR app.processing.raw_load_worker: run 2: line 1788 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,058 ERROR app.processing.raw_load_worker: run 2: line 1807 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,058 ERROR app.processing.raw_load_worker: run 2: line 1814 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,058 ERROR app.processing.raw_load_worker: run 2: line 1824 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,059 ERROR app.processing.raw_load_worker: run 2: line 1831 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,059 ERROR app.processing.raw_load_worker: run 2: line 1833 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,059 ERROR app.processing.raw_load_worker: run 2: line 1845 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,059 ERROR app.processing.raw_load_worker: run 2: line 1849 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,059 ERROR app.processing.raw_load_worker: run 2: line 1850 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,059 ERROR app.processing.raw_load_worker: run 2: line 1864 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,059 ERROR app.processing.raw_load_worker: run 2: line 1868 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,059 ERROR app.processing.raw_load_worker: run 2: line 1877 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,060 ERROR app.processing.raw_load_worker: run 2: line 1898 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,060 ERROR app.processing.raw_load_worker: run 2: line 1924 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,061 ERROR app.processing.raw_load_worker: run 2: line 1952 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,061 ERROR app.processing.raw_load_worker: run 2: line 1960 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,061 ERROR app.processing.raw_load_worker: run 2: line 1964 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,061 ERROR app.processing.raw_load_worker: run 2: line 1971 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,061 ERROR app.processing.raw_load_worker: run 2: line 1977 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,061 ERROR app.processing.raw_load_worker: run 2: line 2004 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,062 ERROR app.processing.raw_load_worker: run 2: line 2013 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,062 ERROR app.processing.raw_load_worker: run 2: line 2015 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,062 ERROR app.processing.raw_load_worker: run 2: line 2023 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,062 ERROR app.processing.raw_load_worker: run 2: line 2035 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,062 ERROR app.processing.raw_load_worker: run 2: line 2040 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,063 ERROR app.processing.raw_load_worker: run 2: line 2092 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,063 ERROR app.processing.raw_load_worker: run 2: line 2101 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,063 ERROR app.processing.raw_load_worker: run 2: line 2112 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,063 ERROR app.processing.raw_load_worker: run 2: line 2122 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,063 ERROR app.processing.raw_load_worker: run 2: line 2123 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,064 ERROR app.processing.raw_load_worker: run 2: line 2143 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,064 ERROR app.processing.raw_load_worker: run 2: line 2166 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,064 ERROR app.processing.raw_load_worker: run 2: line 2191 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,065 ERROR app.processing.raw_load_worker: run 2: line 2204 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,065 ERROR app.processing.raw_load_worker: run 2: line 2214 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,065 ERROR app.processing.raw_load_worker: run 2: line 2252 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,065 ERROR app.processing.raw_load_worker: run 2: line 2263 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,065 ERROR app.processing.raw_load_worker: run 2: line 2266 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,066 ERROR app.processing.raw_load_worker: run 2: line 2271 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,066 ERROR app.processing.raw_load_worker: run 2: line 2274 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,066 ERROR app.processing.raw_load_worker: run 2: line 2277 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,067 ERROR app.processing.raw_load_worker: run 2: line 2337 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,067 ERROR app.processing.raw_load_worker: run 2: line 2350 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,067 ERROR app.processing.raw_load_worker: run 2: line 2364 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,067 ERROR app.processing.raw_load_worker: run 2: line 2365 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,067 ERROR app.processing.raw_load_worker: run 2: line 2381 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,067 ERROR app.processing.raw_load_worker: run 2: line 2387 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,068 ERROR app.processing.raw_load_worker: run 2: line 2404 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,068 ERROR app.processing.raw_load_worker: run 2: line 2431 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,069 ERROR app.processing.raw_load_worker: run 2: line 2471 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,069 ERROR app.processing.raw_load_worker: run 2: line 2473 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,071 ERROR app.processing.raw_load_worker: run 2: line 2568 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,071 ERROR app.processing.raw_load_worker: run 2: line 2571 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,071 ERROR app.processing.raw_load_worker: run 2: line 2605 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,072 ERROR app.processing.raw_load_worker: run 2: line 2624 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,072 ERROR app.processing.raw_load_worker: run 2: line 2629 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,073 ERROR app.processing.raw_load_worker: run 2: line 2689 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,073 ERROR app.processing.raw_load_worker: run 2: line 2690 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,073 ERROR app.processing.raw_load_worker: run 2: line 2695 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,073 ERROR app.processing.raw_load_worker: run 2: line 2718 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,073 ERROR app.processing.raw_load_worker: run 2: line 2724 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,074 ERROR app.processing.raw_load_worker: run 2: line 2735 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,074 ERROR app.processing.raw_load_worker: run 2: line 2749 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,074 ERROR app.processing.raw_load_worker: run 2: line 2750 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,075 ERROR app.processing.raw_load_worker: run 2: line 2780 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,075 ERROR app.processing.raw_load_worker: run 2: line 2788 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,075 ERROR app.processing.raw_load_worker: run 2: line 2801 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,075 ERROR app.processing.raw_load_worker: run 2: line 2827 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,076 ERROR app.processing.raw_load_worker: run 2: line 2844 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,076 ERROR app.processing.raw_load_worker: run 2: line 2850 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,076 ERROR app.processing.raw_load_worker: run 2: line 2870 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,076 ERROR app.processing.raw_load_worker: run 2: line 2884 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,077 ERROR app.processing.raw_load_worker: run 2: line 2901 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,077 ERROR app.processing.raw_load_worker: run 2: line 2906 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,077 ERROR app.processing.raw_load_worker: run 2: line 2916 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,077 ERROR app.processing.raw_load_worker: run 2: line 2934 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,078 ERROR app.processing.raw_load_worker: run 2: line 2946 skipped (empty): expected a non-empty JSON object
+2026-06-10 23:21:02,078 ERROR app.processing.raw_load_worker: run 2: line 2963 skipped (not_object): expected a JSON object, got list
+2026-06-10 23:21:02,078 ERROR app.processing.raw_load_worker: run 2: line 2974 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,079 ERROR app.processing.raw_load_worker: run 2: line 2994 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,079 ERROR app.processing.raw_load_worker: run 2: line 2998 skipped (broken_stub): broken stub record
+2026-06-10 23:21:02,188 INFO app.processing.raw_load_worker: run 2: stage 0 complete - total_lines=3000 raw_loaded=2834 skipped=166
+2026-06-10 23:21:02,193 WARNING app.processing.normalize_worker: raw_document 3767 (external_id=doc-000000): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,193 WARNING app.processing.normalize_worker: raw_document 3769 (external_id=doc-000002): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,193 WARNING app.processing.normalize_worker: raw_document 3770 (external_id=doc-000003): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,193 WARNING app.processing.normalize_worker: raw_document 3772 (external_id=doc-000005): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,194 WARNING app.processing.normalize_worker: raw_document 3773 (external_id=doc-000006): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,194 WARNING app.processing.normalize_worker: raw_document 3774 (external_id=doc-000007): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,194 WARNING app.processing.normalize_worker: raw_document 3781 (external_id=doc-000014): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,195 WARNING app.processing.normalize_worker: raw_document 3785 (external_id=doc-000018): status: unrecognized status: ''; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,195 WARNING app.processing.normalize_worker: raw_document 3787 (external_id=doc-000021): status: unrecognized status: ''
+2026-06-10 23:21:02,195 WARNING app.processing.normalize_worker: raw_document 3791 (external_id=doc-000025): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,196 WARNING app.processing.normalize_worker: raw_document 3796 (external_id=doc-000031): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,196 WARNING app.processing.normalize_worker: raw_document 3797 (external_id=doc-000032): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,197 WARNING app.processing.normalize_worker: raw_document 3802 (external_id=doc-000037): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,197 WARNING app.processing.normalize_worker: raw_document 3804 (external_id=doc-000039): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,197 WARNING app.processing.normalize_worker: raw_document 3810 (external_id=doc-000046): status: unrecognized status: ''
+2026-06-10 23:21:02,197 WARNING app.processing.normalize_worker: raw_document 3812 (external_id=doc-000048): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,198 WARNING app.processing.normalize_worker: raw_document 3815 (external_id=None): status: unrecognized status: ''; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,198 WARNING app.processing.normalize_worker: raw_document 3817 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,198 WARNING app.processing.normalize_worker: raw_document 3821 (external_id=doc-000057): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,198 WARNING app.processing.normalize_worker: raw_document 3822 (external_id=doc-000058): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,199 WARNING app.processing.normalize_worker: raw_document 3826 (external_id=63): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,199 WARNING app.processing.normalize_worker: raw_document 3828 (external_id=doc-000065): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,199 WARNING app.processing.normalize_worker: raw_document 3829 (external_id=doc-000066): updated_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,199 WARNING app.processing.normalize_worker: raw_document 3833 (external_id=doc-000071): status: unrecognized status: ''
+2026-06-10 23:21:02,200 WARNING app.processing.normalize_worker: raw_document 3835 (external_id=doc-000073): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,200 WARNING app.processing.normalize_worker: raw_document 3837 (external_id=doc-000075): status: unrecognized status: ''
+2026-06-10 23:21:02,200 WARNING app.processing.normalize_worker: raw_document 3838 (external_id=doc-000076): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,200 WARNING app.processing.normalize_worker: raw_document 3839 (external_id=doc-000077): status: unrecognized status: ''
+2026-06-10 23:21:02,200 WARNING app.processing.normalize_worker: raw_document 3843 (external_id=doc-000081): status: unrecognized status: ''
+2026-06-10 23:21:02,201 WARNING app.processing.normalize_worker: raw_document 3845 (external_id=doc-000083): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,201 WARNING app.processing.normalize_worker: raw_document 3846 (external_id=doc-000084): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,201 WARNING app.processing.normalize_worker: raw_document 3847 (external_id=doc-000085): status: unrecognized status: ''
+2026-06-10 23:21:02,201 WARNING app.processing.normalize_worker: raw_document 3848 (external_id=doc-000086): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,201 WARNING app.processing.normalize_worker: raw_document 3850 (external_id=doc-000088): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,201 WARNING app.processing.normalize_worker: raw_document 3852 (external_id=doc-000090): status: unrecognized status: ''
+2026-06-10 23:21:02,201 WARNING app.processing.normalize_worker: raw_document 3853 (external_id=doc-000091): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,202 WARNING app.processing.normalize_worker: raw_document 3856 (external_id=doc-000094): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,202 WARNING app.processing.normalize_worker: raw_document 3857 (external_id=doc-000097): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,202 WARNING app.processing.normalize_worker: raw_document 3860 (external_id=None): status: unrecognized status: ''; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,202 WARNING app.processing.normalize_worker: raw_document 3864 (external_id=doc-000104): status: unrecognized status: ''
+2026-06-10 23:21:02,202 WARNING app.processing.normalize_worker: raw_document 3865 (external_id=doc-000105): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,203 WARNING app.processing.normalize_worker: raw_document 3866 (external_id=doc-000106): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,203 WARNING app.processing.normalize_worker: raw_document 3870 (external_id=doc-000110): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,204 WARNING app.processing.normalize_worker: raw_document 3881 (external_id=doc-000123): status: unrecognized status: ''
+2026-06-10 23:21:02,204 WARNING app.processing.normalize_worker: raw_document 3883 (external_id=doc-000125): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,205 WARNING app.processing.normalize_worker: raw_document 3884 (external_id=doc-000126): status: unrecognized status: ''
+2026-06-10 23:21:02,205 WARNING app.processing.normalize_worker: raw_document 3885 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,206 WARNING app.processing.normalize_worker: raw_document 3897 (external_id=doc-000139): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,206 WARNING app.processing.normalize_worker: raw_document 3899 (external_id=doc-000141): status: unrecognized status: ''
+2026-06-10 23:21:02,206 WARNING app.processing.normalize_worker: raw_document 3900 (external_id=doc-000142): status: unrecognized status: ''
+2026-06-10 23:21:02,206 WARNING app.processing.normalize_worker: raw_document 3902 (external_id=doc-000144): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,206 WARNING app.processing.normalize_worker: raw_document 3906 (external_id=doc-000148): status: unrecognized status: ''; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,207 WARNING app.processing.normalize_worker: raw_document 3907 (external_id=doc-000149): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,207 WARNING app.processing.normalize_worker: raw_document 3911 (external_id=doc-000153): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,208 WARNING app.processing.normalize_worker: raw_document 3919 (external_id=doc-000162): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,208 WARNING app.processing.normalize_worker: raw_document 3920 (external_id=doc-000163): status: unrecognized status: ''
+2026-06-10 23:21:02,208 WARNING app.processing.normalize_worker: raw_document 3921 (external_id=doc-000164): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,208 WARNING app.processing.normalize_worker: raw_document 3922 (external_id=doc-000165): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,208 WARNING app.processing.normalize_worker: raw_document 3926 (external_id=doc-000169): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,208 WARNING app.processing.normalize_worker: raw_document 3929 (external_id=doc-000172): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,209 WARNING app.processing.normalize_worker: raw_document 3930 (external_id=doc-000173): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,209 WARNING app.processing.normalize_worker: raw_document 3932 (external_id=doc-000176): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,209 WARNING app.processing.normalize_worker: raw_document 3933 (external_id=doc-000177): status: unrecognized status: ''
+2026-06-10 23:21:02,209 WARNING app.processing.normalize_worker: raw_document 3936 (external_id=doc-000181): updated_at: could not parse date: '2023-13-45'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,210 WARNING app.processing.normalize_worker: raw_document 3940 (external_id=doc-000186): status: unrecognized status: ''
+2026-06-10 23:21:02,210 WARNING app.processing.normalize_worker: raw_document 3943 (external_id=doc-000189): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,210 WARNING app.processing.normalize_worker: raw_document 3946 (external_id=doc-000192): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,210 WARNING app.processing.normalize_worker: raw_document 3948 (external_id=doc-000194): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,210 WARNING app.processing.normalize_worker: raw_document 3949 (external_id=doc-000195): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,211 WARNING app.processing.normalize_worker: raw_document 3953 (external_id=doc-000199): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,211 WARNING app.processing.normalize_worker: raw_document 3956 (external_id=None): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,211 WARNING app.processing.normalize_worker: raw_document 3957 (external_id=doc-000203): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,211 WARNING app.processing.normalize_worker: raw_document 3960 (external_id=doc-000207): updated_at: could not parse date: 'invalid-date'; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,211 WARNING app.processing.normalize_worker: raw_document 3961 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,212 WARNING app.processing.normalize_worker: raw_document 3964 (external_id=None): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,212 WARNING app.processing.normalize_worker: raw_document 3968 (external_id=doc-000215): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,212 WARNING app.processing.normalize_worker: raw_document 3969 (external_id=doc-000216): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,212 WARNING app.processing.normalize_worker: raw_document 3970 (external_id=doc-000217): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,213 WARNING app.processing.normalize_worker: raw_document 3973 (external_id=doc-000220): updated_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,213 WARNING app.processing.normalize_worker: raw_document 3984 (external_id=doc-000231): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,214 WARNING app.processing.normalize_worker: raw_document 3987 (external_id=doc-000234): status: unrecognized status: ''
+2026-06-10 23:21:02,214 WARNING app.processing.normalize_worker: raw_document 3994 (external_id=doc-000241): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,235 WARNING app.processing.normalize_worker: raw_document 4002 (external_id=doc-000249): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,235 WARNING app.processing.normalize_worker: raw_document 4003 (external_id=doc-000250): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,236 WARNING app.processing.normalize_worker: raw_document 4006 (external_id=doc-000253): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,236 WARNING app.processing.normalize_worker: raw_document 4007 (external_id=doc-000254): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,236 WARNING app.processing.normalize_worker: raw_document 4008 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,236 WARNING app.processing.normalize_worker: raw_document 4009 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,236 WARNING app.processing.normalize_worker: raw_document 4016 (external_id=doc-000263): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,237 WARNING app.processing.normalize_worker: raw_document 4017 (external_id=doc-000264): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,237 WARNING app.processing.normalize_worker: raw_document 4018 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,237 WARNING app.processing.normalize_worker: raw_document 4020 (external_id=doc-000267): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,237 WARNING app.processing.normalize_worker: raw_document 4023 (external_id=doc-000270): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,237 WARNING app.processing.normalize_worker: raw_document 4024 (external_id=doc-000271): published_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,238 WARNING app.processing.normalize_worker: raw_document 4031 (external_id=doc-000280): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,238 WARNING app.processing.normalize_worker: raw_document 4034 (external_id=doc-000283): updated_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,238 WARNING app.processing.normalize_worker: raw_document 4035 (external_id=doc-000284): status: unrecognized status: ''
+2026-06-10 23:21:02,239 WARNING app.processing.normalize_worker: raw_document 4039 (external_id=doc-000289): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,239 WARNING app.processing.normalize_worker: raw_document 4041 (external_id=doc-000291): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,239 WARNING app.processing.normalize_worker: raw_document 4045 (external_id=doc-000295): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,239 WARNING app.processing.normalize_worker: raw_document 4046 (external_id=doc-000296): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,240 WARNING app.processing.normalize_worker: raw_document 4055 (external_id=doc-000305): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,240 WARNING app.processing.normalize_worker: raw_document 4056 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,240 WARNING app.processing.normalize_worker: raw_document 4060 (external_id=doc-000310): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,241 WARNING app.processing.normalize_worker: raw_document 4062 (external_id=doc-000313): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,241 WARNING app.processing.normalize_worker: raw_document 4065 (external_id=doc-000316): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,241 WARNING app.processing.normalize_worker: raw_document 4066 (external_id=doc-000318): status: unrecognized status: ''
+2026-06-10 23:21:02,241 WARNING app.processing.normalize_worker: raw_document 4067 (external_id=doc-000319): updated_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,241 WARNING app.processing.normalize_worker: raw_document 4068 (external_id=doc-000320): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,241 WARNING app.processing.normalize_worker: raw_document 4070 (external_id=doc-000322): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,242 WARNING app.processing.normalize_worker: raw_document 4076 (external_id=doc-000329): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,242 WARNING app.processing.normalize_worker: raw_document 4078 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,242 WARNING app.processing.normalize_worker: raw_document 4079 (external_id=doc-000333): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,242 WARNING app.processing.normalize_worker: raw_document 4082 (external_id=None): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,243 WARNING app.processing.normalize_worker: raw_document 4084 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,244 WARNING app.processing.normalize_worker: raw_document 4087 (external_id=doc-000341): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,244 WARNING app.processing.normalize_worker: raw_document 4088 (external_id=doc-000342): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,244 WARNING app.processing.normalize_worker: raw_document 4089 (external_id=None): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,245 WARNING app.processing.normalize_worker: raw_document 4090 (external_id=doc-000344): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,245 WARNING app.processing.normalize_worker: raw_document 4093 (external_id=doc-000347): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,246 WARNING app.processing.normalize_worker: raw_document 4098 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,246 WARNING app.processing.normalize_worker: raw_document 4099 (external_id=doc-000353): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,247 WARNING app.processing.normalize_worker: raw_document 4101 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,247 WARNING app.processing.normalize_worker: raw_document 4102 (external_id=doc-000356): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,247 WARNING app.processing.normalize_worker: raw_document 4103 (external_id=doc-000357): status: unrecognized status: ''
+2026-06-10 23:21:02,247 WARNING app.processing.normalize_worker: raw_document 4104 (external_id=doc-000358): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,248 WARNING app.processing.normalize_worker: raw_document 4106 (external_id=doc-000360): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,248 WARNING app.processing.normalize_worker: raw_document 4109 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,249 WARNING app.processing.normalize_worker: raw_document 4110 (external_id=doc-000365): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,249 WARNING app.processing.normalize_worker: raw_document 4112 (external_id=doc-000367): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,249 WARNING app.processing.normalize_worker: raw_document 4114 (external_id=doc-000369): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,250 WARNING app.processing.normalize_worker: raw_document 4115 (external_id=doc-000370): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,250 WARNING app.processing.normalize_worker: raw_document 4119 (external_id=doc-000374): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,251 WARNING app.processing.normalize_worker: raw_document 4120 (external_id=doc-000375): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,251 WARNING app.processing.normalize_worker: raw_document 4123 (external_id=doc-000378): status: unrecognized status: ''
+2026-06-10 23:21:02,252 WARNING app.processing.normalize_worker: raw_document 4128 (external_id=None): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,253 WARNING app.processing.normalize_worker: raw_document 4131 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,253 WARNING app.processing.normalize_worker: raw_document 4134 (external_id=doc-000391): updated_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,254 WARNING app.processing.normalize_worker: raw_document 4136 (external_id=doc-000393): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,254 WARNING app.processing.normalize_worker: raw_document 4138 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,255 WARNING app.processing.normalize_worker: raw_document 4147 (external_id=doc-000404): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,256 WARNING app.processing.normalize_worker: raw_document 4150 (external_id=doc-000407): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,256 WARNING app.processing.normalize_worker: raw_document 4153 (external_id=doc-000410): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,257 WARNING app.processing.normalize_worker: raw_document 4157 (external_id=doc-000414): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,257 WARNING app.processing.normalize_worker: raw_document 4159 (external_id=doc-000416): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,258 WARNING app.processing.normalize_worker: raw_document 4160 (external_id=doc-000417): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,258 WARNING app.processing.normalize_worker: raw_document 4164 (external_id=doc-000421): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,258 WARNING app.processing.normalize_worker: raw_document 4165 (external_id=doc-000422): status: unrecognized status: ''
+2026-06-10 23:21:02,260 WARNING app.processing.normalize_worker: raw_document 4172 (external_id=doc-000429): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,260 WARNING app.processing.normalize_worker: raw_document 4173 (external_id=doc-000430): status: unrecognized status: ''
+2026-06-10 23:21:02,260 WARNING app.processing.normalize_worker: raw_document 4174 (external_id=doc-000431): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,260 WARNING app.processing.normalize_worker: raw_document 4175 (external_id=doc-000432): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,261 WARNING app.processing.normalize_worker: raw_document 4183 (external_id=doc-000440): word_count: could not parse integer: 'lots'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,262 WARNING app.processing.normalize_worker: raw_document 4184 (external_id=doc-000441): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,262 WARNING app.processing.normalize_worker: raw_document 4188 (external_id=doc-000445): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,263 WARNING app.processing.normalize_worker: raw_document 4191 (external_id=doc-000449): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,264 WARNING app.processing.normalize_worker: raw_document 4195 (external_id=doc-000453): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,264 WARNING app.processing.normalize_worker: raw_document 4197 (external_id=doc-000455): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,264 WARNING app.processing.normalize_worker: raw_document 4199 (external_id=doc-000457): status: unrecognized status: ''
+2026-06-10 23:21:02,265 WARNING app.processing.normalize_worker: raw_document 4203 (external_id=doc-000461): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,265 WARNING app.processing.normalize_worker: raw_document 4204 (external_id=doc-000462): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,266 WARNING app.processing.normalize_worker: raw_document 4207 (external_id=doc-000465): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,266 WARNING app.processing.normalize_worker: raw_document 4208 (external_id=doc-000466): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,266 WARNING app.processing.normalize_worker: raw_document 4209 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,266 WARNING app.processing.normalize_worker: raw_document 4211 (external_id=doc-000469): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,267 WARNING app.processing.normalize_worker: raw_document 4212 (external_id=doc-000470): status: unrecognized status: ''
+2026-06-10 23:21:02,267 WARNING app.processing.normalize_worker: raw_document 4213 (external_id=doc-000471): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,268 WARNING app.processing.normalize_worker: raw_document 4220 (external_id=doc-000478): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,268 WARNING app.processing.normalize_worker: raw_document 4221 (external_id=doc-000479): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,268 WARNING app.processing.normalize_worker: raw_document 4223 (external_id=doc-000481): citation_count: could not parse integer: 'many'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,269 WARNING app.processing.normalize_worker: raw_document 4229 (external_id=doc-000487): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,270 WARNING app.processing.normalize_worker: raw_document 4231 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,270 WARNING app.processing.normalize_worker: raw_document 4232 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,270 WARNING app.processing.normalize_worker: raw_document 4234 (external_id=doc-000492): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,271 WARNING app.processing.normalize_worker: raw_document 4236 (external_id=doc-000494): published_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,271 WARNING app.processing.normalize_worker: raw_document 4238 (external_id=doc-000496): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,271 WARNING app.processing.normalize_worker: raw_document 4240 (external_id=doc-000498): status: unrecognized status: ''; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,272 WARNING app.processing.normalize_worker: raw_document 4244 (external_id=None): status: unrecognized status: ''; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,272 WARNING app.processing.normalize_worker: raw_document 4245 (external_id=doc-000503): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,272 WARNING app.processing.normalize_worker: raw_document 4247 (external_id=doc-000505): status: unrecognized status: ''
+2026-06-10 23:21:02,273 WARNING app.processing.normalize_worker: raw_document 4252 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,273 WARNING app.processing.normalize_worker: raw_document 4253 (external_id=doc-000511): status: unrecognized status: ''
+2026-06-10 23:21:02,273 WARNING app.processing.normalize_worker: raw_document 4257 (external_id=doc-000515): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,273 WARNING app.processing.normalize_worker: raw_document 4258 (external_id=doc-000516): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,274 WARNING app.processing.normalize_worker: raw_document 4264 (external_id=doc-000522): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,314 INFO app.processing.normalize_worker: stage 1: normalized 500 raw documents (remaining=2334)
+2026-06-10 23:21:02,314 INFO app.services.ingestion_service: app.processing.normalize_worker: processed=500 remaining=2334
+2026-06-10 23:21:02,319 WARNING app.processing.normalize_worker: raw_document 4271 (external_id=doc-000530): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,319 WARNING app.processing.normalize_worker: raw_document 4272 (external_id=doc-000531): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,319 WARNING app.processing.normalize_worker: raw_document 4273 (external_id=doc-000532): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,320 WARNING app.processing.normalize_worker: raw_document 4276 (external_id=doc-000537): published_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,320 WARNING app.processing.normalize_worker: raw_document 4278 (external_id=doc-000539): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,320 WARNING app.processing.normalize_worker: raw_document 4282 (external_id=doc-000543): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,321 WARNING app.processing.normalize_worker: raw_document 4285 (external_id=doc-000546): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,321 WARNING app.processing.normalize_worker: raw_document 4287 (external_id=doc-000548): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,321 WARNING app.processing.normalize_worker: raw_document 4291 (external_id=doc-000552): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,321 WARNING app.processing.normalize_worker: raw_document 4292 (external_id=doc-000553): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,322 WARNING app.processing.normalize_worker: raw_document 4301 (external_id=doc-000562): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,322 WARNING app.processing.normalize_worker: raw_document 4303 (external_id=doc-000564): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,323 WARNING app.processing.normalize_worker: raw_document 4307 (external_id=doc-000568): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,323 WARNING app.processing.normalize_worker: raw_document 4308 (external_id=doc-000569): status: unrecognized status: ''
+2026-06-10 23:21:02,323 WARNING app.processing.normalize_worker: raw_document 4310 (external_id=doc-000571): status: unrecognized status: ''
+2026-06-10 23:21:02,323 WARNING app.processing.normalize_worker: raw_document 4313 (external_id=doc-000574): status: unrecognized status: ''
+2026-06-10 23:21:02,324 WARNING app.processing.normalize_worker: raw_document 4322 (external_id=doc-000584): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,325 WARNING app.processing.normalize_worker: raw_document 4325 (external_id=doc-000587): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,325 WARNING app.processing.normalize_worker: raw_document 4328 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,325 WARNING app.processing.normalize_worker: raw_document 4329 (external_id=doc-000591): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,325 WARNING app.processing.normalize_worker: raw_document 4330 (external_id=doc-000592): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,325 WARNING app.processing.normalize_worker: raw_document 4331 (external_id=doc-000593): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,325 WARNING app.processing.normalize_worker: raw_document 4333 (external_id=doc-000595): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,326 WARNING app.processing.normalize_worker: raw_document 4339 (external_id=doc-000601): published_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,327 WARNING app.processing.normalize_worker: raw_document 4348 (external_id=doc-000612): published_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,327 WARNING app.processing.normalize_worker: raw_document 4349 (external_id=doc-000613): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,327 WARNING app.processing.normalize_worker: raw_document 4354 (external_id=doc-000618): status: unrecognized status: ''
+2026-06-10 23:21:02,327 WARNING app.processing.normalize_worker: raw_document 4355 (external_id=doc-000619): status: unrecognized status: ''
+2026-06-10 23:21:02,327 WARNING app.processing.normalize_worker: raw_document 4356 (external_id=doc-000620): published_at: could not parse date: 'invalid-date'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,328 WARNING app.processing.normalize_worker: raw_document 4358 (external_id=doc-000622): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,328 WARNING app.processing.normalize_worker: raw_document 4359 (external_id=doc-000623): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,328 WARNING app.processing.normalize_worker: raw_document 4360 (external_id=doc-000624): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,328 WARNING app.processing.normalize_worker: raw_document 4362 (external_id=doc-000626): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,328 WARNING app.processing.normalize_worker: raw_document 4364 (external_id=doc-000628): updated_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,328 WARNING app.processing.normalize_worker: raw_document 4366 (external_id=doc-000630): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,329 WARNING app.processing.normalize_worker: raw_document 4372 (external_id=doc-000636): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,329 WARNING app.processing.normalize_worker: raw_document 4377 (external_id=doc-000641): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,329 WARNING app.processing.normalize_worker: raw_document 4379 (external_id=doc-000645): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,330 WARNING app.processing.normalize_worker: raw_document 4380 (external_id=doc-000646): status: unrecognized status: ''
+2026-06-10 23:21:02,330 WARNING app.processing.normalize_worker: raw_document 4383 (external_id=doc-000649): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,330 WARNING app.processing.normalize_worker: raw_document 4386 (external_id=doc-000652): citation_count: could not parse integer: 'many'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,330 WARNING app.processing.normalize_worker: raw_document 4387 (external_id=doc-000653): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,330 WARNING app.processing.normalize_worker: raw_document 4389 (external_id=655): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,331 WARNING app.processing.normalize_worker: raw_document 4396 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,331 WARNING app.processing.normalize_worker: raw_document 4397 (external_id=doc-000663): status: unrecognized status: ''
+2026-06-10 23:21:02,331 WARNING app.processing.normalize_worker: raw_document 4398 (external_id=doc-000664): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,331 WARNING app.processing.normalize_worker: raw_document 4401 (external_id=doc-000667): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,332 WARNING app.processing.normalize_worker: raw_document 4402 (external_id=doc-000668): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,332 WARNING app.processing.normalize_worker: raw_document 4403 (external_id=doc-000669): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,332 WARNING app.processing.normalize_worker: raw_document 4404 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,332 WARNING app.processing.normalize_worker: raw_document 4408 (external_id=doc-000674): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,333 WARNING app.processing.normalize_worker: raw_document 4417 (external_id=doc-000683): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,333 WARNING app.processing.normalize_worker: raw_document 4419 (external_id=doc-000685): status: unrecognized status: ''
+2026-06-10 23:21:02,333 WARNING app.processing.normalize_worker: raw_document 4420 (external_id=doc-000686): status: unrecognized status: ''
+2026-06-10 23:21:02,334 WARNING app.processing.normalize_worker: raw_document 4425 (external_id=doc-000691): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,334 WARNING app.processing.normalize_worker: raw_document 4427 (external_id=doc-000693): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,334 WARNING app.processing.normalize_worker: raw_document 4429 (external_id=doc-000695): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,335 WARNING app.processing.normalize_worker: raw_document 4437 (external_id=doc-000703): updated_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,335 WARNING app.processing.normalize_worker: raw_document 4442 (external_id=doc-000709): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,335 WARNING app.processing.normalize_worker: raw_document 4444 (external_id=doc-000711): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,336 WARNING app.processing.normalize_worker: raw_document 4449 (external_id=doc-000716): status: unrecognized status: ''; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,336 WARNING app.processing.normalize_worker: raw_document 4452 (external_id=doc-000719): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,337 WARNING app.processing.normalize_worker: raw_document 4468 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,337 WARNING app.processing.normalize_worker: raw_document 4469 (external_id=doc-000737): status: unrecognized status: ''
+2026-06-10 23:21:02,338 WARNING app.processing.normalize_worker: raw_document 4473 (external_id=doc-000741): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,338 WARNING app.processing.normalize_worker: raw_document 4474 (external_id=doc-000742): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,338 WARNING app.processing.normalize_worker: raw_document 4480 (external_id=doc-000749): status: unrecognized status: ''
+2026-06-10 23:21:02,338 WARNING app.processing.normalize_worker: raw_document 4482 (external_id=doc-000751): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,339 WARNING app.processing.normalize_worker: raw_document 4487 (external_id=doc-000756): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,339 WARNING app.processing.normalize_worker: raw_document 4494 (external_id=doc-000764): status: unrecognized status: ''
+2026-06-10 23:21:02,340 WARNING app.processing.normalize_worker: raw_document 4498 (external_id=doc-000768): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,340 WARNING app.processing.normalize_worker: raw_document 4500 (external_id=doc-000770): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,340 WARNING app.processing.normalize_worker: raw_document 4502 (external_id=doc-000772): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,340 WARNING app.processing.normalize_worker: raw_document 4504 (external_id=doc-000774): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,340 WARNING app.processing.normalize_worker: raw_document 4505 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,341 WARNING app.processing.normalize_worker: raw_document 4508 (external_id=doc-000778): status: unrecognized status: ''
+2026-06-10 23:21:02,341 WARNING app.processing.normalize_worker: raw_document 4510 (external_id=doc-000780): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,341 WARNING app.processing.normalize_worker: raw_document 4513 (external_id=None): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,341 WARNING app.processing.normalize_worker: raw_document 4517 (external_id=doc-000787): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,341 WARNING app.processing.normalize_worker: raw_document 4518 (external_id=doc-000788): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,342 WARNING app.processing.normalize_worker: raw_document 4528 (external_id=doc-000798): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,342 WARNING app.processing.normalize_worker: raw_document 4530 (external_id=doc-000800): status: unrecognized status: ''
+2026-06-10 23:21:02,343 WARNING app.processing.normalize_worker: raw_document 4535 (external_id=doc-000805): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,343 WARNING app.processing.normalize_worker: raw_document 4540 (external_id=doc-000812): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,343 WARNING app.processing.normalize_worker: raw_document 4541 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,344 WARNING app.processing.normalize_worker: raw_document 4543 (external_id=doc-000815): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,344 WARNING app.processing.normalize_worker: raw_document 4550 (external_id=doc-000823): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,344 WARNING app.processing.normalize_worker: raw_document 4551 (external_id=doc-000824): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,345 WARNING app.processing.normalize_worker: raw_document 4559 (external_id=doc-000832): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,345 WARNING app.processing.normalize_worker: raw_document 4564 (external_id=doc-000837): citation_count: could not parse integer: 'many'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,346 WARNING app.processing.normalize_worker: raw_document 4567 (external_id=doc-000840): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,346 WARNING app.processing.normalize_worker: raw_document 4568 (external_id=doc-000841): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,346 WARNING app.processing.normalize_worker: raw_document 4569 (external_id=doc-000842): status: unrecognized status: ''
+2026-06-10 23:21:02,346 WARNING app.processing.normalize_worker: raw_document 4570 (external_id=doc-000843): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,347 WARNING app.processing.normalize_worker: raw_document 4577 (external_id=doc-000850): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,347 WARNING app.processing.normalize_worker: raw_document 4579 (external_id=None): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,347 WARNING app.processing.normalize_worker: raw_document 4580 (external_id=doc-000853): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,347 WARNING app.processing.normalize_worker: raw_document 4583 (external_id=doc-000857): updated_at: could not parse date: 'invalid-date'; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,347 WARNING app.processing.normalize_worker: raw_document 4585 (external_id=doc-000859): updated_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,348 WARNING app.processing.normalize_worker: raw_document 4587 (external_id=doc-000861): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,348 WARNING app.processing.normalize_worker: raw_document 4591 (external_id=doc-000865): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,348 WARNING app.processing.normalize_worker: raw_document 4592 (external_id=doc-000866): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,348 WARNING app.processing.normalize_worker: raw_document 4595 (external_id=doc-000870): status: unrecognized status: ''
+2026-06-10 23:21:02,349 WARNING app.processing.normalize_worker: raw_document 4597 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,349 WARNING app.processing.normalize_worker: raw_document 4598 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,349 WARNING app.processing.normalize_worker: raw_document 4601 (external_id=doc-000876): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,349 WARNING app.processing.normalize_worker: raw_document 4602 (external_id=doc-000877): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,349 WARNING app.processing.normalize_worker: raw_document 4605 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,349 WARNING app.processing.normalize_worker: raw_document 4607 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,350 WARNING app.processing.normalize_worker: raw_document 4611 (external_id=doc-000886): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,350 WARNING app.processing.normalize_worker: raw_document 4613 (external_id=doc-000888): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,350 WARNING app.processing.normalize_worker: raw_document 4614 (external_id=doc-000889): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,351 WARNING app.processing.normalize_worker: raw_document 4618 (external_id=doc-000894): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,351 WARNING app.processing.normalize_worker: raw_document 4619 (external_id=doc-000895): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,351 WARNING app.processing.normalize_worker: raw_document 4623 (external_id=doc-000899): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,352 WARNING app.processing.normalize_worker: raw_document 4628 (external_id=doc-000905): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,352 WARNING app.processing.normalize_worker: raw_document 4629 (external_id=doc-000906): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,352 WARNING app.processing.normalize_worker: raw_document 4630 (external_id=None): updated_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,352 WARNING app.processing.normalize_worker: raw_document 4631 (external_id=doc-000908): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,352 WARNING app.processing.normalize_worker: raw_document 4634 (external_id=doc-000911): published_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,353 WARNING app.processing.normalize_worker: raw_document 4642 (external_id=doc-000919): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,353 WARNING app.processing.normalize_worker: raw_document 4647 (external_id=doc-000925): status: unrecognized status: ''
+2026-06-10 23:21:02,353 WARNING app.processing.normalize_worker: raw_document 4648 (external_id=doc-000926): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,354 WARNING app.processing.normalize_worker: raw_document 4650 (external_id=doc-000928): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,354 WARNING app.processing.normalize_worker: raw_document 4651 (external_id=doc-000929): status: unrecognized status: ''
+2026-06-10 23:21:02,354 WARNING app.processing.normalize_worker: raw_document 4653 (external_id=doc-000931): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,354 WARNING app.processing.normalize_worker: raw_document 4654 (external_id=doc-000932): status: unrecognized status: ''
+2026-06-10 23:21:02,354 WARNING app.processing.normalize_worker: raw_document 4656 (external_id=doc-000934): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,354 WARNING app.processing.normalize_worker: raw_document 4658 (external_id=doc-000936): updated_at: could not parse date: '2023-13-45'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,355 WARNING app.processing.normalize_worker: raw_document 4660 (external_id=doc-000939): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,355 WARNING app.processing.normalize_worker: raw_document 4661 (external_id=doc-000940): status: unrecognized status: ''; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,355 WARNING app.processing.normalize_worker: raw_document 4667 (external_id=doc-000947): status: unrecognized status: ''
+2026-06-10 23:21:02,355 WARNING app.processing.normalize_worker: raw_document 4668 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,356 WARNING app.processing.normalize_worker: raw_document 4670 (external_id=doc-000950): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,356 WARNING app.processing.normalize_worker: raw_document 4672 (external_id=doc-000952): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,356 WARNING app.processing.normalize_worker: raw_document 4676 (external_id=doc-000956): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,356 WARNING app.processing.normalize_worker: raw_document 4678 (external_id=doc-000958): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,356 WARNING app.processing.normalize_worker: raw_document 4679 (external_id=doc-000959): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,357 WARNING app.processing.normalize_worker: raw_document 4685 (external_id=doc-000965): published_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,357 WARNING app.processing.normalize_worker: raw_document 4687 (external_id=None): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,357 WARNING app.processing.normalize_worker: raw_document 4688 (external_id=None): status: unrecognized status: ''; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,357 WARNING app.processing.normalize_worker: raw_document 4689 (external_id=969): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,357 WARNING app.processing.normalize_worker: raw_document 4691 (external_id=doc-000971): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,358 WARNING app.processing.normalize_worker: raw_document 4693 (external_id=doc-000973): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,358 WARNING app.processing.normalize_worker: raw_document 4695 (external_id=doc-000975): status: unrecognized status: ''
+2026-06-10 23:21:02,359 WARNING app.processing.normalize_worker: raw_document 4707 (external_id=doc-000987): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,359 WARNING app.processing.normalize_worker: raw_document 4708 (external_id=doc-000988): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,359 WARNING app.processing.normalize_worker: raw_document 4712 (external_id=doc-000992): updated_at: could not parse date: '2023-13-45'; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,359 WARNING app.processing.normalize_worker: raw_document 4713 (external_id=doc-000993): citation_count: could not parse integer: 'many'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,360 WARNING app.processing.normalize_worker: raw_document 4717 (external_id=doc-000997): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,360 WARNING app.processing.normalize_worker: raw_document 4722 (external_id=doc-001002): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,360 WARNING app.processing.normalize_worker: raw_document 4723 (external_id=doc-001003): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,360 WARNING app.processing.normalize_worker: raw_document 4724 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,361 WARNING app.processing.normalize_worker: raw_document 4725 (external_id=doc-001005): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,361 WARNING app.processing.normalize_worker: raw_document 4726 (external_id=doc-001006): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,361 WARNING app.processing.normalize_worker: raw_document 4728 (external_id=None): status: unrecognized status: ''; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,362 WARNING app.processing.normalize_worker: raw_document 4737 (external_id=doc-001020): status: unrecognized status: ''
+2026-06-10 23:21:02,362 WARNING app.processing.normalize_worker: raw_document 4740 (external_id=doc-001024): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,362 WARNING app.processing.normalize_worker: raw_document 4742 (external_id=doc-001026): updated_at: could not parse date: '2023-13-45'; status: unrecognized status: ''; word_count: could not parse integer: 'lots'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,362 WARNING app.processing.normalize_worker: raw_document 4743 (external_id=doc-001027): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,362 WARNING app.processing.normalize_worker: raw_document 4745 (external_id=doc-001029): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,363 WARNING app.processing.normalize_worker: raw_document 4748 (external_id=doc-001032): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,363 WARNING app.processing.normalize_worker: raw_document 4752 (external_id=doc-001036): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,364 WARNING app.processing.normalize_worker: raw_document 4759 (external_id=doc-001044): status: unrecognized status: ''
+2026-06-10 23:21:02,364 WARNING app.processing.normalize_worker: raw_document 4766 (external_id=doc-001052): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,451 INFO app.processing.normalize_worker: stage 1: normalized 500 raw documents (remaining=1834)
+2026-06-10 23:21:02,452 INFO app.services.ingestion_service: app.processing.normalize_worker: processed=500 remaining=1834
+2026-06-10 23:21:02,456 WARNING app.processing.normalize_worker: raw_document 4769 (external_id=doc-001055): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,457 WARNING app.processing.normalize_worker: raw_document 4773 (external_id=doc-001059): updated_at: could not parse date: 'invalid-date'; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,457 WARNING app.processing.normalize_worker: raw_document 4776 (external_id=doc-001062): status: unrecognized status: ''
+2026-06-10 23:21:02,458 WARNING app.processing.normalize_worker: raw_document 4785 (external_id=doc-001071): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,458 WARNING app.processing.normalize_worker: raw_document 4786 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,458 WARNING app.processing.normalize_worker: raw_document 4791 (external_id=doc-001077): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,459 WARNING app.processing.normalize_worker: raw_document 4798 (external_id=doc-001084): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,459 WARNING app.processing.normalize_worker: raw_document 4799 (external_id=doc-001085): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,459 WARNING app.processing.normalize_worker: raw_document 4800 (external_id=None): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,459 WARNING app.processing.normalize_worker: raw_document 4803 (external_id=doc-001089): updated_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,460 WARNING app.processing.normalize_worker: raw_document 4811 (external_id=doc-001097): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,461 WARNING app.processing.normalize_worker: raw_document 4823 (external_id=doc-001110): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,461 WARNING app.processing.normalize_worker: raw_document 4825 (external_id=doc-001112): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,461 WARNING app.processing.normalize_worker: raw_document 4826 (external_id=doc-001113): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,462 WARNING app.processing.normalize_worker: raw_document 4833 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,462 WARNING app.processing.normalize_worker: raw_document 4836 (external_id=None): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,463 WARNING app.processing.normalize_worker: raw_document 4842 (external_id=None): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,464 WARNING app.processing.normalize_worker: raw_document 4853 (external_id=doc-001140): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,464 WARNING app.processing.normalize_worker: raw_document 4857 (external_id=doc-001144): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,464 WARNING app.processing.normalize_worker: raw_document 4858 (external_id=doc-001145): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,464 WARNING app.processing.normalize_worker: raw_document 4859 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,464 WARNING app.processing.normalize_worker: raw_document 4862 (external_id=doc-001150): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,465 WARNING app.processing.normalize_worker: raw_document 4866 (external_id=doc-001154): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,465 WARNING app.processing.normalize_worker: raw_document 4867 (external_id=doc-001155): status: unrecognized status: ''
+2026-06-10 23:21:02,465 WARNING app.processing.normalize_worker: raw_document 4868 (external_id=doc-001156): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,466 WARNING app.processing.normalize_worker: raw_document 4875 (external_id=doc-001164): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,466 WARNING app.processing.normalize_worker: raw_document 4876 (external_id=None): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,466 WARNING app.processing.normalize_worker: raw_document 4878 (external_id=doc-001168): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,466 WARNING app.processing.normalize_worker: raw_document 4880 (external_id=doc-001170): status: unrecognized status: ''
+2026-06-10 23:21:02,466 WARNING app.processing.normalize_worker: raw_document 4881 (external_id=doc-001171): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,467 WARNING app.processing.normalize_worker: raw_document 4883 (external_id=doc-001174): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,467 WARNING app.processing.normalize_worker: raw_document 4885 (external_id=doc-001176): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,467 WARNING app.processing.normalize_worker: raw_document 4889 (external_id=doc-001180): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,468 WARNING app.processing.normalize_worker: raw_document 4896 (external_id=doc-001188): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,468 WARNING app.processing.normalize_worker: raw_document 4900 (external_id=doc-001193): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,468 WARNING app.processing.normalize_worker: raw_document 4904 (external_id=doc-001197): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,469 WARNING app.processing.normalize_worker: raw_document 4912 (external_id=doc-001206): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,469 WARNING app.processing.normalize_worker: raw_document 4913 (external_id=doc-001207): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,469 WARNING app.processing.normalize_worker: raw_document 4914 (external_id=doc-001209): status: unrecognized status: ''
+2026-06-10 23:21:02,469 WARNING app.processing.normalize_worker: raw_document 4915 (external_id=doc-001210): published_at: could not parse date: '2023-13-45'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,471 WARNING app.processing.normalize_worker: raw_document 4921 (external_id=doc-001216): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,471 WARNING app.processing.normalize_worker: raw_document 4923 (external_id=doc-001218): status: unrecognized status: ''
+2026-06-10 23:21:02,471 WARNING app.processing.normalize_worker: raw_document 4926 (external_id=doc-001221): updated_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,471 WARNING app.processing.normalize_worker: raw_document 4928 (external_id=doc-001223): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,472 WARNING app.processing.normalize_worker: raw_document 4932 (external_id=doc-001227): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,472 WARNING app.processing.normalize_worker: raw_document 4934 (external_id=doc-001229): published_at: could not parse date: '2023-13-45'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,472 WARNING app.processing.normalize_worker: raw_document 4935 (external_id=doc-001230): updated_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,472 WARNING app.processing.normalize_worker: raw_document 4938 (external_id=doc-001233): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,473 WARNING app.processing.normalize_worker: raw_document 4944 (external_id=doc-001239): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,473 WARNING app.processing.normalize_worker: raw_document 4948 (external_id=doc-001243): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,473 WARNING app.processing.normalize_worker: raw_document 4950 (external_id=doc-001245): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,474 WARNING app.processing.normalize_worker: raw_document 4952 (external_id=doc-001247): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,474 WARNING app.processing.normalize_worker: raw_document 4953 (external_id=doc-001248): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,474 WARNING app.processing.normalize_worker: raw_document 4957 (external_id=doc-001252): status: unrecognized status: ''; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,474 WARNING app.processing.normalize_worker: raw_document 4962 (external_id=doc-001258): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,475 WARNING app.processing.normalize_worker: raw_document 4963 (external_id=doc-001259): status: unrecognized status: ''
+2026-06-10 23:21:02,475 WARNING app.processing.normalize_worker: raw_document 4971 (external_id=doc-001267): status: unrecognized status: ''
+2026-06-10 23:21:02,475 WARNING app.processing.normalize_worker: raw_document 4972 (external_id=doc-001268): published_at: could not parse date: 'invalid-date'; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,476 WARNING app.processing.normalize_worker: raw_document 4974 (external_id=None): word_count: could not parse integer: 'lots'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,476 WARNING app.processing.normalize_worker: raw_document 4975 (external_id=doc-001271): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,476 WARNING app.processing.normalize_worker: raw_document 4982 (external_id=None): published_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,476 WARNING app.processing.normalize_worker: raw_document 4983 (external_id=doc-001280): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,477 WARNING app.processing.normalize_worker: raw_document 4987 (external_id=doc-001285): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,477 WARNING app.processing.normalize_worker: raw_document 4988 (external_id=doc-001286): published_at: could not parse date: 'invalid-date'; citation_count: could not parse integer: 'many'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,477 WARNING app.processing.normalize_worker: raw_document 4991 (external_id=doc-001290): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,478 WARNING app.processing.normalize_worker: raw_document 4997 (external_id=doc-001296): status: unrecognized status: ''
+2026-06-10 23:21:02,478 WARNING app.processing.normalize_worker: raw_document 5002 (external_id=doc-001301): updated_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,478 WARNING app.processing.normalize_worker: raw_document 5007 (external_id=doc-001306): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,479 WARNING app.processing.normalize_worker: raw_document 5009 (external_id=doc-001308): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,479 WARNING app.processing.normalize_worker: raw_document 5012 (external_id=doc-001311): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,479 WARNING app.processing.normalize_worker: raw_document 5013 (external_id=doc-001312): status: unrecognized status: ''
+2026-06-10 23:21:02,479 WARNING app.processing.normalize_worker: raw_document 5014 (external_id=doc-001314): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,480 WARNING app.processing.normalize_worker: raw_document 5020 (external_id=doc-001320): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,480 WARNING app.processing.normalize_worker: raw_document 5021 (external_id=doc-001321): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,480 WARNING app.processing.normalize_worker: raw_document 5025 (external_id=doc-001325): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,480 WARNING app.processing.normalize_worker: raw_document 5026 (external_id=doc-001326): status: unrecognized status: ''
+2026-06-10 23:21:02,481 WARNING app.processing.normalize_worker: raw_document 5028 (external_id=doc-001328): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,481 WARNING app.processing.normalize_worker: raw_document 5031 (external_id=doc-001331): updated_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,481 WARNING app.processing.normalize_worker: raw_document 5032 (external_id=doc-001332): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,481 WARNING app.processing.normalize_worker: raw_document 5037 (external_id=doc-001337): published_at: could not parse date: '2023-13-45'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,482 WARNING app.processing.normalize_worker: raw_document 5039 (external_id=doc-001339): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,482 WARNING app.processing.normalize_worker: raw_document 5041 (external_id=doc-001341): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,482 WARNING app.processing.normalize_worker: raw_document 5042 (external_id=doc-001342): status: unrecognized status: ''
+2026-06-10 23:21:02,483 WARNING app.processing.normalize_worker: raw_document 5052 (external_id=doc-001353): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,483 WARNING app.processing.normalize_worker: raw_document 5057 (external_id=doc-001358): updated_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,483 WARNING app.processing.normalize_worker: raw_document 5058 (external_id=doc-001359): status: unrecognized status: ''; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,483 WARNING app.processing.normalize_worker: raw_document 5059 (external_id=doc-001360): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,484 WARNING app.processing.normalize_worker: raw_document 5060 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,484 WARNING app.processing.normalize_worker: raw_document 5063 (external_id=doc-001364): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,484 WARNING app.processing.normalize_worker: raw_document 5064 (external_id=doc-001365): status: unrecognized status: ''
+2026-06-10 23:21:02,484 WARNING app.processing.normalize_worker: raw_document 5065 (external_id=doc-001366): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,485 WARNING app.processing.normalize_worker: raw_document 5071 (external_id=doc-001372): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,485 WARNING app.processing.normalize_worker: raw_document 5072 (external_id=doc-001373): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,485 WARNING app.processing.normalize_worker: raw_document 5073 (external_id=doc-001374): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,485 WARNING app.processing.normalize_worker: raw_document 5075 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,485 WARNING app.processing.normalize_worker: raw_document 5076 (external_id=None): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,485 WARNING app.processing.normalize_worker: raw_document 5077 (external_id=doc-001378): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,486 WARNING app.processing.normalize_worker: raw_document 5080 (external_id=doc-001381): status: unrecognized status: ''
+2026-06-10 23:21:02,486 WARNING app.processing.normalize_worker: raw_document 5081 (external_id=doc-001382): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,486 WARNING app.processing.normalize_worker: raw_document 5082 (external_id=doc-001383): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,486 WARNING app.processing.normalize_worker: raw_document 5085 (external_id=doc-001386): status: unrecognized status: ''
+2026-06-10 23:21:02,487 WARNING app.processing.normalize_worker: raw_document 5090 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,487 WARNING app.processing.normalize_worker: raw_document 5092 (external_id=doc-001393): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,487 WARNING app.processing.normalize_worker: raw_document 5094 (external_id=doc-001395): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,488 WARNING app.processing.normalize_worker: raw_document 5100 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,488 WARNING app.processing.normalize_worker: raw_document 5105 (external_id=doc-001406): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,489 WARNING app.processing.normalize_worker: raw_document 5117 (external_id=doc-001418): status: unrecognized status: ''
+2026-06-10 23:21:02,489 WARNING app.processing.normalize_worker: raw_document 5120 (external_id=doc-001421): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,489 WARNING app.processing.normalize_worker: raw_document 5121 (external_id=doc-001423): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,490 WARNING app.processing.normalize_worker: raw_document 5123 (external_id=doc-001425): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,490 WARNING app.processing.normalize_worker: raw_document 5124 (external_id=doc-001426): status: unrecognized status: ''
+2026-06-10 23:21:02,490 WARNING app.processing.normalize_worker: raw_document 5125 (external_id=doc-001427): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,490 WARNING app.processing.normalize_worker: raw_document 5127 (external_id=doc-001430): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,490 WARNING app.processing.normalize_worker: raw_document 5128 (external_id=doc-001431): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,490 WARNING app.processing.normalize_worker: raw_document 5129 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,490 WARNING app.processing.normalize_worker: raw_document 5130 (external_id=doc-001433): status: unrecognized status: ''
+2026-06-10 23:21:02,490 WARNING app.processing.normalize_worker: raw_document 5131 (external_id=doc-001434): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,491 WARNING app.processing.normalize_worker: raw_document 5135 (external_id=doc-001438): status: unrecognized status: ''
+2026-06-10 23:21:02,491 WARNING app.processing.normalize_worker: raw_document 5136 (external_id=doc-001439): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,491 WARNING app.processing.normalize_worker: raw_document 5137 (external_id=doc-001440): published_at: could not parse date: 'invalid-date'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,491 WARNING app.processing.normalize_worker: raw_document 5141 (external_id=doc-001444): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,492 WARNING app.processing.normalize_worker: raw_document 5143 (external_id=doc-001446): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,492 WARNING app.processing.normalize_worker: raw_document 5144 (external_id=doc-001447): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,492 WARNING app.processing.normalize_worker: raw_document 5147 (external_id=1451): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,492 WARNING app.processing.normalize_worker: raw_document 5149 (external_id=doc-001453): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,492 WARNING app.processing.normalize_worker: raw_document 5151 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,493 WARNING app.processing.normalize_worker: raw_document 5154 (external_id=doc-001458): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,493 WARNING app.processing.normalize_worker: raw_document 5156 (external_id=doc-001460): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,493 WARNING app.processing.normalize_worker: raw_document 5158 (external_id=doc-001462): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,493 WARNING app.processing.normalize_worker: raw_document 5159 (external_id=doc-001463): status: unrecognized status: ''
+2026-06-10 23:21:02,493 WARNING app.processing.normalize_worker: raw_document 5160 (external_id=doc-001464): status: unrecognized status: ''
+2026-06-10 23:21:02,494 WARNING app.processing.normalize_worker: raw_document 5164 (external_id=doc-001469): status: unrecognized status: ''
+2026-06-10 23:21:02,494 WARNING app.processing.normalize_worker: raw_document 5166 (external_id=None): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,494 WARNING app.processing.normalize_worker: raw_document 5168 (external_id=doc-001473): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,494 WARNING app.processing.normalize_worker: raw_document 5170 (external_id=doc-001475): status: unrecognized status: ''
+2026-06-10 23:21:02,495 WARNING app.processing.normalize_worker: raw_document 5179 (external_id=doc-001484): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,495 WARNING app.processing.normalize_worker: raw_document 5181 (external_id=doc-001486): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,495 WARNING app.processing.normalize_worker: raw_document 5183 (external_id=doc-001488): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,496 WARNING app.processing.normalize_worker: raw_document 5186 (external_id=doc-001491): status: unrecognized status: ''
+2026-06-10 23:21:02,496 WARNING app.processing.normalize_worker: raw_document 5190 (external_id=None): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,496 WARNING app.processing.normalize_worker: raw_document 5196 (external_id=doc-001501): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,497 WARNING app.processing.normalize_worker: raw_document 5198 (external_id=doc-001504): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,497 WARNING app.processing.normalize_worker: raw_document 5199 (external_id=doc-001505): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,497 WARNING app.processing.normalize_worker: raw_document 5206 (external_id=doc-001512): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,498 WARNING app.processing.normalize_worker: raw_document 5207 (external_id=doc-001513): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,498 WARNING app.processing.normalize_worker: raw_document 5208 (external_id=doc-001514): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,498 WARNING app.processing.normalize_worker: raw_document 5213 (external_id=doc-001519): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,498 WARNING app.processing.normalize_worker: raw_document 5215 (external_id=doc-001521): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,499 WARNING app.processing.normalize_worker: raw_document 5218 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,499 WARNING app.processing.normalize_worker: raw_document 5220 (external_id=doc-001526): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,499 WARNING app.processing.normalize_worker: raw_document 5221 (external_id=doc-001527): status: unrecognized status: ''
+2026-06-10 23:21:02,499 WARNING app.processing.normalize_worker: raw_document 5222 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,499 WARNING app.processing.normalize_worker: raw_document 5223 (external_id=doc-001529): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,499 WARNING app.processing.normalize_worker: raw_document 5226 (external_id=doc-001532): status: unrecognized status: ''
+2026-06-10 23:21:02,499 WARNING app.processing.normalize_worker: raw_document 5227 (external_id=1533): status: unrecognized status: ''
+2026-06-10 23:21:02,500 WARNING app.processing.normalize_worker: raw_document 5229 (external_id=doc-001535): status: unrecognized status: ''
+2026-06-10 23:21:02,501 WARNING app.processing.normalize_worker: raw_document 5243 (external_id=doc-001552): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,501 WARNING app.processing.normalize_worker: raw_document 5246 (external_id=doc-001555): status: unrecognized status: ''
+2026-06-10 23:21:02,501 WARNING app.processing.normalize_worker: raw_document 5249 (external_id=doc-001558): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,501 WARNING app.processing.normalize_worker: raw_document 5250 (external_id=doc-001559): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,502 WARNING app.processing.normalize_worker: raw_document 5252 (external_id=doc-001561): published_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,502 WARNING app.processing.normalize_worker: raw_document 5256 (external_id=None): published_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,502 WARNING app.processing.normalize_worker: raw_document 5257 (external_id=doc-001566): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,502 WARNING app.processing.normalize_worker: raw_document 5259 (external_id=doc-001568): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,503 WARNING app.processing.normalize_worker: raw_document 5264 (external_id=doc-001574): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,503 WARNING app.processing.normalize_worker: raw_document 5265 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,570 INFO app.processing.normalize_worker: stage 1: normalized 500 raw documents (remaining=1334)
+2026-06-10 23:21:02,570 INFO app.services.ingestion_service: app.processing.normalize_worker: processed=500 remaining=1334
+2026-06-10 23:21:02,575 WARNING app.processing.normalize_worker: raw_document 5268 (external_id=doc-001578): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,575 WARNING app.processing.normalize_worker: raw_document 5271 (external_id=doc-001581): updated_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,575 WARNING app.processing.normalize_worker: raw_document 5274 (external_id=doc-001585): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,576 WARNING app.processing.normalize_worker: raw_document 5276 (external_id=doc-001588): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,576 WARNING app.processing.normalize_worker: raw_document 5277 (external_id=doc-001589): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,576 WARNING app.processing.normalize_worker: raw_document 5278 (external_id=doc-001590): updated_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,576 WARNING app.processing.normalize_worker: raw_document 5280 (external_id=doc-001592): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,576 WARNING app.processing.normalize_worker: raw_document 5281 (external_id=None): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,576 WARNING app.processing.normalize_worker: raw_document 5282 (external_id=doc-001594): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,577 WARNING app.processing.normalize_worker: raw_document 5285 (external_id=doc-001597): published_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,577 WARNING app.processing.normalize_worker: raw_document 5286 (external_id=None): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,577 WARNING app.processing.normalize_worker: raw_document 5287 (external_id=doc-001599): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,578 WARNING app.processing.normalize_worker: raw_document 5296 (external_id=doc-001608): published_at: could not parse date: '2023-13-45'; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,578 WARNING app.processing.normalize_worker: raw_document 5298 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,578 WARNING app.processing.normalize_worker: raw_document 5303 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,579 WARNING app.processing.normalize_worker: raw_document 5304 (external_id=doc-001616): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,579 WARNING app.processing.normalize_worker: raw_document 5307 (external_id=doc-001619): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,579 WARNING app.processing.normalize_worker: raw_document 5309 (external_id=doc-001621): published_at: could not parse date: '2023-13-45'; updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,580 WARNING app.processing.normalize_worker: raw_document 5315 (external_id=doc-001627): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,580 WARNING app.processing.normalize_worker: raw_document 5318 (external_id=doc-001630): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,580 WARNING app.processing.normalize_worker: raw_document 5322 (external_id=doc-001634): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,581 WARNING app.processing.normalize_worker: raw_document 5323 (external_id=doc-001635): updated_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,581 WARNING app.processing.normalize_worker: raw_document 5326 (external_id=doc-001638): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,581 WARNING app.processing.normalize_worker: raw_document 5331 (external_id=doc-001643): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,581 WARNING app.processing.normalize_worker: raw_document 5332 (external_id=doc-001644): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: '2023-13-45'; word_count: could not parse integer: 'lots'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,582 WARNING app.processing.normalize_worker: raw_document 5337 (external_id=doc-001650): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,582 WARNING app.processing.normalize_worker: raw_document 5338 (external_id=doc-001651): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,582 WARNING app.processing.normalize_worker: raw_document 5341 (external_id=doc-001654): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,582 WARNING app.processing.normalize_worker: raw_document 5342 (external_id=doc-001655): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,582 WARNING app.processing.normalize_worker: raw_document 5344 (external_id=doc-001657): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,583 WARNING app.processing.normalize_worker: raw_document 5349 (external_id=doc-001662): updated_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,584 WARNING app.processing.normalize_worker: raw_document 5356 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,584 WARNING app.processing.normalize_worker: raw_document 5357 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,584 WARNING app.processing.normalize_worker: raw_document 5360 (external_id=doc-001674): published_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,584 WARNING app.processing.normalize_worker: raw_document 5363 (external_id=None): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,584 WARNING app.processing.normalize_worker: raw_document 5365 (external_id=None): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,585 WARNING app.processing.normalize_worker: raw_document 5366 (external_id=doc-001681): updated_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,585 WARNING app.processing.normalize_worker: raw_document 5373 (external_id=doc-001688): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,585 WARNING app.processing.normalize_worker: raw_document 5376 (external_id=doc-001691): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,586 WARNING app.processing.normalize_worker: raw_document 5379 (external_id=doc-001694): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,586 WARNING app.processing.normalize_worker: raw_document 5380 (external_id=doc-001695): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,586 WARNING app.processing.normalize_worker: raw_document 5381 (external_id=doc-001696): published_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,586 WARNING app.processing.normalize_worker: raw_document 5384 (external_id=doc-001699): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,587 WARNING app.processing.normalize_worker: raw_document 5395 (external_id=doc-001711): status: unrecognized status: ''; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,587 WARNING app.processing.normalize_worker: raw_document 5396 (external_id=doc-001712): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,588 WARNING app.processing.normalize_worker: raw_document 5402 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,588 WARNING app.processing.normalize_worker: raw_document 5403 (external_id=doc-001719): status: unrecognized status: ''
+2026-06-10 23:21:02,588 WARNING app.processing.normalize_worker: raw_document 5407 (external_id=doc-001723): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,589 WARNING app.processing.normalize_worker: raw_document 5414 (external_id=doc-001730): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,589 WARNING app.processing.normalize_worker: raw_document 5415 (external_id=None): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,589 WARNING app.processing.normalize_worker: raw_document 5416 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,589 WARNING app.processing.normalize_worker: raw_document 5418 (external_id=doc-001734): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,590 WARNING app.processing.normalize_worker: raw_document 5424 (external_id=doc-001740): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,590 WARNING app.processing.normalize_worker: raw_document 5425 (external_id=doc-001741): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,590 WARNING app.processing.normalize_worker: raw_document 5430 (external_id=doc-001746): status: unrecognized status: ''
+2026-06-10 23:21:02,590 WARNING app.processing.normalize_worker: raw_document 5431 (external_id=doc-001747): status: unrecognized status: ''
+2026-06-10 23:21:02,591 WARNING app.processing.normalize_worker: raw_document 5433 (external_id=doc-001749): status: unrecognized status: ''
+2026-06-10 23:21:02,591 WARNING app.processing.normalize_worker: raw_document 5439 (external_id=doc-001755): status: unrecognized status: ''
+2026-06-10 23:21:02,592 WARNING app.processing.normalize_worker: raw_document 5446 (external_id=None): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,592 WARNING app.processing.normalize_worker: raw_document 5449 (external_id=doc-001765): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,592 WARNING app.processing.normalize_worker: raw_document 5452 (external_id=doc-001768): status: unrecognized status: ''; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,592 WARNING app.processing.normalize_worker: raw_document 5454 (external_id=doc-001771): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,592 WARNING app.processing.normalize_worker: raw_document 5455 (external_id=doc-001772): status: unrecognized status: ''
+2026-06-10 23:21:02,593 WARNING app.processing.normalize_worker: raw_document 5458 (external_id=doc-001776): status: unrecognized status: ''
+2026-06-10 23:21:02,593 WARNING app.processing.normalize_worker: raw_document 5459 (external_id=doc-001777): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,594 WARNING app.processing.normalize_worker: raw_document 5473 (external_id=doc-001792): published_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,594 WARNING app.processing.normalize_worker: raw_document 5474 (external_id=None): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,594 WARNING app.processing.normalize_worker: raw_document 5475 (external_id=doc-001794): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,595 WARNING app.processing.normalize_worker: raw_document 5481 (external_id=doc-001800): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,595 WARNING app.processing.normalize_worker: raw_document 5484 (external_id=doc-001803): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,595 WARNING app.processing.normalize_worker: raw_document 5486 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,596 WARNING app.processing.normalize_worker: raw_document 5491 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,596 WARNING app.processing.normalize_worker: raw_document 5500 (external_id=doc-001821): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,596 WARNING app.processing.normalize_worker: raw_document 5501 (external_id=doc-001822): status: unrecognized status: ''
+2026-06-10 23:21:02,597 WARNING app.processing.normalize_worker: raw_document 5504 (external_id=doc-001826): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,597 WARNING app.processing.normalize_worker: raw_document 5505 (external_id=doc-001827): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,597 WARNING app.processing.normalize_worker: raw_document 5513 (external_id=doc-001837): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,598 WARNING app.processing.normalize_worker: raw_document 5515 (external_id=None): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,598 WARNING app.processing.normalize_worker: raw_document 5518 (external_id=doc-001842): status: unrecognized status: ''
+2026-06-10 23:21:02,599 WARNING app.processing.normalize_worker: raw_document 5527 (external_id=doc-001854): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,599 WARNING app.processing.normalize_worker: raw_document 5530 (external_id=doc-001857): citation_count: could not parse integer: 'many'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,599 WARNING app.processing.normalize_worker: raw_document 5534 (external_id=doc-001861): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,600 WARNING app.processing.normalize_worker: raw_document 5537 (external_id=doc-001865): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,600 WARNING app.processing.normalize_worker: raw_document 5540 (external_id=doc-001869): updated_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,600 WARNING app.processing.normalize_worker: raw_document 5542 (external_id=doc-001871): updated_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,600 WARNING app.processing.normalize_worker: raw_document 5544 (external_id=doc-001873): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,600 WARNING app.processing.normalize_worker: raw_document 5546 (external_id=doc-001875): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,601 WARNING app.processing.normalize_worker: raw_document 5547 (external_id=doc-001877): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,601 WARNING app.processing.normalize_worker: raw_document 5548 (external_id=doc-001878): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,601 WARNING app.processing.normalize_worker: raw_document 5549 (external_id=doc-001879): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,601 WARNING app.processing.normalize_worker: raw_document 5553 (external_id=doc-001883): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,601 WARNING app.processing.normalize_worker: raw_document 5554 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,603 WARNING app.processing.normalize_worker: raw_document 5561 (external_id=doc-001891): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,603 WARNING app.processing.normalize_worker: raw_document 5563 (external_id=doc-001893): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,603 WARNING app.processing.normalize_worker: raw_document 5564 (external_id=None): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,603 WARNING app.processing.normalize_worker: raw_document 5567 (external_id=doc-001898): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,603 WARNING app.processing.normalize_worker: raw_document 5570 (external_id=doc-001901): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,604 WARNING app.processing.normalize_worker: raw_document 5572 (external_id=doc-001903): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,604 WARNING app.processing.normalize_worker: raw_document 5574 (external_id=doc-001905): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,604 WARNING app.processing.normalize_worker: raw_document 5575 (external_id=doc-001906): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,604 WARNING app.processing.normalize_worker: raw_document 5578 (external_id=doc-001909): status: unrecognized status: ''
+2026-06-10 23:21:02,604 WARNING app.processing.normalize_worker: raw_document 5579 (external_id=doc-001910): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,605 WARNING app.processing.normalize_worker: raw_document 5583 (external_id=doc-001914): published_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,605 WARNING app.processing.normalize_worker: raw_document 5586 (external_id=doc-001917): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,605 WARNING app.processing.normalize_worker: raw_document 5590 (external_id=doc-001921): status: unrecognized status: ''
+2026-06-10 23:21:02,606 WARNING app.processing.normalize_worker: raw_document 5594 (external_id=doc-001926): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,606 WARNING app.processing.normalize_worker: raw_document 5604 (external_id=doc-001936): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,607 WARNING app.processing.normalize_worker: raw_document 5605 (external_id=doc-001937): status: unrecognized status: ''
+2026-06-10 23:21:02,607 WARNING app.processing.normalize_worker: raw_document 5610 (external_id=None): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,608 WARNING app.processing.normalize_worker: raw_document 5615 (external_id=doc-001947): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,608 WARNING app.processing.normalize_worker: raw_document 5621 (external_id=doc-001954): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,608 WARNING app.processing.normalize_worker: raw_document 5622 (external_id=doc-001955): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,608 WARNING app.processing.normalize_worker: raw_document 5625 (external_id=doc-001958): status: unrecognized status: ''; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,608 WARNING app.processing.normalize_worker: raw_document 5626 (external_id=doc-001960): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,609 WARNING app.processing.normalize_worker: raw_document 5634 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,610 WARNING app.processing.normalize_worker: raw_document 5640 (external_id=doc-001977): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,610 WARNING app.processing.normalize_worker: raw_document 5641 (external_id=doc-001978): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,610 WARNING app.processing.normalize_worker: raw_document 5647 (external_id=doc-001984): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,610 WARNING app.processing.normalize_worker: raw_document 5648 (external_id=doc-001985): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,611 WARNING app.processing.normalize_worker: raw_document 5653 (external_id=doc-001990): status: unrecognized status: ''
+2026-06-10 23:21:02,611 WARNING app.processing.normalize_worker: raw_document 5656 (external_id=doc-001993): status: unrecognized status: ''
+2026-06-10 23:21:02,611 WARNING app.processing.normalize_worker: raw_document 5662 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,612 WARNING app.processing.normalize_worker: raw_document 5663 (external_id=doc-002000): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,612 WARNING app.processing.normalize_worker: raw_document 5667 (external_id=doc-002005): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,612 WARNING app.processing.normalize_worker: raw_document 5671 (external_id=doc-002009): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,613 WARNING app.processing.normalize_worker: raw_document 5674 (external_id=doc-002013): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,613 WARNING app.processing.normalize_worker: raw_document 5675 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,613 WARNING app.processing.normalize_worker: raw_document 5682 (external_id=doc-002023): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,613 WARNING app.processing.normalize_worker: raw_document 5683 (external_id=doc-002024): status: unrecognized status: ''
+2026-06-10 23:21:02,613 WARNING app.processing.normalize_worker: raw_document 5684 (external_id=doc-002025): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,614 WARNING app.processing.normalize_worker: raw_document 5688 (external_id=doc-002029): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,614 WARNING app.processing.normalize_worker: raw_document 5689 (external_id=2030): updated_at: could not parse date: '2023-13-45'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,614 WARNING app.processing.normalize_worker: raw_document 5691 (external_id=doc-002032): status: unrecognized status: ''
+2026-06-10 23:21:02,614 WARNING app.processing.normalize_worker: raw_document 5693 (external_id=doc-002035): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,615 WARNING app.processing.normalize_worker: raw_document 5698 (external_id=doc-002041): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,615 WARNING app.processing.normalize_worker: raw_document 5702 (external_id=doc-002045): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,615 WARNING app.processing.normalize_worker: raw_document 5705 (external_id=doc-002048): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,616 WARNING app.processing.normalize_worker: raw_document 5707 (external_id=doc-002050): status: unrecognized status: ''
+2026-06-10 23:21:02,616 WARNING app.processing.normalize_worker: raw_document 5709 (external_id=doc-002052): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,616 WARNING app.processing.normalize_worker: raw_document 5713 (external_id=doc-002056): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,616 WARNING app.processing.normalize_worker: raw_document 5717 (external_id=doc-002060): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,617 WARNING app.processing.normalize_worker: raw_document 5720 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,617 WARNING app.processing.normalize_worker: raw_document 5721 (external_id=doc-002064): status: unrecognized status: ''
+2026-06-10 23:21:02,617 WARNING app.processing.normalize_worker: raw_document 5726 (external_id=doc-002069): status: unrecognized status: ''
+2026-06-10 23:21:02,617 WARNING app.processing.normalize_worker: raw_document 5727 (external_id=doc-002070): status: unrecognized status: ''
+2026-06-10 23:21:02,618 WARNING app.processing.normalize_worker: raw_document 5730 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,618 WARNING app.processing.normalize_worker: raw_document 5737 (external_id=None): relevance_score: could not parse float: 'high'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,618 WARNING app.processing.normalize_worker: raw_document 5738 (external_id=doc-002081): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,618 WARNING app.processing.normalize_worker: raw_document 5741 (external_id=doc-002084): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,619 WARNING app.processing.normalize_worker: raw_document 5742 (external_id=doc-002085): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,619 WARNING app.processing.normalize_worker: raw_document 5749 (external_id=doc-002093): updated_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,619 WARNING app.processing.normalize_worker: raw_document 5750 (external_id=doc-002094): updated_at: could not parse date: 'invalid-date'; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,620 WARNING app.processing.normalize_worker: raw_document 5755 (external_id=doc-002099): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,620 WARNING app.processing.normalize_worker: raw_document 5757 (external_id=doc-002102): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,620 WARNING app.processing.normalize_worker: raw_document 5761 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,621 WARNING app.processing.normalize_worker: raw_document 5766 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,690 INFO app.processing.normalize_worker: stage 1: normalized 500 raw documents (remaining=834)
+2026-06-10 23:21:02,690 INFO app.services.ingestion_service: app.processing.normalize_worker: processed=500 remaining=834
+2026-06-10 23:21:02,696 WARNING app.processing.normalize_worker: raw_document 5774 (external_id=doc-002120): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,696 WARNING app.processing.normalize_worker: raw_document 5775 (external_id=doc-002123): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,696 WARNING app.processing.normalize_worker: raw_document 5776 (external_id=doc-002124): status: unrecognized status: ''
+2026-06-10 23:21:02,696 WARNING app.processing.normalize_worker: raw_document 5781 (external_id=2129): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,697 WARNING app.processing.normalize_worker: raw_document 5786 (external_id=2134): status: unrecognized status: ''
+2026-06-10 23:21:02,697 WARNING app.processing.normalize_worker: raw_document 5791 (external_id=doc-002139): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,698 WARNING app.processing.normalize_worker: raw_document 5797 (external_id=doc-002146): status: unrecognized status: ''
+2026-06-10 23:21:02,698 WARNING app.processing.normalize_worker: raw_document 5798 (external_id=doc-002147): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,698 WARNING app.processing.normalize_worker: raw_document 5801 (external_id=doc-002150): status: unrecognized status: ''
+2026-06-10 23:21:02,698 WARNING app.processing.normalize_worker: raw_document 5802 (external_id=doc-002151): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,698 WARNING app.processing.normalize_worker: raw_document 5803 (external_id=doc-002152): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,698 WARNING app.processing.normalize_worker: raw_document 5804 (external_id=doc-002153): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,699 WARNING app.processing.normalize_worker: raw_document 5806 (external_id=doc-002155): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,699 WARNING app.processing.normalize_worker: raw_document 5807 (external_id=doc-002156): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,699 WARNING app.processing.normalize_worker: raw_document 5809 (external_id=doc-002158): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,699 WARNING app.processing.normalize_worker: raw_document 5811 (external_id=doc-002160): updated_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,699 WARNING app.processing.normalize_worker: raw_document 5812 (external_id=doc-002161): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,700 WARNING app.processing.normalize_worker: raw_document 5821 (external_id=doc-002171): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,700 WARNING app.processing.normalize_worker: raw_document 5822 (external_id=doc-002172): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,700 WARNING app.processing.normalize_worker: raw_document 5823 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,701 WARNING app.processing.normalize_worker: raw_document 5833 (external_id=doc-002183): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,701 WARNING app.processing.normalize_worker: raw_document 5835 (external_id=doc-002185): status: unrecognized status: ''
+2026-06-10 23:21:02,701 WARNING app.processing.normalize_worker: raw_document 5837 (external_id=doc-002187): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,702 WARNING app.processing.normalize_worker: raw_document 5839 (external_id=doc-002189): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,702 WARNING app.processing.normalize_worker: raw_document 5841 (external_id=doc-002192): status: unrecognized status: ''
+2026-06-10 23:21:02,702 WARNING app.processing.normalize_worker: raw_document 5848 (external_id=doc-002199): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,703 WARNING app.processing.normalize_worker: raw_document 5850 (external_id=doc-002201): status: unrecognized status: ''
+2026-06-10 23:21:02,703 WARNING app.processing.normalize_worker: raw_document 5852 (external_id=doc-002204): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,703 WARNING app.processing.normalize_worker: raw_document 5854 (external_id=doc-002206): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,704 WARNING app.processing.normalize_worker: raw_document 5860 (external_id=doc-002212): published_at: could not parse date: 'invalid-date'; citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,704 WARNING app.processing.normalize_worker: raw_document 5861 (external_id=doc-002214): status: unrecognized status: ''
+2026-06-10 23:21:02,704 WARNING app.processing.normalize_worker: raw_document 5862 (external_id=doc-002215): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,704 WARNING app.processing.normalize_worker: raw_document 5863 (external_id=doc-002216): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,704 WARNING app.processing.normalize_worker: raw_document 5864 (external_id=None): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,704 WARNING app.processing.normalize_worker: raw_document 5869 (external_id=doc-002222): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,705 WARNING app.processing.normalize_worker: raw_document 5870 (external_id=doc-002223): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,705 WARNING app.processing.normalize_worker: raw_document 5871 (external_id=doc-002224): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,705 WARNING app.processing.normalize_worker: raw_document 5872 (external_id=doc-002225): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,705 WARNING app.processing.normalize_worker: raw_document 5876 (external_id=doc-002229): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,705 WARNING app.processing.normalize_worker: raw_document 5877 (external_id=doc-002230): published_at: could not parse date: '2023-13-45'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,706 WARNING app.processing.normalize_worker: raw_document 5881 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,706 WARNING app.processing.normalize_worker: raw_document 5885 (external_id=doc-002238): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,706 WARNING app.processing.normalize_worker: raw_document 5887 (external_id=doc-002240): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,707 WARNING app.processing.normalize_worker: raw_document 5891 (external_id=doc-002244): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,707 WARNING app.processing.normalize_worker: raw_document 5892 (external_id=doc-002245): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,707 WARNING app.processing.normalize_worker: raw_document 5895 (external_id=doc-002248): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,707 WARNING app.processing.normalize_worker: raw_document 5897 (external_id=doc-002250): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,708 WARNING app.processing.normalize_worker: raw_document 5898 (external_id=doc-002252): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,708 WARNING app.processing.normalize_worker: raw_document 5899 (external_id=doc-002253): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,708 WARNING app.processing.normalize_worker: raw_document 5901 (external_id=doc-002255): status: unrecognized status: ''; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,708 WARNING app.processing.normalize_worker: raw_document 5904 (external_id=doc-002258): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,708 WARNING app.processing.normalize_worker: raw_document 5906 (external_id=doc-002260): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,709 WARNING app.processing.normalize_worker: raw_document 5914 (external_id=doc-002271): status: unrecognized status: ''
+2026-06-10 23:21:02,710 WARNING app.processing.normalize_worker: raw_document 5920 (external_id=doc-002279): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,710 WARNING app.processing.normalize_worker: raw_document 5922 (external_id=doc-002281): status: unrecognized status: ''
+2026-06-10 23:21:02,710 WARNING app.processing.normalize_worker: raw_document 5923 (external_id=None): published_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,710 WARNING app.processing.normalize_worker: raw_document 5924 (external_id=doc-002283): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,710 WARNING app.processing.normalize_worker: raw_document 5926 (external_id=doc-002285): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,710 WARNING app.processing.normalize_worker: raw_document 5927 (external_id=doc-002286): status: unrecognized status: ''
+2026-06-10 23:21:02,711 WARNING app.processing.normalize_worker: raw_document 5929 (external_id=doc-002288): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,711 WARNING app.processing.normalize_worker: raw_document 5931 (external_id=doc-002290): status: unrecognized status: ''; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,711 WARNING app.processing.normalize_worker: raw_document 5932 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,711 WARNING app.processing.normalize_worker: raw_document 5933 (external_id=doc-002292): status: unrecognized status: ''
+2026-06-10 23:21:02,711 WARNING app.processing.normalize_worker: raw_document 5937 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,711 WARNING app.processing.normalize_worker: raw_document 5939 (external_id=doc-002298): status: unrecognized status: ''
+2026-06-10 23:21:02,712 WARNING app.processing.normalize_worker: raw_document 5941 (external_id=doc-002300): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,712 WARNING app.processing.normalize_worker: raw_document 5942 (external_id=doc-002301): updated_at: could not parse date: 'invalid-date'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,712 WARNING app.processing.normalize_worker: raw_document 5945 (external_id=doc-002304): status: unrecognized status: ''
+2026-06-10 23:21:02,712 WARNING app.processing.normalize_worker: raw_document 5949 (external_id=doc-002308): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,712 WARNING app.processing.normalize_worker: raw_document 5950 (external_id=doc-002309): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,713 WARNING app.processing.normalize_worker: raw_document 5952 (external_id=doc-002311): status: unrecognized status: ''
+2026-06-10 23:21:02,713 WARNING app.processing.normalize_worker: raw_document 5955 (external_id=doc-002314): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,713 WARNING app.processing.normalize_worker: raw_document 5956 (external_id=doc-002315): word_count: could not parse integer: 'lots'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,713 WARNING app.processing.normalize_worker: raw_document 5958 (external_id=doc-002317): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,714 WARNING app.processing.normalize_worker: raw_document 5964 (external_id=None): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,714 WARNING app.processing.normalize_worker: raw_document 5966 (external_id=doc-002325): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,714 WARNING app.processing.normalize_worker: raw_document 5967 (external_id=doc-002326): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,714 WARNING app.processing.normalize_worker: raw_document 5968 (external_id=doc-002327): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,714 WARNING app.processing.normalize_worker: raw_document 5970 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,714 WARNING app.processing.normalize_worker: raw_document 5971 (external_id=doc-002330): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,715 WARNING app.processing.normalize_worker: raw_document 5976 (external_id=doc-002335): status: unrecognized status: ''
+2026-06-10 23:21:02,715 WARNING app.processing.normalize_worker: raw_document 5978 (external_id=doc-002338): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,715 WARNING app.processing.normalize_worker: raw_document 5979 (external_id=doc-002339): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,715 WARNING app.processing.normalize_worker: raw_document 5981 (external_id=doc-002341): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,716 WARNING app.processing.normalize_worker: raw_document 5983 (external_id=doc-002343): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,716 WARNING app.processing.normalize_worker: raw_document 5984 (external_id=doc-002344): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,716 WARNING app.processing.normalize_worker: raw_document 5986 (external_id=doc-002346): status: unrecognized status: ''
+2026-06-10 23:21:02,716 WARNING app.processing.normalize_worker: raw_document 5987 (external_id=doc-002347): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,716 WARNING app.processing.normalize_worker: raw_document 5990 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,717 WARNING app.processing.normalize_worker: raw_document 5992 (external_id=doc-002353): updated_at: could not parse date: '2023-13-45'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,717 WARNING app.processing.normalize_worker: raw_document 5993 (external_id=doc-002354): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,717 WARNING app.processing.normalize_worker: raw_document 5994 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,717 WARNING app.processing.normalize_worker: raw_document 5997 (external_id=doc-002358): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,717 WARNING app.processing.normalize_worker: raw_document 5999 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,718 WARNING app.processing.normalize_worker: raw_document 6003 (external_id=doc-002366): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,718 WARNING app.processing.normalize_worker: raw_document 6009 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,718 WARNING app.processing.normalize_worker: raw_document 6011 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,719 WARNING app.processing.normalize_worker: raw_document 6017 (external_id=doc-002381): status: unrecognized status: ''
+2026-06-10 23:21:02,719 WARNING app.processing.normalize_worker: raw_document 6019 (external_id=doc-002383): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,719 WARNING app.processing.normalize_worker: raw_document 6020 (external_id=doc-002384): status: unrecognized status: ''
+2026-06-10 23:21:02,720 WARNING app.processing.normalize_worker: raw_document 6026 (external_id=doc-002391): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,720 WARNING app.processing.normalize_worker: raw_document 6030 (external_id=doc-002395): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,720 WARNING app.processing.normalize_worker: raw_document 6031 (external_id=doc-002396): status: unrecognized status: ''
+2026-06-10 23:21:02,721 WARNING app.processing.normalize_worker: raw_document 6039 (external_id=doc-002405): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,721 WARNING app.processing.normalize_worker: raw_document 6043 (external_id=doc-002409): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,722 WARNING app.processing.normalize_worker: raw_document 6048 (external_id=None): published_at: could not parse date: '2023-13-45'; updated_at: could not parse date: 'invalid-date'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,722 WARNING app.processing.normalize_worker: raw_document 6049 (external_id=doc-002415): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,722 WARNING app.processing.normalize_worker: raw_document 6050 (external_id=doc-002416): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,722 WARNING app.processing.normalize_worker: raw_document 6053 (external_id=doc-002419): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,723 WARNING app.processing.normalize_worker: raw_document 6060 (external_id=doc-002426): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,723 WARNING app.processing.normalize_worker: raw_document 6065 (external_id=doc-002432): status: unrecognized status: ''
+2026-06-10 23:21:02,723 WARNING app.processing.normalize_worker: raw_document 6066 (external_id=doc-002433): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,724 WARNING app.processing.normalize_worker: raw_document 6069 (external_id=doc-002436): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,724 WARNING app.processing.normalize_worker: raw_document 6070 (external_id=doc-002437): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,724 WARNING app.processing.normalize_worker: raw_document 6071 (external_id=doc-002438): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,724 WARNING app.processing.normalize_worker: raw_document 6074 (external_id=doc-002441): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,724 WARNING app.processing.normalize_worker: raw_document 6077 (external_id=doc-002444): status: unrecognized status: ''
+2026-06-10 23:21:02,725 WARNING app.processing.normalize_worker: raw_document 6081 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,725 WARNING app.processing.normalize_worker: raw_document 6083 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,725 WARNING app.processing.normalize_worker: raw_document 6084 (external_id=doc-002451): updated_at: could not parse date: '2023-13-45'; word_count: could not parse integer: 'lots'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,726 WARNING app.processing.normalize_worker: raw_document 6093 (external_id=doc-002460): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,726 WARNING app.processing.normalize_worker: raw_document 6095 (external_id=doc-002462): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,726 WARNING app.processing.normalize_worker: raw_document 6096 (external_id=doc-002463): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,727 WARNING app.processing.normalize_worker: raw_document 6105 (external_id=doc-002474): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,727 WARNING app.processing.normalize_worker: raw_document 6108 (external_id=doc-002477): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,727 WARNING app.processing.normalize_worker: raw_document 6110 (external_id=doc-002479): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,728 WARNING app.processing.normalize_worker: raw_document 6113 (external_id=doc-002482): status: unrecognized status: ''
+2026-06-10 23:21:02,728 WARNING app.processing.normalize_worker: raw_document 6116 (external_id=doc-002485): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,728 WARNING app.processing.normalize_worker: raw_document 6119 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,729 WARNING app.processing.normalize_worker: raw_document 6125 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,729 WARNING app.processing.normalize_worker: raw_document 6133 (external_id=doc-002502): updated_at: could not parse date: 'invalid-date'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,730 WARNING app.processing.normalize_worker: raw_document 6139 (external_id=doc-002508): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,730 WARNING app.processing.normalize_worker: raw_document 6141 (external_id=doc-002510): status: unrecognized status: ''
+2026-06-10 23:21:02,730 WARNING app.processing.normalize_worker: raw_document 6142 (external_id=doc-002511): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,730 WARNING app.processing.normalize_worker: raw_document 6144 (external_id=doc-002513): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,731 WARNING app.processing.normalize_worker: raw_document 6147 (external_id=doc-002516): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,731 WARNING app.processing.normalize_worker: raw_document 6152 (external_id=doc-002521): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,731 WARNING app.processing.normalize_worker: raw_document 6155 (external_id=doc-002524): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,731 WARNING app.processing.normalize_worker: raw_document 6156 (external_id=doc-002525): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,732 WARNING app.processing.normalize_worker: raw_document 6159 (external_id=doc-002528): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,732 WARNING app.processing.normalize_worker: raw_document 6168 (external_id=doc-002537): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,733 WARNING app.processing.normalize_worker: raw_document 6170 (external_id=doc-002539): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,733 WARNING app.processing.normalize_worker: raw_document 6173 (external_id=doc-002542): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,733 WARNING app.processing.normalize_worker: raw_document 6174 (external_id=doc-002543): status: unrecognized status: ''
+2026-06-10 23:21:02,733 WARNING app.processing.normalize_worker: raw_document 6178 (external_id=doc-002547): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,733 WARNING app.processing.normalize_worker: raw_document 6179 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,734 WARNING app.processing.normalize_worker: raw_document 6181 (external_id=doc-002550): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,734 WARNING app.processing.normalize_worker: raw_document 6182 (external_id=doc-002551): status: unrecognized status: ''
+2026-06-10 23:21:02,734 WARNING app.processing.normalize_worker: raw_document 6183 (external_id=doc-002552): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,734 WARNING app.processing.normalize_worker: raw_document 6184 (external_id=doc-002553): status: unrecognized status: ''
+2026-06-10 23:21:02,734 WARNING app.processing.normalize_worker: raw_document 6186 (external_id=doc-002555): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,734 WARNING app.processing.normalize_worker: raw_document 6190 (external_id=doc-002559): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,735 WARNING app.processing.normalize_worker: raw_document 6192 (external_id=doc-002561): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,735 WARNING app.processing.normalize_worker: raw_document 6194 (external_id=doc-002563): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,736 WARNING app.processing.normalize_worker: raw_document 6201 (external_id=doc-002572): word_count: could not parse integer: 'lots'; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,737 WARNING app.processing.normalize_worker: raw_document 6206 (external_id=doc-002577): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,737 WARNING app.processing.normalize_worker: raw_document 6207 (external_id=doc-002578): status: unrecognized status: ''
+2026-06-10 23:21:02,737 WARNING app.processing.normalize_worker: raw_document 6208 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,737 WARNING app.processing.normalize_worker: raw_document 6209 (external_id=doc-002580): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,737 WARNING app.processing.normalize_worker: raw_document 6210 (external_id=doc-002581): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,737 WARNING app.processing.normalize_worker: raw_document 6214 (external_id=doc-002585): status: unrecognized status: ''
+2026-06-10 23:21:02,738 WARNING app.processing.normalize_worker: raw_document 6215 (external_id=doc-002586): status: unrecognized status: ''
+2026-06-10 23:21:02,738 WARNING app.processing.normalize_worker: raw_document 6219 (external_id=doc-002590): citation_count: could not parse integer: 'many'; word_count: could not parse integer: 'lots'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,738 WARNING app.processing.normalize_worker: raw_document 6221 (external_id=doc-002592): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,738 WARNING app.processing.normalize_worker: raw_document 6225 (external_id=doc-002596): status: unrecognized status: ''; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,739 WARNING app.processing.normalize_worker: raw_document 6227 (external_id=doc-002598): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,739 WARNING app.processing.normalize_worker: raw_document 6232 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,739 WARNING app.processing.normalize_worker: raw_document 6234 (external_id=doc-002606): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,739 WARNING app.processing.normalize_worker: raw_document 6237 (external_id=doc-002609): status: unrecognized status: ''
+2026-06-10 23:21:02,740 WARNING app.processing.normalize_worker: raw_document 6241 (external_id=doc-002613): status: unrecognized status: ''
+2026-06-10 23:21:02,740 WARNING app.processing.normalize_worker: raw_document 6244 (external_id=doc-002616): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,740 WARNING app.processing.normalize_worker: raw_document 6246 (external_id=doc-002618): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,740 WARNING app.processing.normalize_worker: raw_document 6248 (external_id=doc-002620): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,741 WARNING app.processing.normalize_worker: raw_document 6253 (external_id=doc-002626): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,741 WARNING app.processing.normalize_worker: raw_document 6257 (external_id=doc-002631): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,741 WARNING app.processing.normalize_worker: raw_document 6260 (external_id=doc-002634): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,741 WARNING app.processing.normalize_worker: raw_document 6262 (external_id=doc-002636): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,832 INFO app.processing.normalize_worker: stage 1: normalized 500 raw documents (remaining=334)
+2026-06-10 23:21:02,833 INFO app.services.ingestion_service: app.processing.normalize_worker: processed=500 remaining=334
+2026-06-10 23:21:02,838 WARNING app.processing.normalize_worker: raw_document 6276 (external_id=doc-002650): status: unrecognized status: ''
+2026-06-10 23:21:02,839 WARNING app.processing.normalize_worker: raw_document 6280 (external_id=doc-002654): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,839 WARNING app.processing.normalize_worker: raw_document 6281 (external_id=doc-002655): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,839 WARNING app.processing.normalize_worker: raw_document 6283 (external_id=doc-002657): status: unrecognized status: ''
+2026-06-10 23:21:02,839 WARNING app.processing.normalize_worker: raw_document 6285 (external_id=doc-002659): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,840 WARNING app.processing.normalize_worker: raw_document 6289 (external_id=doc-002663): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,840 WARNING app.processing.normalize_worker: raw_document 6295 (external_id=doc-002669): published_at: could not parse date: '2023-13-45'; updated_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,841 WARNING app.processing.normalize_worker: raw_document 6297 (external_id=doc-002671): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,841 WARNING app.processing.normalize_worker: raw_document 6305 (external_id=doc-002679): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,841 WARNING app.processing.normalize_worker: raw_document 6307 (external_id=doc-002681): status: unrecognized status: ''
+2026-06-10 23:21:02,842 WARNING app.processing.normalize_worker: raw_document 6309 (external_id=None): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,842 WARNING app.processing.normalize_worker: raw_document 6311 (external_id=None): updated_at: could not parse date: 'invalid-date'; relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,842 WARNING app.processing.normalize_worker: raw_document 6313 (external_id=None): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,843 WARNING app.processing.normalize_worker: raw_document 6318 (external_id=doc-002695): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,843 WARNING app.processing.normalize_worker: raw_document 6320 (external_id=doc-002697): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,843 WARNING app.processing.normalize_worker: raw_document 6325 (external_id=doc-002702): status: unrecognized status: ''
+2026-06-10 23:21:02,843 WARNING app.processing.normalize_worker: raw_document 6326 (external_id=doc-002703): updated_at: could not parse date: '2023-13-45'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,844 WARNING app.processing.normalize_worker: raw_document 6329 (external_id=doc-002706): status: unrecognized status: ''
+2026-06-10 23:21:02,844 WARNING app.processing.normalize_worker: raw_document 6331 (external_id=doc-002708): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,844 WARNING app.processing.normalize_worker: raw_document 6333 (external_id=doc-002710): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,845 WARNING app.processing.normalize_worker: raw_document 6338 (external_id=doc-002715): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,845 WARNING app.processing.normalize_worker: raw_document 6339 (external_id=doc-002716): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,845 WARNING app.processing.normalize_worker: raw_document 6340 (external_id=doc-002718): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,845 WARNING app.processing.normalize_worker: raw_document 6341 (external_id=doc-002719): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,846 WARNING app.processing.normalize_worker: raw_document 6350 (external_id=None): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,846 WARNING app.processing.normalize_worker: raw_document 6352 (external_id=doc-002731): published_at: could not parse date: '2023-13-45'; status: unrecognized status: ''
+2026-06-10 23:21:02,846 WARNING app.processing.normalize_worker: raw_document 6353 (external_id=doc-002732): status: unrecognized status: ''
+2026-06-10 23:21:02,847 WARNING app.processing.normalize_worker: raw_document 6355 (external_id=doc-002735): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,847 WARNING app.processing.normalize_worker: raw_document 6361 (external_id=doc-002741): status: unrecognized status: ''
+2026-06-10 23:21:02,848 WARNING app.processing.normalize_worker: raw_document 6370 (external_id=doc-002752): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,848 WARNING app.processing.normalize_worker: raw_document 6372 (external_id=doc-002754): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,848 WARNING app.processing.normalize_worker: raw_document 6373 (external_id=None): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,849 WARNING app.processing.normalize_worker: raw_document 6384 (external_id=doc-002766): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,850 WARNING app.processing.normalize_worker: raw_document 6392 (external_id=doc-002774): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,850 WARNING app.processing.normalize_worker: raw_document 6395 (external_id=doc-002777): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,850 WARNING app.processing.normalize_worker: raw_document 6398 (external_id=doc-002781): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,850 WARNING app.processing.normalize_worker: raw_document 6401 (external_id=doc-002784): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,851 WARNING app.processing.normalize_worker: raw_document 6403 (external_id=doc-002786): citation_count: could not parse integer: 'many'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,851 WARNING app.processing.normalize_worker: raw_document 6408 (external_id=doc-002792): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,851 WARNING app.processing.normalize_worker: raw_document 6411 (external_id=doc-002795): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,852 WARNING app.processing.normalize_worker: raw_document 6414 (external_id=doc-002798): published_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,852 WARNING app.processing.normalize_worker: raw_document 6416 (external_id=doc-002801): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,852 WARNING app.processing.normalize_worker: raw_document 6417 (external_id=doc-002802): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,852 WARNING app.processing.normalize_worker: raw_document 6418 (external_id=doc-002803): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,852 WARNING app.processing.normalize_worker: raw_document 6420 (external_id=doc-002805): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,853 WARNING app.processing.normalize_worker: raw_document 6426 (external_id=doc-002811): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,854 WARNING app.processing.normalize_worker: raw_document 6436 (external_id=doc-002821): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,854 WARNING app.processing.normalize_worker: raw_document 6438 (external_id=doc-002823): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,854 WARNING app.processing.normalize_worker: raw_document 6440 (external_id=doc-002825): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,854 WARNING app.processing.normalize_worker: raw_document 6445 (external_id=doc-002831): status: unrecognized status: ''
+2026-06-10 23:21:02,855 WARNING app.processing.normalize_worker: raw_document 6446 (external_id=doc-002832): published_at: could not parse date: '2023-13-45'; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,855 WARNING app.processing.normalize_worker: raw_document 6451 (external_id=None): status: unrecognized status: ''
+2026-06-10 23:21:02,855 WARNING app.processing.normalize_worker: raw_document 6452 (external_id=doc-002838): status: unrecognized status: ''; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,855 WARNING app.processing.normalize_worker: raw_document 6454 (external_id=doc-002840): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,856 WARNING app.processing.normalize_worker: raw_document 6468 (external_id=doc-002856): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,857 WARNING app.processing.normalize_worker: raw_document 6480 (external_id=doc-002868): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,858 WARNING app.processing.normalize_worker: raw_document 6481 (external_id=doc-002870): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,858 WARNING app.processing.normalize_worker: raw_document 6483 (external_id=doc-002872): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,858 WARNING app.processing.normalize_worker: raw_document 6485 (external_id=doc-002874): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,858 WARNING app.processing.normalize_worker: raw_document 6486 (external_id=doc-002875): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,858 WARNING app.processing.normalize_worker: raw_document 6487 (external_id=doc-002876): status: unrecognized status: ''
+2026-06-10 23:21:02,859 WARNING app.processing.normalize_worker: raw_document 6491 (external_id=doc-002880): status: unrecognized status: ''
+2026-06-10 23:21:02,859 WARNING app.processing.normalize_worker: raw_document 6492 (external_id=None): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,859 WARNING app.processing.normalize_worker: raw_document 6494 (external_id=doc-002884): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,859 WARNING app.processing.normalize_worker: raw_document 6498 (external_id=doc-002888): status: unrecognized status: ''; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,860 WARNING app.processing.normalize_worker: raw_document 6502 (external_id=doc-002892): updated_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,860 WARNING app.processing.normalize_worker: raw_document 6508 (external_id=doc-002898): updated_at: could not parse date: 'invalid-date'; status: unrecognized status: ''
+2026-06-10 23:21:02,861 WARNING app.processing.normalize_worker: raw_document 6517 (external_id=doc-002909): published_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,861 WARNING app.processing.normalize_worker: raw_document 6521 (external_id=doc-002913): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,861 WARNING app.processing.normalize_worker: raw_document 6524 (external_id=doc-002917): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,862 WARNING app.processing.normalize_worker: raw_document 6537 (external_id=doc-002930): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,862 WARNING app.processing.normalize_worker: raw_document 6538 (external_id=doc-002931): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,863 WARNING app.processing.normalize_worker: raw_document 6543 (external_id=doc-002937): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,863 WARNING app.processing.normalize_worker: raw_document 6546 (external_id=doc-002940): tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,863 WARNING app.processing.normalize_worker: raw_document 6547 (external_id=doc-002941): published_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,864 WARNING app.processing.normalize_worker: raw_document 6550 (external_id=doc-002944): published_at: could not parse date: 'invalid-date'; updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,864 WARNING app.processing.normalize_worker: raw_document 6554 (external_id=doc-002949): status: unrecognized status: ''; tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,864 WARNING app.processing.normalize_worker: raw_document 6562 (external_id=doc-002957): status: unrecognized status: ''; word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,865 WARNING app.processing.normalize_worker: raw_document 6569 (external_id=doc-002965): citation_count: could not parse integer: 'many'
+2026-06-10 23:21:02,865 WARNING app.processing.normalize_worker: raw_document 6572 (external_id=doc-002968): status: unrecognized status: ''
+2026-06-10 23:21:02,865 WARNING app.processing.normalize_worker: raw_document 6573 (external_id=doc-002969): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,866 WARNING app.processing.normalize_worker: raw_document 6574 (external_id=doc-002970): status: unrecognized status: ''
+2026-06-10 23:21:02,866 WARNING app.processing.normalize_worker: raw_document 6581 (external_id=doc-002978): relevance_score: could not parse float: 'high'
+2026-06-10 23:21:02,866 WARNING app.processing.normalize_worker: raw_document 6582 (external_id=doc-002979): published_at: could not parse date: '2023-13-45'
+2026-06-10 23:21:02,867 WARNING app.processing.normalize_worker: raw_document 6587 (external_id=doc-002984): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,867 WARNING app.processing.normalize_worker: raw_document 6588 (external_id=None): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,867 WARNING app.processing.normalize_worker: raw_document 6589 (external_id=doc-002986): updated_at: could not parse date: 'invalid-date'
+2026-06-10 23:21:02,867 WARNING app.processing.normalize_worker: raw_document 6594 (external_id=doc-002991): published_at: could not parse date: 'invalid-date'; tags: tags list contained non-string elements, which were dropped
+2026-06-10 23:21:02,868 WARNING app.processing.normalize_worker: raw_document 6596 (external_id=doc-002994): tags: unexpected type for tags: int: 123
+2026-06-10 23:21:02,868 WARNING app.processing.normalize_worker: raw_document 6598 (external_id=doc-002996): word_count: could not parse integer: 'lots'
+2026-06-10 23:21:02,919 INFO app.processing.normalize_worker: stage 1: normalized 334 raw documents (remaining=0)
+2026-06-10 23:21:02,919 INFO app.services.ingestion_service: app.processing.normalize_worker: processed=334 remaining=0
+2026-06-10 23:21:03,611 INFO app.processing.duplicates_worker: stage 2: processed 500 documents (remaining=444)
+2026-06-10 23:21:03,611 INFO app.services.ingestion_service: app.processing.duplicates_worker: processed=500 remaining=444
+2026-06-10 23:21:03,640 INFO app.processing.duplicates_worker: stage 2: processed 444 documents (remaining=0)
+2026-06-10 23:21:03,641 INFO app.services.ingestion_service: app.processing.duplicates_worker: processed=444 remaining=0
+2026-06-10 23:21:03,704 INFO app.processing.scoring_worker: stage 3: scored 500 documents (remaining=2334)
+2026-06-10 23:21:03,704 INFO app.services.ingestion_service: app.processing.scoring_worker: processed=500 remaining=2334
+2026-06-10 23:21:03,752 INFO app.processing.scoring_worker: stage 3: scored 500 documents (remaining=1834)
+2026-06-10 23:21:03,753 INFO app.services.ingestion_service: app.processing.scoring_worker: processed=500 remaining=1834
+2026-06-10 23:21:03,798 INFO app.processing.scoring_worker: stage 3: scored 500 documents (remaining=1334)
+2026-06-10 23:21:03,799 INFO app.services.ingestion_service: app.processing.scoring_worker: processed=500 remaining=1334
+2026-06-10 23:21:03,860 INFO app.processing.scoring_worker: stage 3: scored 500 documents (remaining=834)
+2026-06-10 23:21:03,860 INFO app.services.ingestion_service: app.processing.scoring_worker: processed=500 remaining=834
+2026-06-10 23:21:03,907 INFO app.processing.scoring_worker: stage 3: scored 500 documents (remaining=334)
+2026-06-10 23:21:03,907 INFO app.services.ingestion_service: app.processing.scoring_worker: processed=500 remaining=334
+2026-06-10 23:21:03,962 INFO app.processing.scoring_worker: stage 3: scored 334 documents (remaining=0)
+2026-06-10 23:21:03,962 INFO app.services.ingestion_service: app.processing.scoring_worker: processed=334 remaining=0
+2026-06-10 23:21:03,975 INFO app.services.ingestion_service: run 2: FINAL SUMMARY - total_lines=3000 raw_loaded=2834 skipped=166 normalized=2834 duplicates=2170 scored=2834 elapsed=1.96s
+2026-06-10 23:21:03,975 INFO app.services.ingestion_service: run 2: pipeline completed

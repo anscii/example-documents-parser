@@ -1,3 +1,4 @@
+import logging
 from datetime import date
 
 from app.models import Author, Document, IngestionRun, Organization, RawDocument
@@ -217,3 +218,26 @@ def test_process_batch_returns_zero_when_nothing_pending(db_session):
     processed, remaining = normalize_worker.process_batch(db_session, batch_size=10)
     assert processed == 0
     assert remaining == 0
+
+
+def test_process_batch_logs_external_id_for_normalized_record(db_session, caplog):
+    run = _make_run(db_session)
+    _add_raw_doc(db_session, run, FULL_RECORD, line_number=1)
+
+    with caplog.at_level(logging.DEBUG, logger="app.processing.normalize_worker"):
+        normalize_worker.process_batch(db_session, batch_size=10)
+
+    assert "external_id=doc-100" in caplog.text
+
+
+def test_process_batch_includes_external_id_in_warning_log(db_session, caplog):
+    run = _make_run(db_session)
+    _add_raw_doc(db_session, run, MESSY_RECORD, line_number=1)
+
+    with caplog.at_level(logging.WARNING, logger="app.processing.normalize_worker"):
+        normalize_worker.process_batch(db_session, batch_size=10)
+
+    warning_records = [r for r in caplog.records if r.levelname == "WARNING"]
+    assert len(warning_records) == 1
+    # MESSY_RECORD's external_id ("duplicate-id") normalizes to None.
+    assert "external_id=None" in warning_records[0].getMessage()

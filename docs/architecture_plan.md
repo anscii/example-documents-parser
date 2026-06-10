@@ -10,7 +10,7 @@ This plan was refined via a `grill-with-docs` session covering edge cases found 
 
 ### Confirmed data profile (verified against all 11,000 lines of input_docs/*.jsonl)
 
-- 11,000 lines → **114** are `[]` (skip, `not_object`), **331** are `{"broken": true}` (skip, `broken_stub`) → **10,555** valid records. **222** are `{}` (valid, all-null `documents` row, NOT skipped).
+- 11,000 lines → **114** are `[]` (skip, `not_object`), **331** are `{"broken": true}` (skip, `broken_stub`), **222** are `{}` (skip, `empty`) → **667** total hard-skips → **10,333** valid records.
 - `external_id`: sentinels `"duplicate-id"` (844), `""` (188), `null` (400) → "no external id" (`raw_external_id = NULL`); not unique, not an identity key.
 - **41 non-null titles** (case/whitespace-insensitive), each repeated ~176–386 times; **2,186 records have null title** (singletons). Title-grouping normalization confirmed against the actual 41 titles: only 2 pairs differ by case alone (`"Climate Policy in Southern Europe"` / `"climate policy in southern europe"`, `"URBAN DEVELOPMENT STRATEGIES"` / `"Urban Development Strategies"`), no whitespace-only variants exist.
 - `status`: str (mixed casing incl. PUBLISHED/Draft/unknown/""), int (0–5), bool, null.
@@ -32,7 +32,7 @@ This plan was refined via a `grill-with-docs` session covering edge cases found 
 ### Architecture decisions (locked in across brainstorming + review rounds)
 
 - **Stack**: Python 3.12 + `uv` + FastAPI + SQLAlchemy 2.0 + Alembic + SQLite (`data/app.db`, gitignored) + pytest.
-- **`documents`**: ONE ROW PER VALID INGESTED RECORD (~10,555 rows from a full demo run of all 5 files), not collapsed.
+- **`documents`**: ONE ROW PER VALID INGESTED RECORD (~10,333 rows from a full demo run of all 5 files), not collapsed.
 - **`/stats`** = document-corpus statistics only. Ingestion run status/history is separate (`GET /ingestions`, `GET /ingestions/{run_id}`).
 - All 3 processing steps required: duplicate detection, quality scoring, document_type classification.
 - **No CLI ingestion trigger** — `POST /ingestions` is the only entry point, and the app is never hardcoded to a local `input_docs` path.
@@ -143,11 +143,11 @@ example_documents_parser/
 
 **`ingestion_runs`**: `id`, `source_file` (str), `file_hash` (str, indexed), `staged_path` (str), `started_at`, `finished_at`, `status` (`queued`|`processing`|`completed`|`failed`, indexed), `total_lines`, `raw_loaded_count`, `skipped_count`, `error_message`.
 
-**`ingestion_errors`**: `id`, `run_id` FK, `line_number`, `raw_line` (truncated 2000 chars), `error_category` (`invalid_json`|`not_object`|`broken_stub`), `error_detail`. Only the ~445 hard-skips per file go here.
+**`ingestion_errors`**: `id`, `run_id` FK, `line_number`, `raw_line` (truncated 2000 chars), `error_category` (`invalid_json`|`not_object`|`broken_stub`|`empty`), `error_detail`. Only the ~667 hard-skips per file go here.
 
 **`raw_documents`** (stage-1 queue): `id`, `ingestion_run_id` FK (indexed), `line_number`, `raw_data` (JSON — structurally-valid parsed record, incl. `{}`), `status` (`pending`|`normalized`, indexed), `created_at`, `normalized_at` (nullable).
 
-**`documents`** (~10,555 rows after a full demo):
+**`documents`** (~10,333 rows after a full demo):
 - Provenance: `id`, `raw_document_id` FK (unique, indexed), `raw_external_id` (nullable, indexed, NOT unique).
 - Text: `title`, `normalized_title` (lower/trim/collapse-whitespace, indexed), `abstract`, `body`.
 - Dates: `published_at` (Date, indexed) + `published_at_raw`, `updated_at` + `updated_at_raw`.
@@ -286,7 +286,7 @@ Note: `documents.citation_count`/`relevance_score` themselves remain `NULL` for 
 
 - **Unit** (`tests/unit/`, no DB): table-driven tests per normalizer covering every messy-value category from the data profile, including the new edge cases — `source_name` `""`/`null`/`"unknown"`(any case)→`NULL`; `region` `""`/`null`→`NULL`; `tags: [null]`→`[]`+warning and `["energy", null]`→`["energy"]`+warning; `normalize_title_for_grouping` on the two case-variant title pairs. Also `record_validator` (`[]`/`{"broken":true}`/`{}`/malformed JSON); `duplicates_worker` (cohort graph: author-only edge, source-only edge, both, neither → singleton; component merge when a bridging doc arrives; canonical pick; confidence formula incl. cap at 1.0; Unknown-author/null-source never create edges); `scoring_worker` (each component incl. future-date clamping, plus the `"many"`→p90 and `"high"`→0.9 substitutions via a fake `raw_data`).
 - **Integration** (`tests/integration/`): temp SQLite + Alembic-migrated schema + `TestClient` with `get_db` override; background tasks executed synchronously in tests (call `run_pipeline`/worker functions directly rather than relying on `BackgroundTasks` timing). `test_staged_pipeline.py` POSTs a ~20-50 line fixture `.jsonl` (covering every messy case incl. `source_name="unknown"`, `tags: [null]`, `region: ""` + a crafted title+author duplicate group + a crafted title+source duplicate group + a same-title-different-author/source non-duplicate pair), drives all stages to completion, asserts row counts/categories/dedup/score fields. `test_api_*.py` cover all routers incl. every `/documents` filter, pagination defaults, `canonical_only` default behavior, 404, `/stats` shape/sum-consistency, `POST /ingestions` 409-on-duplicate + `force=true` bypass.
-- Optional `@pytest.mark.slow` test uploading each of the real `input_docs/*.jsonl` files and driving all stages, asserting headline numbers (10,555 normalized docs total, 41 title-based cohorts, etc.) — also useful for generating the execution log deliverable.
+- Optional `@pytest.mark.slow` test uploading each of the real `input_docs/*.jsonl` files and driving all stages, asserting headline numbers (10,333 normalized docs total, 41 title-based cohorts, etc.) — also useful for generating the execution log deliverable.
 
 ---
 
@@ -324,7 +324,7 @@ Note: `documents.citation_count`/`relevance_score` themselves remain `NULL` for 
 - `uv run pytest` — all unit + integration tests pass.
 - `uv run alembic upgrade head` then `sqlite3 data/app.db .schema`.
 - Start server, for `f in documents_1..5.jsonl: curl -F "file=@input_docs/$f" localhost:8000/ingestions`, poll `GET /ingestions/{id}` until `completed` for each. Then verify:
-  - Sum of `raw_loaded_count` across the 5 runs = 10555; sum of `skipped_count` = 445.
+  - Sum of `raw_loaded_count` across the 5 runs = 10333; sum of `skipped_count` = 667.
   - Re-POSTing the same file without `force` → 409; with `force=true` → new run accepted.
   - `GET /stats` internally consistent (`sum(by_status.values()) == total_documents`, etc.); `by_region`/`top_tags` show all real values with no spurious `"unknown"` source/`"none"` tag entries.
   - `GET /documents` (default, no params) total count == `total_documents` (canonical_only defaults to false); filters/pagination sane; `GET /documents/{id}` for a duplicate-group member shows `duplicate_group`, `quality_score`, `document_type`.

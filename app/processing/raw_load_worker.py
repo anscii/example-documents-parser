@@ -34,6 +34,12 @@ def process_run(db: Session, run: IngestionRun) -> None:
                 )
             )
             raw_loaded_count += 1
+            logger.debug(
+                "run %s: line %d staged (external_id=%s)",
+                run.id,
+                line_number,
+                result.data.get("external_id"),
+            )
         else:
             db.add(
                 IngestionError(

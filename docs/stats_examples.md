@@ -1,7 +1,7 @@
 # `/stats` examples
 
 Real `GET /stats` response captured after ingesting all five `input_docs/documents_*.jsonl`
-files (10,555 documents total — see [`execution_log_sample.md`](./execution_log_sample.md)
+files (10,333 documents total — see [`execution_log_sample.md`](./execution_log_sample.md)
 for the run that produced this state).
 
 ```bash
@@ -10,15 +10,15 @@ curl -s http://localhost:8000/stats | python3 -m json.tool
 
 ```json
 {
-    "total_documents": 10555,
+    "total_documents": 10333,
     "by_status": {
         "draft": 4046,
-        "unknown": 3260,
+        "unknown": 3038,
         "published": 2204,
         "archived": 1045
     },
     "by_document_type": {
-        "unknown": 3022,
+        "unknown": 2800,
         "report": 1972,
         "dataset": 985,
         "working_paper": 937,
@@ -28,7 +28,7 @@ curl -s http://localhost:8000/stats | python3 -m json.tool
         "policy_brief": 901
     },
     "by_region": {
-        "unknown": 1581,
+        "unknown": 1359,
         "Global": 754,
         "Latin America": 721,
         "Southeast Asia": 711,
@@ -44,7 +44,7 @@ curl -s http://localhost:8000/stats | python3 -m json.tool
         "Sub-Saharan Africa": 629
     },
     "by_language": {
-        "unknown": 2694,
+        "unknown": 2472,
         "en": 1608,
         "de": 809,
         "it": 807,
@@ -99,63 +99,63 @@ curl -s http://localhost:8000/stats | python3 -m json.tool
         "avg_group_size": 168.04,
         "top_groups": [
             {
-                "group_id": 9,
+                "group_id": 8,
                 "size": 374,
-                "canonical_document_id": 687,
+                "canonical_document_id": 674,
                 "normalized_title": "urban development strategies"
             },
             {
                 "group_id": 2,
                 "size": 367,
-                "canonical_document_id": 3339,
+                "canonical_document_id": 3272,
                 "normalized_title": "climate policy in southern europe"
             },
             {
                 "group_id": 1,
                 "size": 206,
-                "canonical_document_id": 8522,
+                "canonical_document_id": 8352,
                 "normalized_title": "energy market trends 2023"
             },
             {
-                "group_id": 31,
+                "group_id": 30,
                 "size": 204,
-                "canonical_document_id": 7061,
+                "canonical_document_id": 6926,
                 "normalized_title": "green finance instruments 2022"
             },
             {
-                "group_id": 81,
+                "group_id": 79,
                 "size": 202,
-                "canonical_document_id": 2688,
+                "canonical_document_id": 2629,
                 "normalized_title": "solar power adoption barriers"
             },
             {
-                "group_id": 14,
+                "group_id": 13,
                 "size": 201,
-                "canonical_document_id": 8444,
+                "canonical_document_id": 8274,
                 "normalized_title": "permafrost thaw: tipping points"
             },
             {
-                "group_id": 34,
+                "group_id": 33,
                 "size": 201,
-                "canonical_document_id": 5118,
+                "canonical_document_id": 5012,
                 "normalized_title": "methane emissions from livestock"
             },
             {
                 "group_id": 3,
                 "size": 200,
-                "canonical_document_id": 3630,
+                "canonical_document_id": 3556,
                 "normalized_title": "urban heat island mitigation"
             },
             {
-                "group_id": 64,
+                "group_id": 63,
                 "size": 200,
-                "canonical_document_id": 2161,
+                "canonical_document_id": 2111,
                 "normalized_title": "ai applications in climate modelling"
             },
             {
-                "group_id": 67,
+                "group_id": 66,
                 "size": 199,
-                "canonical_document_id": 7811,
+                "canonical_document_id": 7657,
                 "normalized_title": "renewable energy transition in the eu"
             }
         ]
@@ -163,11 +163,11 @@ curl -s http://localhost:8000/stats | python3 -m json.tool
     "quality_score_distribution": {
         "min": 0.0,
         "max": 100.0,
-        "mean": 49.71,
-        "median": 49.25,
-        "p25": 38.24,
-        "p75": 60.41,
-        "histogram": [367, 168, 719, 1767, 2452, 2365, 1504, 596, 161, 456]
+        "mean": 50.78,
+        "median": 49.66,
+        "p25": 39.01,
+        "p75": 60.62,
+        "histogram": [145, 168, 719, 1767, 2452, 2365, 1504, 596, 161, 456]
     }
 }
 ```
@@ -186,5 +186,5 @@ curl -s http://localhost:8000/stats | python3 -m json.tool
   documents sharing a title but with no shared `author`/`source_name` linking them to the
   rest of the cohort form their own smaller duplicate group(s) (per ADR 0002's grouping rule).
 - `quality_score_distribution.histogram` is 10 buckets of width 10 over `[0, 100]`; the
-  buckets sum to `10555`, matching `total_documents` (every document has a `quality_score`
+  buckets sum to `10333`, matching `total_documents` (every document has a `quality_score`
   once stage 3 has fully drained).

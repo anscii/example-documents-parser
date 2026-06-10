@@ -56,10 +56,13 @@ async def create_run(db: Session, file: UploadFile, force: bool) -> IngestionRun
 
     if not force:
         existing = db.execute(
-            select(IngestionRun).where(
+            select(IngestionRun)
+            .where(
                 IngestionRun.file_hash == file_hash,
                 IngestionRun.status == "completed",
             )
+            .order_by(IngestionRun.id.desc())
+            .limit(1)
         ).scalar_one_or_none()
         if existing is not None:
             raise DuplicateIngestionError(existing_run_id=existing.id)
@@ -96,6 +99,13 @@ def _run_pipeline_locked(run_id: int) -> None:
             logger.error("run %s: not found", run_id)
             return
 
+        logger.info(
+            "run %s: pipeline started (source_file=%s, status=%s)",
+            run_id,
+            run.source_file,
+            run.status,
+        )
+
         if run.status == "queued":
             raw_load_worker.process_run(db, run)
 
@@ -104,8 +114,10 @@ def _run_pipeline_locked(run_id: int) -> None:
         _drain(db, scoring_worker)
 
         run.status = "completed"
-        run.finished_at = datetime.now(timezone.utc).replace(tzinfo=None)
+        finished_at = datetime.now(timezone.utc).replace(tzinfo=None)
+        run.finished_at = finished_at
         db.commit()
+        _log_run_summary(db, run, finished_at)
         logger.info("run %s: pipeline completed", run_id)
     except Exception as exc:
         db.rollback()
@@ -119,6 +131,46 @@ def _run_pipeline_locked(run_id: int) -> None:
         root_logger.removeHandler(handler)
         handler.close()
         db.close()
+
+
+def _log_run_summary(db: Session, run: IngestionRun, finished_at: datetime) -> None:
+    run_documents = select(Document).join(
+        RawDocument, Document.raw_document_id == RawDocument.id
+    ).where(RawDocument.ingestion_run_id == run.id)
+
+    normalized_count = (
+        db.scalar(select(func.count()).select_from(run_documents.subquery())) or 0
+    )
+    duplicates_count = (
+        db.scalar(
+            select(func.count()).select_from(
+                run_documents.where(Document.is_canonical.is_(False)).subquery()
+            )
+        )
+        or 0
+    )
+    scored_count = (
+        db.scalar(
+            select(func.count()).select_from(
+                run_documents.where(Document.quality_score.isnot(None)).subquery()
+            )
+        )
+        or 0
+    )
+    elapsed = (finished_at - run.started_at).total_seconds()
+
+    logger.info(
+        "run %s: FINAL SUMMARY - total_lines=%d raw_loaded=%d skipped=%d "
+        "normalized=%d duplicates=%d scored=%d elapsed=%.2fs",
+        run.id,
+        run.total_lines or 0,
+        run.raw_loaded_count or 0,
+        run.skipped_count or 0,
+        normalized_count,
+        duplicates_count,
+        scored_count,
+        elapsed,
+    )
 
 
 def _drain(db: Session, worker: _BatchWorker) -> None:

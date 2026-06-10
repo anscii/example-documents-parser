@@ -51,8 +51,18 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
         db.add(document)
         raw_doc.status = "normalized"
         raw_doc.normalized_at = datetime.now(timezone.utc).replace(tzinfo=None)
+        logger.debug(
+            "raw_document %s: normalized (external_id=%s)",
+            raw_doc.id,
+            document.raw_external_id,
+        )
         if warnings:
-            logger.warning("raw_document %s: %s", raw_doc.id, "; ".join(warnings))
+            logger.warning(
+                "raw_document %s (external_id=%s): %s",
+                raw_doc.id,
+                document.raw_external_id,
+                "; ".join(warnings),
+            )
 
     db.commit()
 

@@ -14,7 +14,8 @@ wheels/
 data/*.db
 data/uploads/*
 !data/uploads/.gitkeep
-logs/*.log
 
 # macOS junk in the provided input data
 input_docs/__MACOSX/
+
+.vscode

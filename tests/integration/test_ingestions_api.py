@@ -54,8 +54,13 @@ def test_ingestion_run_writes_per_run_log_file(client, tmp_path):
     assert log_file.exists()
 
     contents = log_file.read_text()
+    assert f"run {run_id}: pipeline started" in contents
     assert f"run {run_id}: stage 0 complete - total_lines=5 raw_loaded=1 skipped=4" in contents
     assert contents.count(" ERROR ") == 4
+    assert (
+        f"run {run_id}: FINAL SUMMARY - total_lines=5 raw_loaded=1 skipped=4 "
+        "normalized=1 duplicates=0 scored=1" in contents
+    )
     assert f"run {run_id}: pipeline completed" in contents
 
 
@@ -86,6 +91,18 @@ def test_duplicate_ingestion_with_force_creates_new_run(client, db_session):
 
     assert second.status_code == 201
     assert second.json()["id"] != run_id
+
+
+def test_duplicate_check_handles_multiple_completed_runs_with_same_hash(client, db_session):
+    first = _post_mini(client)
+    assert first.status_code == 201
+
+    second = _post_mini(client, force="true")
+    assert second.status_code == 201
+
+    third = _post_mini(client)
+
+    assert third.status_code == 409
 
 
 def test_list_ingestions_returns_runs_newest_first(client):

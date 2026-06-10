@@ -120,5 +120,5 @@ stay `NULL` for these).
 - `tests/factories.py` has helpers for building raw JSONL records.
 - `tests/integration/test_full_corpus.py` (marked `slow`) ingests all of
   `input_docs/documents_*.jsonl` and asserts the headline numbers documented
-  in `docs/stats_examples.md` (10,555 documents, 41 distinct titles, 48
+  in `docs/stats_examples.md` (10,333 documents, 41 distinct titles, 48
   duplicate groups, 8,066 total duplicates).

@@ -120,11 +120,11 @@ ingestion_runs ──< ingestion_errors
 - **`ingestion_runs`**: one row per `POST /ingestions` (source file, hash,
   staged path, status, `total_lines`/`raw_loaded_count`/`skipped_count`).
 - **`ingestion_errors`**: one row per hard-skipped line (`invalid_json` /
-  `not_object` / `broken_stub`), with the truncated raw line and detail.
+  `not_object` / `broken_stub` / `empty`), with the truncated raw line and detail.
 - **`raw_documents`**: one row per structurally-valid input line (verbatim
   `raw_data` JSON), `status` = `pending` → `normalized` (the stage-1 queue
   marker).
-- **`documents`**: one row per `raw_documents` row (~10,555 for the full
+- **`documents`**: one row per `raw_documents` row (~10,333 for the full
   corpus) — normalized fields, `*_raw` companions for lossy conversions
   (dates, status, language, booleans, document_type), `url_valid`/`doi_valid`
   flags, and the stage-2/3 result columns `duplicate_group_id` /

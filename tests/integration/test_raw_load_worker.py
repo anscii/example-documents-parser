@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 
 from app.models import IngestionError, IngestionRun, RawDocument
@@ -52,3 +53,12 @@ def test_process_run_classifies_lines(db_session):
         "broken_stub",
         "invalid_json",
     ]
+
+
+def test_process_run_logs_external_id_for_staged_records(db_session, caplog):
+    run = _make_run(db_session, FIXTURE_PATH)
+
+    with caplog.at_level(logging.DEBUG, logger="app.processing.raw_load_worker"):
+        raw_load_worker.process_run(db_session, run)
+
+    assert "external_id=doc-001" in caplog.text
