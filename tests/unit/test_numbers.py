@@ -18,6 +18,13 @@ from app.ingestion.normalizers.numbers import (
         ("many", None, True),
         (True, None, True),
         ([], None, True),
+        (float("nan"), None, True),
+        (float("inf"), None, True),
+        (float("-inf"), None, True),
+        ("nan", None, True),
+        ("inf", None, True),
+        ("Infinity", None, True),
+        ("-Infinity", None, True),
     ],
 )
 def test_coerce_int(value, expected, expect_warning):
@@ -36,6 +43,13 @@ def test_coerce_int(value, expected, expect_warning):
         ("high", None, True),
         (True, None, True),
         ([], None, True),
+        (float("nan"), None, True),
+        (float("inf"), None, True),
+        (float("-inf"), None, True),
+        ("nan", None, True),
+        ("inf", None, True),
+        ("Infinity", None, True),
+        ("-Infinity", None, True),
     ],
 )
 def test_coerce_float(value, expected, expect_warning):

@@ -15,6 +15,7 @@ from app.ingestion.normalizers.tags import normalize_tags
         ("water,energy", ["energy", "water"], False),
         ("energy; renewables", ["energy", "renewables"], False),
         ({"topic": "climate"}, ["climate"], False),
+        ({"a": 1, "topic": "climate"}, ["climate"], True),
         (123, [], True),
         ("", [], False),
     ],

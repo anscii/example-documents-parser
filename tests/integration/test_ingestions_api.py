@@ -56,7 +56,13 @@ def test_ingestion_run_writes_per_run_log_file(client, tmp_path):
     contents = log_file.read_text()
     assert f"run {run_id}: pipeline started" in contents
     assert f"run {run_id}: stage 0 complete - total_lines=5 raw_loaded=1 skipped=4" in contents
-    assert contents.count(" ERROR ") == 4
+    for line_number, category in [
+        (2, "empty"),
+        (3, "not_object"),
+        (4, "broken_stub"),
+        (5, "invalid_json"),
+    ]:
+        assert f"run {run_id}: line {line_number} skipped ({category})" in contents
     assert (
         f"run {run_id}: FINAL SUMMARY - total_lines=5 raw_loaded=1 skipped=4 "
         "normalized=1 duplicates=0 scored=1" in contents

@@ -5,21 +5,7 @@ from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict
 
 
-class AuthorRef(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
-
-    id: int
-    name: str
-
-
-class OrganizationRef(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
-
-    id: int
-    name: str
-
-
-class TagRef(BaseModel):
+class EntityRef(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
@@ -31,15 +17,15 @@ class DocumentSummary(BaseModel):
 
     id: int
     title: str | None
-    author: AuthorRef
-    organization: OrganizationRef
+    author: EntityRef
+    organization: EntityRef
     source_name: str | None
     published_at: date | None
     language: str
     status: str
     document_type: str
     region: str | None
-    tags: list[TagRef]
+    tags: list[EntityRef]
     citation_count: int | None
     relevance_score: float | None
     quality_score: float | None

@@ -1,38 +1,11 @@
 import itertools
 from datetime import date, timedelta
 
-from sqlalchemy import select
-
-from app.models import Author, Document, IngestionRun, Organization, RawDocument
-from app.models.sentinels import UNKNOWN_NORMALIZED_NAME
+from app.models import Document, RawDocument
 from app.processing import scoring_worker
+from tests.factories import make_run, unknown_author_id, unknown_org_id
 
 _line_numbers = itertools.count(1)
-
-
-def _make_run(db_session) -> IngestionRun:
-    run = IngestionRun(
-        source_file="f.jsonl",
-        file_hash="h",
-        staged_path="/tmp/f.jsonl",
-        status="processing",
-    )
-    db_session.add(run)
-    db_session.commit()
-    db_session.refresh(run)
-    return run
-
-
-def _unknown_author_id(db_session) -> int:
-    return db_session.scalar(
-        select(Author.id).where(Author.normalized_name == UNKNOWN_NORMALIZED_NAME)
-    )
-
-
-def _unknown_org_id(db_session) -> int:
-    return db_session.scalar(
-        select(Organization.id).where(Organization.normalized_name == UNKNOWN_NORMALIZED_NAME)
-    )
 
 
 def _make_document(db_session, run, raw_data=None, **overrides) -> Document:
@@ -50,8 +23,8 @@ def _make_document(db_session, run, raw_data=None, **overrides) -> Document:
         "raw_external_id": None,
         "title": "Sample Title",
         "normalized_title": None,
-        "author_id": _unknown_author_id(db_session),
-        "organization_id": _unknown_org_id(db_session),
+        "author_id": unknown_author_id(db_session),
+        "organization_id": unknown_org_id(db_session),
         "language": "unknown",
         "status": "unknown",
         "document_type": "unknown",
@@ -68,7 +41,7 @@ def _make_document(db_session, run, raw_data=None, **overrides) -> Document:
 
 
 def test_citation_percentile_ranking(db_session):
-    run = _make_run(db_session)
+    run = make_run(db_session)
 
     doc_low = _make_document(db_session, run, citation_count=10)
     doc_mid = _make_document(db_session, run, citation_count=20)
@@ -88,7 +61,7 @@ def test_citation_percentile_ranking(db_session):
 
 
 def test_many_citation_sentinel_uses_p90(db_session):
-    run = _make_run(db_session)
+    run = make_run(db_session)
 
     _make_document(db_session, run, citation_count=10)
     _make_document(db_session, run, citation_count=20)
@@ -104,7 +77,7 @@ def test_many_citation_sentinel_uses_p90(db_session):
 
 
 def test_high_relevance_sentinel(db_session):
-    run = _make_run(db_session)
+    run = make_run(db_session)
 
     doc = _make_document(
         db_session, run, relevance_score=None, raw_data={"relevance_score": "high"}
@@ -117,7 +90,7 @@ def test_high_relevance_sentinel(db_session):
 
 
 def test_future_published_at_gives_max_recency_bonus(db_session):
-    run = _make_run(db_session)
+    run = make_run(db_session)
 
     doc = _make_document(db_session, run, published_at=date.today() + timedelta(days=30))
 
@@ -128,7 +101,7 @@ def test_future_published_at_gives_max_recency_bonus(db_session):
 
 
 def test_missing_published_at_gives_zero_recency(db_session):
-    run = _make_run(db_session)
+    run = make_run(db_session)
 
     doc = _make_document(db_session, run, published_at=None)
 
@@ -139,7 +112,7 @@ def test_missing_published_at_gives_zero_recency(db_session):
 
 
 def test_quality_score_clamped_to_100(db_session):
-    run = _make_run(db_session)
+    run = make_run(db_session)
 
     doc = _make_document(
         db_session,
@@ -163,3 +136,31 @@ def test_process_batch_returns_zero_when_nothing_pending(db_session):
     processed, remaining = scoring_worker.process_batch(db_session, batch_size=10)
     assert processed == 0
     assert remaining == 0
+
+
+def test_citation_count_distribution_is_cached_per_session(
+    db_session, db_session_factory, monkeypatch
+):
+    run = make_run(db_session)
+    _make_document(db_session, run, citation_count=10)
+    _make_document(db_session, run, citation_count=20)
+
+    call_count = {"n": 0}
+    original = scoring_worker._citation_count_distribution
+
+    def spy(db):
+        call_count["n"] += 1
+        return original(db)
+
+    monkeypatch.setattr(scoring_worker, "_citation_count_distribution", spy)
+
+    scoring_worker.process_batch(db_session, batch_size=1)
+    scoring_worker.process_batch(db_session, batch_size=1)
+    assert call_count["n"] == 1
+
+    other_session = db_session_factory()
+    try:
+        scoring_worker.process_batch(other_session, batch_size=10)
+    finally:
+        other_session.close()
+    assert call_count["n"] == 2

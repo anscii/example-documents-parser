@@ -1,27 +1,15 @@
 import logging
 from pathlib import Path
 
-from app.models import IngestionError, IngestionRun, RawDocument
+from app.models import IngestionError, RawDocument
 from app.processing import raw_load_worker
+from tests.factories import make_run
 
 FIXTURE_PATH = Path(__file__).resolve().parents[1] / "fixtures" / "sample_input" / "mini.jsonl"
 
 
-def _make_run(db_session, staged_path: Path) -> IngestionRun:
-    run = IngestionRun(
-        source_file="mini.jsonl",
-        file_hash="testhash",
-        staged_path=str(staged_path),
-        status="queued",
-    )
-    db_session.add(run)
-    db_session.commit()
-    db_session.refresh(run)
-    return run
-
-
 def test_process_run_classifies_lines(db_session):
-    run = _make_run(db_session, FIXTURE_PATH)
+    run = make_run(db_session, staged_path=FIXTURE_PATH)
 
     raw_load_worker.process_run(db_session, run)
 
@@ -56,7 +44,7 @@ def test_process_run_classifies_lines(db_session):
 
 
 def test_process_run_logs_external_id_for_staged_records(db_session, caplog):
-    run = _make_run(db_session, FIXTURE_PATH)
+    run = make_run(db_session, staged_path=FIXTURE_PATH)
 
     with caplog.at_level(logging.DEBUG, logger="app.processing.raw_load_worker"):
         raw_load_worker.process_run(db_session, run)

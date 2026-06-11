@@ -1,3 +1,6 @@
+import math
+
+
 def coerce_int(value: object) -> tuple[int | None, str | None]:
     """Coerce a numeric field (citation_count, word_count, page_count) to int.
 
@@ -11,6 +14,8 @@ def coerce_int(value: object) -> tuple[int | None, str | None]:
     if isinstance(value, int):
         return value, None
     if isinstance(value, float):
+        if not math.isfinite(value):
+            return None, f"non-finite float for integer field: {value!r}"
         return int(value), None
     if isinstance(value, str):
         text = value.strip()
@@ -18,9 +23,12 @@ def coerce_int(value: object) -> tuple[int | None, str | None]:
             return int(text), None
         except ValueError:
             try:
-                return int(float(text)), None
+                parsed = float(text)
             except ValueError:
                 return None, f"could not parse integer: {value!r}"
+            if not math.isfinite(parsed):
+                return None, f"non-finite float for integer field: {value!r}"
+            return int(parsed), None
     return None, f"unexpected type for integer field: {type(value).__name__}: {value!r}"
 
 
@@ -35,13 +43,19 @@ def coerce_float(value: object) -> tuple[float | None, str | None]:
     if isinstance(value, bool):
         return None, f"unexpected boolean for numeric field: {value!r}"
     if isinstance(value, (int, float)):
-        return float(value), None
+        parsed = float(value)
+        if not math.isfinite(parsed):
+            return None, f"non-finite float for float field: {value!r}"
+        return parsed, None
     if isinstance(value, str):
         text = value.strip()
         try:
-            return float(text), None
+            parsed = float(text)
         except ValueError:
             return None, f"could not parse float: {value!r}"
+        if not math.isfinite(parsed):
+            return None, f"non-finite float for float field: {value!r}"
+        return parsed, None
     return None, f"unexpected type for float field: {type(value).__name__}: {value!r}"
 
 

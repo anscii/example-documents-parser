@@ -7,6 +7,7 @@ from app.ingestion.record_validator import InvalidRecord, ValidRecord, classify
     ("line", "expected_type", "expected_data", "expected_category"),
     [
         ('{"a": 1}', ValidRecord, {"a": 1}, None),
+        ("", InvalidRecord, None, "invalid_json"),
         ("{}", InvalidRecord, None, "empty"),
         ("[]", InvalidRecord, None, "not_object"),
         ('"just a string"', InvalidRecord, None, "not_object"),

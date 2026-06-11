@@ -28,10 +28,14 @@ _MANY_CITATION_SENTINEL = "many"
 _HIGH_RELEVANCE_SENTINEL = "high"
 _HIGH_RELEVANCE_VALUE = 0.9
 
+_CC_DISTRIBUTION_CACHE_KEY = "scoring_worker.cc_distribution"
+
 
 def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
     """Stage 3: compute the composite quality_score for a batch of documents."""
-    cc_sorted, p90_value = _citation_count_distribution(db)
+    if _CC_DISTRIBUTION_CACHE_KEY not in db.info:
+        db.info[_CC_DISTRIBUTION_CACHE_KEY] = _citation_count_distribution(db)
+    cc_sorted, p90_value = db.info[_CC_DISTRIBUTION_CACHE_KEY]
 
     pending = (
         db.execute(

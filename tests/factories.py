@@ -1,4 +1,5 @@
 import itertools
+from pathlib import Path
 
 from sqlalchemy import select
 
@@ -8,12 +9,12 @@ from app.models.sentinels import UNKNOWN_NORMALIZED_NAME
 _counter = itertools.count(1)
 
 
-def make_run(db_session) -> IngestionRun:
+def make_run(db_session, staged_path: str | Path | None = None) -> IngestionRun:
     n = next(_counter)
     run = IngestionRun(
         source_file=f"f{n}.jsonl",
         file_hash=f"hash{n}",
-        staged_path=f"/tmp/f{n}.jsonl",
+        staged_path=str(staged_path) if staged_path is not None else f"/tmp/f{n}.jsonl",
         status="completed",
     )
     db_session.add(run)

@@ -13,6 +13,7 @@ from app.ingestion.normalizers.dates import normalize_date
         ("2020-05-01", date(2020, 5, 1), "2020-05-01", False),
         ("2020-05-01T12:00:00Z", date(2020, 5, 1), "2020-05-01T12:00:00Z", False),
         (20200501, date(2020, 5, 1), "20200501", False),
+        (20231345, None, "20231345", True),
         ("invalid-date", None, "invalid-date", True),
         ("2023-13-45", None, "2023-13-45", True),
         (12345, None, "12345", True),

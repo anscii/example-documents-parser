@@ -7,6 +7,7 @@ from app.config import settings
 from app.db.session import get_db
 from app.processing import duplicates_worker, normalize_worker, scoring_worker
 from app.schemas.processing import ProcessingResult
+from app.services import ingestion_service
 
 router = APIRouter(prefix="/processing", tags=["processing"])
 
@@ -15,7 +16,7 @@ router = APIRouter(prefix="/processing", tags=["processing"])
 def process_normalize(
     batch_size: int = settings.default_batch_size, db: Session = Depends(get_db)
 ) -> ProcessingResult:
-    processed, remaining = normalize_worker.process_batch(db, batch_size)
+    processed, remaining = ingestion_service.run_processing_batch(normalize_worker, db, batch_size)
     return ProcessingResult(processed=processed, remaining=remaining)
 
 
@@ -23,7 +24,7 @@ def process_normalize(
 def process_duplicates(
     batch_size: int = settings.default_batch_size, db: Session = Depends(get_db)
 ) -> ProcessingResult:
-    processed, remaining = duplicates_worker.process_batch(db, batch_size)
+    processed, remaining = ingestion_service.run_processing_batch(duplicates_worker, db, batch_size)
     return ProcessingResult(processed=processed, remaining=remaining)
 
 
@@ -31,5 +32,5 @@ def process_duplicates(
 def process_scoring(
     batch_size: int = settings.default_batch_size, db: Session = Depends(get_db)
 ) -> ProcessingResult:
-    processed, remaining = scoring_worker.process_batch(db, batch_size)
+    processed, remaining = ingestion_service.run_processing_batch(scoring_worker, db, batch_size)
     return ProcessingResult(processed=processed, remaining=remaining)

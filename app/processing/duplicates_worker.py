@@ -68,8 +68,19 @@ def process_batch(db: Session, batch_size: int) -> tuple[int, int]:
         else:
             _mark_singleton(doc)
 
-    for normalized_title in titles:
-        _process_title_cohort(db, normalized_title, unknown_author_id, unknown_org_id)
+    if titles:
+        cohort_docs = (
+            db.execute(select(Document).where(Document.normalized_title.in_(titles)))
+            .scalars()
+            .all()
+        )
+        cohorts: dict[str, list[Document]] = defaultdict(list)
+        for doc in cohort_docs:
+            assert doc.normalized_title is not None
+            cohorts[doc.normalized_title].append(doc)
+
+        for normalized_title in titles:
+            _process_cohort(cohorts[normalized_title], unknown_author_id, unknown_org_id)
 
     db.commit()
 
@@ -101,15 +112,7 @@ def _mark_singleton(doc: Document) -> None:
     doc.duplicate_confidence = None
 
 
-def _process_title_cohort(
-    db: Session, normalized_title: str, unknown_author_id: int, unknown_org_id: int
-) -> None:
-    cohort = (
-        db.execute(select(Document).where(Document.normalized_title == normalized_title))
-        .scalars()
-        .all()
-    )
-
+def _process_cohort(cohort: list[Document], unknown_author_id: int, unknown_org_id: int) -> None:
     if len(cohort) == 1:
         _mark_singleton(cohort[0])
         return

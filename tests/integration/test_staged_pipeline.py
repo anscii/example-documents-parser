@@ -70,12 +70,14 @@ def test_staged_pipeline_normalizes_messy_record(client, db_session):
     assert document.document_type == "unknown"
     assert document.tags == []
     assert document.published_at == date(2021, 3, 15)
-    assert document.normalization_warnings == [
-        "citation_count: could not parse integer: 'many'",
-        "relevance_score: could not parse float: 'high'",
-        "peer_reviewed: unexpected integer for boolean field: 2",
-        "tags: tags list contained non-string elements, which were dropped",
-    ]
+    assert sorted(document.normalization_warnings) == sorted(
+        [
+            "citation_count: could not parse integer: 'many'",
+            "relevance_score: could not parse float: 'high'",
+            "peer_reviewed: unexpected integer for boolean field: 2",
+            "tags: tags list contained non-string elements, which were dropped",
+        ]
+    )
 
     author = db_session.get(Author, document.author_id)
     organization = db_session.get(Organization, document.organization_id)

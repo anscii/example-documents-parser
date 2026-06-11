@@ -137,13 +137,13 @@ def _run_pipeline_locked(run_id: int) -> None:
 
 
 def _log_run_summary(db: Session, run: IngestionRun, finished_at: datetime) -> None:
-    run_documents = select(Document).join(
-        RawDocument, Document.raw_document_id == RawDocument.id
-    ).where(RawDocument.ingestion_run_id == run.id)
-
-    normalized_count = (
-        db.scalar(select(func.count()).select_from(run_documents.subquery())) or 0
+    run_documents = (
+        select(Document)
+        .join(RawDocument, Document.raw_document_id == RawDocument.id)
+        .where(RawDocument.ingestion_run_id == run.id)
     )
+
+    normalized_count = db.scalar(select(func.count()).select_from(run_documents.subquery())) or 0
     duplicates_count = (
         db.scalar(
             select(func.count()).select_from(
@@ -183,6 +183,16 @@ def _drain(db: Session, worker: _BatchWorker) -> None:
         logger.info("%s: processed=%d remaining=%d", worker.__name__, processed, remaining)
         if processed == 0 or remaining == 0:
             break
+
+
+def run_processing_batch(worker: _BatchWorker, db: Session, batch_size: int) -> tuple[int, int]:
+    """Run a single process_batch() call under _pipeline_lock.
+
+    Used by the /processing/* endpoints so they can't race with a concurrent
+    run_pipeline() call on the same global queue rows.
+    """
+    with _pipeline_lock:
+        return worker.process_batch(db, batch_size)
 
 
 def resume_pending_runs() -> None:

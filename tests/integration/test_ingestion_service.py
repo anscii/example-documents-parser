@@ -1,6 +1,7 @@
 import threading
 
 from app.models import Document, IngestionRun, RawDocument
+from app.processing import normalize_worker
 from app.services import ingestion_service
 
 
@@ -102,6 +103,32 @@ def test_run_pipeline_serializes_concurrent_runs(db_session, db_session_factory,
     assert not ingestion_service._pipeline_lock.locked()
     db_session.refresh(run)
     assert run.status == "completed"
+
+
+def test_run_processing_batch_blocks_while_pipeline_lock_held(
+    db_session, db_session_factory, monkeypatch
+):
+    monkeypatch.setattr("app.services.ingestion_service.SessionLocal", db_session_factory)
+
+    result_holder: dict[str, tuple[int, int]] = {}
+
+    def call():
+        result_holder["result"] = ingestion_service.run_processing_batch(
+            normalize_worker, db_session, 10
+        )
+
+    ingestion_service._pipeline_lock.acquire()
+    try:
+        thread = threading.Thread(target=call)
+        thread.start()
+        thread.join(timeout=0.2)
+        assert thread.is_alive()
+        assert "result" not in result_holder
+    finally:
+        ingestion_service._pipeline_lock.release()
+
+    thread.join(timeout=5)
+    assert result_holder["result"] == (0, 0)
 
 
 def test_run_pipeline_stays_completed_when_summary_logging_fails(
